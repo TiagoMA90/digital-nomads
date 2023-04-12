@@ -12,5 +12,5 @@ def about(request):
     return render(request, 'blog/about.html')
 
 # Remove???
-def blog(request):
-    return render(request, 'blog/blog.html')
+# def blog(request):
+#    return render(request, 'blog/blog.html')
