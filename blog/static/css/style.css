@@ -1,0 +1,19 @@
+body {
+    background: #5f5f5f;
+    color: #333333;
+    margin-top: 5rem;
+}
+  
+  /* Font coloring */
+
+.bg-steel {
+    background-color: #770e00;
+}
+
+h1, h2, h3 {
+    color: #770e00;
+}
+
+p {
+    color: #000000
+}
