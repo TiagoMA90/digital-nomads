@@ -2,15 +2,15 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 # Create your views here.
-# Paths to the suffix
+# Routing...
 
 def home(request):
-    return HttpResponse('<h1>Home</h1>')
-
-
-def blog(request):
-    return HttpResponse('<h1>Blog</h1>')
+    return render(request, 'blog/home.html')
 
 
 def about(request):
-    return HttpResponse('<h1>About</h1>')
+    return render(request, 'blog/about.html')
+
+
+def blog(request):
+    return render(request, 'blog/blog.html')
