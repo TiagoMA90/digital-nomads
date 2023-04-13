@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['localhost']
 INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'users.apps.UsersConfig',
+    'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -116,6 +117,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 STATIC_URL = 'static/'
 
