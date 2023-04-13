@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.shortcuts import redirect
 from django.contrib import messages
-from django.contrib.auth.forms import UserCreationForm
+from .forms import UserRegisterForm
 
 
 def register(request):
