@@ -1,9 +1,10 @@
 from django.shortcuts import render
 from django.shortcuts import redirect
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from .forms import UserRegisterForm
 
-
+# Function to create and save a User account
 def register(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
@@ -15,3 +16,8 @@ def register(request):
     else:
         form = UserRegisterForm()
     return render(request, 'users/register.html', {'form': form})
+
+# Decorator for Users to be required to log in and display the User profile
+@login_required
+def profile(request):
+    return render(request, 'users/profile.html')
