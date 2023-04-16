@@ -26,6 +26,7 @@ def profile(request):
         profile_form = ProfileUpdateForm(request.POST, request.FILES, instance = request.user.profile)
         user_form = UserUpdateForm(request.POST, instance = request.user)
 
+        # If the profile and user forms are valid, save both forms, execute the following message and redirect/refresh the profile
         if profile_form.is_valid() and user_form.is_valid():
             profile_form.save()
             user_form.save()
