@@ -22,8 +22,8 @@ def register(request):
 # Decorator for Users to be required to log in and display the User profile
 @login_required
 def profile(request):
-    u_form = UserUpdateForm()
-    p_form = ProfileUpdateForm()
+    user_form = UserUpdateForm()
+    profile_form = ProfileUpdateForm()
 
     context = {
         'user_form': user_form,
