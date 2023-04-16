@@ -22,12 +22,21 @@ def register(request):
 # Decorator for Users to be required to log in and display the User profile
 @login_required
 def profile(request):
-    user_form = UserUpdateForm()
-    profile_form = ProfileUpdateForm()
+    if request.method == 'POST':
+        profile_form = ProfileUpdateForm(request.POST, request.FILES, instance = request.user.profile)
+        user_form = UserUpdateForm(request.POST, instance = request.user)
+
+        if profile_form.is_valid() and user_form.is_valid():
+            profile_form.save()
+            user_form.save()
+    else:
+        profile_form = UserUpateForm(instance=request.user)
+        user_form = UserUpateForm(instance=request.user)
+
 
     context = {
-        'user_form': user_form,
-        'profile_form': profile_form
+        'profile_form': profile_form, 
+        'user_form': user_form
     }
 
     return render(request, 'users/profile.html', context)
