@@ -3,6 +3,8 @@ from django.shortcuts import redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import UserRegisterForm
+from .forms import UserUpdateForm
+from .forms import ProfileUpdateForm
 
 # Function to create and save a User account
 def register(request):
@@ -20,4 +22,12 @@ def register(request):
 # Decorator for Users to be required to log in and display the User profile
 @login_required
 def profile(request):
-    return render(request, 'users/profile.html')
+    u_form = UserUpdateForm()
+    p_form = ProfileUpdateForm()
+
+    context = {
+        'user_form': user_form,
+        'profile_form': profile_form
+    }
+
+    return render(request, 'users/profile.html', context)
