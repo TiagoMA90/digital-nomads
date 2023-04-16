@@ -29,9 +29,11 @@ def profile(request):
         if profile_form.is_valid() and user_form.is_valid():
             profile_form.save()
             user_form.save()
+            messages.info(request, f'Account details have been updated.')
+            return redirect('profile')
     else:
-        profile_form = UserUpateForm(instance=request.user)
-        user_form = UserUpateForm(instance=request.user)
+        profile_form = ProfileUpdateForm(instance=request.user.profile)
+        user_form = UserUpdateForm(instance=request.user)
 
 
     context = {
