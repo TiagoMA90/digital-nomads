@@ -3,6 +3,7 @@
 {% block content %}
     {% for post in posts %}
         <article class="media content-section">
+          <img class="border border-dark rounded imgframe" src="{{ post.author.profile.image.url }}" alt="">
           <div class="media-body">
             <div class="article-metadata">
               <!-- Posts the Users Name of the Post -->

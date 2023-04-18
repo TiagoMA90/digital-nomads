@@ -12,15 +12,16 @@ class Profile(models.Model):
     def __str__(self):
         return f'{self.user.username} Data'
 
+    # Profile Image sizing and saving
     def save(self):
         super().save()
 
-        img = Image.open(self.image.path)
+        user_img = Image.open(self.image.path)
 
-        if img.width >= 351 or img.height >= 351:
+        if user_img.width >= 351 or user_img.height >= 351:
             output_size = (350, 350)
-            img.thumbnail(output_size)
-            img.save(self.image.path)
+            user_img.thumbnail(output_size)
+            user_img.save(self.image.path)
 
 
 
