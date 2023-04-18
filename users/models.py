@@ -7,7 +7,7 @@ from PIL import Image
 # Profiles 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    image = models.ImageField(default='default.png', upload_to='profile_img')
+    image = models.ImageField(default='default.png' or 'default_a', upload_to='profile_img')
 
     def __str__(self):
         return f'{self.user.username} Data'
@@ -17,7 +17,8 @@ class Profile(models.Model):
         super().save()
 
         user_img = Image.open(self.image.path)
-
+        
+        # If the image uploaded is more or equals to 351px, set it to 350px and save it
         if user_img.width >= 351 or user_img.height >= 351:
             output_size = (350, 350)
             user_img.thumbnail(output_size)
