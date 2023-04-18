@@ -13,7 +13,7 @@ class Profile(models.Model):
         return f'{self.user.username} Data'
 
     # Profile Image sizing and saving
-    def save(self):
+    def save(self, *args, **kwargs):
         super().save()
 
         user_img = Image.open(self.image.path)
