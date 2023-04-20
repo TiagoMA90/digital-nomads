@@ -3,7 +3,9 @@ from django.shortcuts import get_object_or_404
 from django.views.generic import ListView
 from django.views.generic import DetailView
 from django.views.generic import CreateView
+from django.views.generic import UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import UserPassesTestMixin
 from .models import Post
 
 # Routing for the urls
@@ -27,6 +29,24 @@ class PostCreateView(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
+
+
+class PostUpdateView(UserPassesTestMixin, LoginRequiredMixin, UpdateView):
+    model = Post
+    fields = ['title', 'content']
+    login_url = "/login/"
+    redirect_field_name = "/home/"
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+
+    def test_func(self):
+        post = self.get_object()
+        if self.request.user == post.author:
+            return True
+        else:
+            return False
 
 
 class PostListView(ListView):
