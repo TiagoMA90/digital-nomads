@@ -77,7 +77,7 @@ class PostListView(ListView):
     paginate_by = 6
 
 
-# User Post Vews
+# User Post Views
 class UserPostListView(ListView):
     model = Post
     template_name = 'blog/post_user.html'
