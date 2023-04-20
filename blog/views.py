@@ -7,6 +7,7 @@ from django.views.generic import UpdateView
 from django.views.generic import DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.mixins import UserPassesTestMixin
+from django.contrib.auth.models import User
 from .models import Post
 
 # Routing for the urls
@@ -67,10 +68,23 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         else:
             return False
 
-
+# Post View
 class PostListView(ListView):
     model = Post
     template_name = 'blog/home.html'
     context_object_name = 'posts'
     ordering = ['-date_posted']
-    paginate_by = 5
+    paginate_by = 6
+
+
+# User Post Vews
+class UserPostListView(ListView):
+    model = Post
+    template_name = 'blog/post_user.html'
+    context_object_name = 'posts'
+    ordering = ['-date_posted']
+    paginate_by = 6
+
+    def get_query_set(self):
+        user = get_object_or_404(User, username=self.kwargs.get('username'))
+        return Post.object.filter(author=user)

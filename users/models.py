@@ -26,7 +26,7 @@ class Profile(models.Model):
 
 
 
-# Signal for User/Profile
+# Signals for User/Profile
 @receiver(post_save, sender=User)
 def register_profile(sender, instance, created, **kwargs):
     if created:
