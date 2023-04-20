@@ -1,0 +1,19 @@
+<!-- Extends from base.html -->
+{% extends "blog/base.html" %}
+{% block content %}
+    <article class="media content-section">
+        <img class="rounded img-frame" src="{{ object.author.profile.image.url }}" alt="">
+        <div class="media-body">
+        <div class="article-metadata">
+            <!-- Posts the Users Name of the Post -->
+            <a class="mr-2" href="#">{{ object.author }}</a>
+            <!-- Posts the Date of the Post -->
+            <small class="text-muted">{{ object.date_posted|date:"N d, Y" }}</small>
+        </div>
+        <!-- Posts the Title of the Post -->
+        <h2 class="article-title">{{ object.title }}</h2>
+        <!-- Posts the content of the Post -->
+        <p class="article-content">{{ object.content }}</p>
+        </div>
+    </article>
+{% endblock %}

@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404
 from django.views.generic import ListView
+from django.views.generic import DetailView
 from .models import Post
 
 # Routing for the urls
@@ -9,6 +10,10 @@ def home(request):
         'posts': Post.objects.all()
     }
     return render(request, 'blog/home.html')
+
+
+class PostDetailView(DetailView):
+    model = Post
 
 
 class PostListView(ListView):
