@@ -4,6 +4,7 @@ from django.views.generic import ListView
 from django.views.generic import DetailView
 from django.views.generic import CreateView
 from django.views.generic import UpdateView
+from django.views.generic import DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.mixins import UserPassesTestMixin
 from .models import Post
@@ -16,10 +17,16 @@ def home(request):
     return render(request, 'blog/home.html')
 
 
+def about(request):
+    return render(request, 'blog/about.html', {'title':'About'})
+
+
 class PostDetailView(DetailView):
     model = Post
 
 
+# C R U D
+# Create View
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
     fields = ['title', 'content']
@@ -30,7 +37,7 @@ class PostCreateView(LoginRequiredMixin, CreateView):
         form.instance.author = self.request.user
         return super().form_valid(form)
 
-
+# Update View
 class PostUpdateView(UserPassesTestMixin, LoginRequiredMixin, UpdateView):
     model = Post
     fields = ['title', 'content']
@@ -48,12 +55,21 @@ class PostUpdateView(UserPassesTestMixin, LoginRequiredMixin, UpdateView):
         else:
             return False
 
+# Delete View
+class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    model = Post
+    success_url = '/'
+    
+    def test_func(self):
+        post = self.get_object()
+        if self.request.user == post.author:
+            return True
+        else:
+            return False
+
 
 class PostListView(ListView):
     model = Post
     template_name = 'blog/home.html'
     context_object_name = 'posts'
     ordering = ['-date_posted']
-
-def about(request):
-    return render(request, 'blog/about.html', {'title':'About'})
