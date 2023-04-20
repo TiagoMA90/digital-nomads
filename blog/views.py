@@ -15,6 +15,7 @@ class PostListView(ListView):
     model = Post
     template_name = 'blog/home.html'
     context_object_name = 'posts'
+    descending_order = ['-date_posted']
 
 def about(request):
     return render(request, 'blog/about.html', {'title':'About'})
