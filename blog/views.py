@@ -3,6 +3,7 @@ from django.shortcuts import get_object_or_404
 from django.views.generic import ListView
 from django.views.generic import DetailView
 from django.views.generic import CreateView
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Post
 
 # Routing for the urls
@@ -17,9 +18,11 @@ class PostDetailView(DetailView):
     model = Post
 
 
-class PostCreateView(CreateView):
+class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
     fields = ['title', 'content']
+    login_url = "/login/"
+    redirect_field_name = "/home/"
 
     def form_valid(self, form):
         form.instance.author = self.request.user
