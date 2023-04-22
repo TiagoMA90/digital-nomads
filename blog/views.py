@@ -9,6 +9,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.mixins import UserPassesTestMixin
 from django.contrib.auth.models import User
 from .models import Post
+from .models import Comment
 
 
 # Routing for the urls
@@ -89,3 +90,9 @@ class UserPostListView(ListView):
     def get_queryset(self):
         user = get_object_or_404(User, username=self.kwargs.get('username'))
         return Post.objects.filter(author=user)
+
+# Comment View
+class PostCommentView(CreateView):
+    model = Comment
+    template_name = 'blog/post_comment.html'
+    fields = '__all__'
