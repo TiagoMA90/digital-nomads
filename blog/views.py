@@ -92,7 +92,16 @@ class UserPostListView(ListView):
         return Post.objects.filter(author=user)
 
 # Comment View
-class PostCommentView(CreateView):
+class PostCommentView(LoginRequiredMixin, CreateView):
     model = Comment
     template_name = 'blog/post_comment.html'
-    fields = '__all__'
+    login_url = "/login/"
+    redirect_field_name = "/home/"
+
+    fields = ('body',)
+
+    def form_valid(self, form):
+        form.instance.post_id = self.kwargs['pk']
+        return super().form_valid(form)
+
+    success_url = "/"
