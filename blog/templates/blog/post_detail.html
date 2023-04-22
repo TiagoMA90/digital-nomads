@@ -24,4 +24,22 @@
         <p class="article-content">{{ object.content }}</p>
         </div>
     </article>
+    <br>
+    <h4>Comments:</h4>
+
+    {% if not post.comments.all %}
+    No Comments...
+    {% else %}
+        {% for comment in post.comments.all %}
+        <hr>
+        {{ comment.body}}
+        <br>
+        <small>
+            {{ comment.name }} - 
+            {{ comment.date_commented}}
+        </small>
+        <hr>
+        {% endfor %}
+    {% endif %}
+
 {% endblock %}
