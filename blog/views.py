@@ -10,6 +10,7 @@ from django.contrib.auth.mixins import UserPassesTestMixin
 from django.contrib.auth.models import User
 from .models import Post
 
+
 # Routing for the urls
 def home(request):
     context= {
