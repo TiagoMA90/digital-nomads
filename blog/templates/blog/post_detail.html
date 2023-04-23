@@ -38,7 +38,7 @@
         {{ comment.body}}
         <br>
         <small>
-            {{ comment.name }} - 
+            <a class="mr-2" href="{% url 'post-user' post.author.username %}">{{ post.author }}</a>
             {{ comment.date_commented}}
         </small>
         <hr>
