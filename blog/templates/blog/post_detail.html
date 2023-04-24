@@ -26,12 +26,15 @@
         <!-- Like Button -->
         <form action="{% url 'like-post' post.pk %}" method="POST">
             {% csrf_token %}
-            {% if liked %}
-                <button class="btn btn-sm" type="submit" name="post_id" value="{{ post.id }}">Like</button>
+            {% if user.is_authenticated %}
+                {% if liked %}
+                    <button class="btn btn-sm" type="submit" name="post_id" value="{{ post.id }}">Like</button>
+                {% else %}
+                    <button class="btn btn-sm" type="submit" name="post_id" value="{{ post.id }}">Like</button>
+                {% endif %}
             {% else %}
-                <button class="btn btn-sm" type="submit" name="post_id" value="{{ post.id }}">Like</button>
+            <small class="text-muted">You must <a href="{% url 'login' %}">sign in</a>, in order to like this article!</small>
             {% endif %}
-                
                 - {{ total_likes }} Likes
         </form>
     </article>
