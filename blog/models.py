@@ -10,12 +10,16 @@ class Post(models.Model):
     content = models.TextField()                                # Text field
     date_posted = models.DateTimeField(default=timezone.now)    # Time Stamp for the defaults Time Zone
     author = models.ForeignKey(User, on_delete=models.CASCADE)  # User if User gets delete, so are its Posts
+    likes = models.ManyToManyField(User, related_name='posts')
 
     def __str__(self):
         return self.title
 
     def get_absolute_url(self):
         return reverse('post-detail', kwargs={'pk': self.pk})
+
+    def total_likes(self):
+        return self.likes.count()
 
 
 # Comment Model

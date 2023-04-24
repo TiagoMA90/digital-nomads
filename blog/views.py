@@ -8,6 +8,8 @@ from django.views.generic import DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.mixins import UserPassesTestMixin
 from django.contrib.auth.models import User
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 from .models import Post
 from .models import Comment
 
@@ -27,6 +29,20 @@ def about(request):
 class PostDetailView(DetailView):
     model = Post
 
+    def get_context_data(self, *args, **kwargs):
+        context = super(PostDetailView, self).get_context_data(*args, **kwargs)
+        click = get_object_or_404(Post, id=self.kwargs['pk'])
+        total_likes = click.total_likes()
+        liked = False
+        
+        if click.likes.filter(id=self.request.user.id).exists():
+            liked = True
+            
+        context["total_likes"] = total_likes
+        context["liked"] = liked
+
+        return context
+
 
 # C R U D
 # Create View
@@ -39,6 +55,7 @@ class PostCreateView(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
+
 
 # Update View
 class PostUpdateView(UserPassesTestMixin, LoginRequiredMixin, UpdateView):
@@ -58,6 +75,7 @@ class PostUpdateView(UserPassesTestMixin, LoginRequiredMixin, UpdateView):
         else:
             return False
 
+
 # Delete View
 class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Post
@@ -69,6 +87,7 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
             return True
         else:
             return False
+
 
 # Post View
 class PostListView(ListView):
@@ -91,6 +110,7 @@ class UserPostListView(ListView):
         user = get_object_or_404(User, username=self.kwargs.get('username'))
         return Post.objects.filter(author=user)
 
+
 # Comment View
 class PostCommentView(CreateView):
     model = Comment
@@ -105,3 +125,18 @@ class PostCommentView(CreateView):
         return super().form_valid(form)
 
     success_url = "/"
+
+
+# Like Views
+def LikeView(request, pk):
+    post = get_object_or_404(Post, id=request.Post.get('post_id'))
+    liked = False
+
+    if post.likes.filter(id=request.user.id).exists():
+        post.likes.remove(request.user)
+        liked = False
+    else:
+        liked= True
+        
+    post.likes.add(request.user)
+    return HttpResponseRedirect(reverse('post-detail', args=[str(pk)]))

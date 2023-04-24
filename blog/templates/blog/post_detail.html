@@ -4,7 +4,7 @@
     <article class="media content-section">
         <img class="rounded img-frame" src="{{ object.author.profile.image.url }}" alt="Users Profile image">
         <div class="media-body">
-        <div class="row no-gutters article-metadata">
+        <div class="row no-gutters">
             <div class="col-12 col-sm-6 col-md-8">
             <!-- Posts the Users Name of the Post -->
             <a class="mr-4" href="{% url 'post-user' object.author.username %}">{{ object.author }}</a>
@@ -23,8 +23,18 @@
         <!-- Posts the content of the Post -->
         <p class="article-content">{{ object.content }}</p>
         </div>
+        <!-- Like Button -->
+        <form action="{% url 'like-post' post.pk %}" method="POST">
+            {% csrf_token %}
+            {% if liked %}
+                <button class="btn btn-sm" type="submit" name="post_id" value="{{ post.id }}">Like</button>
+            {% else %}
+                <button class="btn btn-sm" type="submit" name="post_id" value="{{ post.id }}">Like</button>
+            {% endif %}
+                
+                - {{ total_likes }} Likes
+        </form>
     </article>
-    <br>
     <!-- Coment Section -->
     <section>
         <h4>Comments:</h4>
