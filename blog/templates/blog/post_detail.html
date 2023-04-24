@@ -28,22 +28,20 @@
     <!-- Coment Section -->
     <section>
         <h4>Comments:</h4>
-
         {% if not post.comments.all %}
-        <em>No Comments...</em>
-        <br>
-        <a href="{% url 'post-comment' post.pk %}">Add a Comment</a>
-        {% else %}
-        <a href="{% url 'post-comment' post.pk %}">Add a Comment</a>
-            {% for comment in post.comments.all %}
-            <hr>
-            {{ comment.body}}
+            <em>No Comments...</em>
             <br>
-            <small>
-                <!--FIX THIS LINE FOR THE REG USER-->
-                {{ user.username }} | {{ comment.date_commented}}
-            </small>
-            <hr>
+            <a href="{% url 'post-comment' post.pk %}">Add a Comment</a>
+        {% else %}
+            <a href="{% url 'post-comment' post.pk %}">Add a Comment</a>
+                {% for comment in post.comments.all %}
+                <hr>
+                {{ comment.body}}
+                <br>
+                <small>
+                    <em>{{ comment.name }} | {{ comment.date_commented}}</em>
+                </small>
+                <hr>
             {% endfor %}
         {% endif %}
     </section>

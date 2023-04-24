@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 
 
-
+# Post Model
 class Post(models.Model):
     title = models.CharField(max_length=150)                    # Title field for 150 characters
     content = models.TextField()                                # Text field
@@ -18,11 +18,12 @@ class Post(models.Model):
         return reverse('post-detail', kwargs={'pk': self.pk})
 
 
+# Comment Model
 class Comment(models.Model):
     post = models.ForeignKey(Post, related_name="comments", on_delete=models.CASCADE)
-    name = models.CharField(max_length=255)
     body = models.TextField()
     date_commented = models.DateTimeField(auto_now_add=True)
+    name = models.CharField(max_length=255)
 
     def __str__(self):
         return self.post.title
