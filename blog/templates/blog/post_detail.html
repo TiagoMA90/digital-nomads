@@ -25,24 +25,26 @@
         </div>
     </article>
     <br>
-    <h4>Comments:</h4>
+    <!-- Coment Section -->
+    <section>
+        <h4>Comments:</h4>
 
-    {% if not post.comments.all %}
-    <em>No Comments...</em>
-    <br>
-    <a href="{% url 'post-comment' post.pk %}">Add a Comment</a>
-    {% else %}
-    <a href="{% url 'post-comment' post.pk %}">Add a Comment</a>
-        {% for comment in post.comments.all %}
-        <hr>
-        {{ comment.body}}
+        {% if not post.comments.all %}
+        <em>No Comments...</em>
         <br>
-        <small>
-            <a class="mr-2" href="{% url 'post-user' post.author.username %}">{{ post.author }}</a>
-            {{ comment.date_commented}}
-        </small>
-        <hr>
-        {% endfor %}
-    {% endif %}
+        <a href="{% url 'post-comment' post.pk %}">Add a Comment</a>
+        {% else %}
+        <a href="{% url 'post-comment' post.pk %}">Add a Comment</a>
+            {% for comment in post.comments.all %}
+            <hr>
+            {{ comment.body}}
+            <br>
+            <small>
+                {{ user.username }} | {{ comment.date_commented}}
+            </small>
+            <hr>
+            {% endfor %}
+        {% endif %}
+    </section>
 
 {% endblock %}
