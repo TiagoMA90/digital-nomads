@@ -9,7 +9,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.mixins import UserPassesTestMixin
 from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 from .models import Post
 from .models import Comment
 
@@ -117,7 +117,6 @@ class PostCommentView(CreateView):
     template_name = 'blog/post_comment.html'
     login_url = "/login/"
     redirect_field_name = "/home/"
-
     fields = ['name', 'body']
 
     def form_valid(self, form):
@@ -129,14 +128,15 @@ class PostCommentView(CreateView):
 
 # Like Views
 def LikeView(request, pk):
-    post = get_object_or_404(Post, id=request.Post.get('post_id'))
+    post = get_object_or_404(Post, id=request.POST.get('post_id'))
     liked = False
-
+    # if the post is liked by the registered user Unlike/Remove the Like
     if post.likes.filter(id=request.user.id).exists():
         post.likes.remove(request.user)
         liked = False
+    # otherwise Like/Add a Like
     else:
-        liked= True
-        
-    post.likes.add(request.user)
+        post.likes.add(request.user)
+        liked = True
+
     return HttpResponseRedirect(reverse('post-detail', args=[str(pk)]))
