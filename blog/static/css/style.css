@@ -36,12 +36,17 @@ body {
     margin-bottom: 20px;
   }
   
-  .article-title {
-    color: #444444;
+  .post-panel {
+    color: #000000;
   }
   
+  a.article-title {
+    color: #444444;
+    text-decoration: none;
+  }
+
   a.article-title:hover {
-    color: #428bca;
+    color: #ca4242;
     text-decoration: none;
   }
   
@@ -55,13 +60,13 @@ body {
     margin-right: 16px;
   }
   
-  .article-metadata {
+  .post-panel {
     padding-bottom: 1px;
     margin-bottom: 4px;
     border-bottom: 1px solid #e3e3e3
   }
   
-  .article-metadata a:hover {
+  .post-panel a:hover {
     color: #333;
     text-decoration: none;
   }

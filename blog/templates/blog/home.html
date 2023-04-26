@@ -5,7 +5,7 @@
         <article class="media content-section">
           <img class="rounded img-frame" src="{{ post.author.profile.image.url }}" alt="">
           <div class="media-body">
-            <div class="article-metadata">
+            <div class="post-panel">
               <!-- Posts the Users Name of the Post -->
               <a href="{% url 'post-user' post.author.username %}">{{ post.author }}</a>
               <!-- Posts the Date of the Post -->
@@ -40,4 +40,6 @@
       {% endif %}
 
     {% endif %}
+    <br>
+    <br>
 {% endblock %}
