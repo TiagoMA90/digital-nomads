@@ -4,40 +4,46 @@
     <article class="media content-section">
         <img class="rounded img-frame" src="{{ object.author.profile.image.url }}" alt="Users Profile image">
         <div class="media-body">
-        <div class="row no-gutters">
-            <div class="col-12 col-sm-6 col-md-8">
-            <!-- Posts the Users Name of the Post -->
-            <a href="{% url 'post-user' object.author.username %}">{{ object.author }}</a>
-            <!-- Posts the Date of the Post -->
-            <small class="text-muted"> • {{ object.date_posted|date:"N d, Y" }}</small>
-            {% if object.author == user %}
+            <div class="row no-gutters">
+                <div class="col-12 col-sm-6 col-md-8">
+                    <!-- Posts the Users Name of the Post -->
+                    <a href="{% url 'post-user' object.author.username %}">{{ object.author }}</a>
+                    <!-- Posts the Date of the Post -->
+                    <small class="text-muted"> • {{ object.date_posted|date:"N d, Y" }}</small>
+                </div>
             </div>
-            <div class="col-8 col-md-4">
-                <a class="btn btn-outline-warning" href="{% url 'post-update' object.id %}">Update</a>
-                <a class="btn btn-outline-danger" href="{% url 'post-delete' object.id %}">Delete</a>
+            <div>
+                <!-- Posts the Title of the Post -->
+                <h2 class="article-title">{{ object.title }}</h2>
+                <!-- Posts the content of the Post -->
+                <p class="article-content">{{ object.content|safe }}</p>
             </div>
-            {% endif %}
         </div>
-        <!-- Posts the Title of the Post -->
-        <h2 class="article-title">{{ object.title }}</h2>
-        <!-- Posts the content of the Post -->
-        <p class="article-content">{{ object.content|safe }}</p>
-        </div>
-        <!-- Like Button -->
-        <form action="{% url 'like-post' post.pk %}" method="POST">
-            {% csrf_token %}
-            {% if user.is_authenticated %}
-                {% if liked %}
-                    <button class="btn btn-outline-info" type="submit" name="post_id" value="{{ post.id }}">Like</button>
-                {% else %}
-                    <button class="btn btn-outline-info" type="submit" name="post_id" value="{{ post.id }}">Like</button>
-                {% endif %}
-            {% else %}
-            <small class="text-muted">You must <a href="{% url 'login' %}">sign in</a>, in order to like this article!</small>
-            {% endif %}
-                - {{ total_likes }} Likes
-        </form>
     </article>
+    <section>
+        <div class="container">
+            <div class="row">
+                {% if object.author == user %}
+                        <a class="btn btn-outline-warning" href="{% url 'post-update' object.id %}">Update</a>
+                        <a class="btn btn-outline-danger" href="{% url 'post-delete' object.id %}">Delete</a>
+                {% endif %}
+                <!-- Like Button -->
+                <form action="{% url 'like-post' post.pk %}" method="POST">
+                    {% csrf_token %}
+                    {% if user.is_authenticated %}
+                        {% if liked %}
+                            <button class="btn btn-outline-info" type="submit" name="post_id" value="{{ post.id }}">Like</button>
+                        {% else %}
+                            <button class="btn btn-outline-info" type="submit" name="post_id" value="{{ post.id }}">Like</button>
+                        {% endif %}
+                    {% else %}
+                        <small class="text-muted">You must <a href="{% url 'login' %}">sign in</a>, in order to like this article!</small>
+                    {% endif %}
+                        - {{ total_likes }} Likes
+                </form>
+            </div>
+        </div>
+    </section>
     <!-- Coment Section -->
     <section>
         <h4>Comments:</h4>
