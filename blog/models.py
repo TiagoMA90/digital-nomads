@@ -2,12 +2,13 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 from django.urls import reverse
+from ckeditor.fields import RichTextField
 
 
 # Post Model
 class Post(models.Model):
     title = models.CharField(max_length=150)                    # Title field for 150 characters
-    content = models.TextField()                                # Text field
+    content = RichTextField(blank=True, null=True)                                # Text field
     date_posted = models.DateTimeField(default=timezone.now)    # Time Stamp for the defaults Time Zone
     author = models.ForeignKey(User, on_delete=models.CASCADE)  # User if User gets delete, so are its Posts
     likes = models.ManyToManyField(User, related_name='posts')

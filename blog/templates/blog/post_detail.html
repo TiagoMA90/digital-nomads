@@ -7,9 +7,9 @@
         <div class="row no-gutters">
             <div class="col-12 col-sm-6 col-md-8">
             <!-- Posts the Users Name of the Post -->
-            <a class="mr-4" href="{% url 'post-user' object.author.username %}">{{ object.author }}</a>
+            <a href="{% url 'post-user' object.author.username %}">{{ object.author }}</a>
             <!-- Posts the Date of the Post -->
-            <small class="text-muted">{{ object.date_posted|date:"N d, Y" }}</small>
+            <small class="text-muted"> • {{ object.date_posted|date:"N d, Y" }}</small>
             {% if object.author == user %}
             </div>
             <div class="col-8 col-md-4">
@@ -21,7 +21,7 @@
         <!-- Posts the Title of the Post -->
         <h2 class="article-title">{{ object.title }}</h2>
         <!-- Posts the content of the Post -->
-        <p class="article-content">{{ object.content }}</p>
+        <p class="article-content">{{ object.content|safe }}</p>
         </div>
         <!-- Like Button -->
         <form action="{% url 'like-post' post.pk %}" method="POST">
