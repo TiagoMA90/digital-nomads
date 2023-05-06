@@ -15,7 +15,7 @@
             <!-- Posts the Title of the Post -->
             <h2><a class="title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
             <!-- Posts the content of the Post -->
-            <p class="article-content">{{ post.content }}</p>
+            <p class="article-content">{{ post.content|truncatewords_html:50|safe }}</p>
           </div>
         </article>
     {% endfor %}
