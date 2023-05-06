@@ -16,7 +16,7 @@ body {
     margin-bottom: 20px;
   }
 
-  .post-panel {
+.post-panel {
     color: #000000;
     padding-bottom: 1px;
     margin-bottom: 4px;
@@ -62,18 +62,19 @@ ul {
     font-weight: 500;
   }
   
-  
+/* Post */
+/* Title properties */
 a.title {
-    color: #444444;
-    text-decoration: none;
-  }
+  color: #444444;
+  text-decoration: none;
+}
 
 a.title:hover {
-    color: #ca4242;
-    text-decoration: none;
-  }
+  color: #ca4242;
+  text-decoration: none;
+}
 
-/* Post */
+/* Article Properties */
 .article-content {
     white-space: pre-line;
   }
