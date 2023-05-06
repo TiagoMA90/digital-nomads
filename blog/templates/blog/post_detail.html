@@ -1,7 +1,7 @@
 <!-- Extends from base.html -->
 {% extends "blog/base.html" %}
 {% block content %}
-    <article class="media content-section">
+    <article class="media panels">
         <img class="rounded img-frame" src="{{ object.author.profile.image.url }}" alt="Users Profile image">
         <div class="media-body">
             <div class="post-panel">
@@ -12,7 +12,7 @@
             </div>
             <div>
                 <!-- Posts the Title of the Post -->
-                <h2 class="article-title">{{ object.title }}</h2>
+                <h2 class="title">{{ object.title }}</h2>
                 <!-- Posts the content of the Post -->
                 <p class="article-content">{{ object.content|safe }}</p>
             </div>

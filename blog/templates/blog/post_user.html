@@ -3,7 +3,7 @@
 {% block content %}
     <h1 class="mb-3">{{ view.kwargs.username }} Posts</h1>
     {% for post in posts %}
-        <article class="media content-section">
+        <article class="media panels">
           <img class="rounded img-frame" src="{{ post.author.profile.image.url }}" alt="">
           <div class="media-body">
             <div class="article-metadata">
@@ -13,7 +13,7 @@
               <small class="text-muted">{{ post.date_posted|date:"N d, Y" }}</small>
             </div>
             <!-- Posts the Title of the Post -->
-            <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
+            <h2><a class="title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
             <!-- Posts the content of the Post -->
             <p class="article-content">{{ post.content }}</p>
           </div>

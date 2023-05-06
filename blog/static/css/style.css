@@ -1,19 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Staatliches&display=swap');
 
+/* Body section & Panels*/
 body {
     background: #fafafa;
     color: #333333;
     margin-top: 5rem;
   }
+
+.panels {
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+  }
+
+  .post-panel {
+    color: #000000;
+    padding-bottom: 1px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #e3e3e3
+  }
+
+.post-panel a:hover {
+    color: #333;
+    text-decoration: none;
+  }
   
-h1, h2, h3, h4, h5, h6 {
-    color: #444444;
+/* Calligraphy */
+
+.logo  {
+  font-family: 'Audiowide', sans-serif;
+}
+
+h1, h2, h3  {
+  font-family: 'Staatliches';
+  color: #444444;
+  margin-top: 1rem;
   }
   
 ul {
     margin: 0;
   }
   
+/* Header properties */
 .bg-steel {
     background-color: #5e0000;
   }
@@ -31,28 +62,18 @@ ul {
     font-weight: 500;
   }
   
-.content-section {
-    background: #ffffff;
-    padding: 10px 20px;
-    border: 1px solid #dddddd;
-    border-radius: 3px;
-    margin-bottom: 20px;
-  }
   
-.post-panel {
-    color: #000000;
-  }
-  
-a.article-title {
+a.title {
     color: #444444;
     text-decoration: none;
   }
 
-a.article-title:hover {
+a.title:hover {
     color: #ca4242;
     text-decoration: none;
   }
-  
+
+/* Post */
 .article-content {
     white-space: pre-line;
   }
@@ -62,18 +83,7 @@ a.article-title:hover {
     width: 65px;
     margin-right: 16px;
   }
-  
-.post-panel {
-    padding-bottom: 1px;
-    margin-bottom: 4px;
-    border-bottom: 1px solid #e3e3e3
-  }
-  
-.post-panel a:hover {
-    color: #333;
-    text-decoration: none;
-  }
-  
+    
 .article-svg {
     width: 25px;
     height: 25px;
@@ -90,8 +100,3 @@ a.article-title:hover {
 .account-heading {
     font-size: 2.5rem;
   }
-
-
-.logo  {
-  font-family: 'Audiowide', sans-serif;
-}
