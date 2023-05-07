@@ -46,7 +46,7 @@ ul {
   
 /* Header properties */
 .bg-steel {
-    background-color: #5e0000;
+    background-color: #807a45;
   }
   
 .site-header .navbar-nav .nav-link {
@@ -65,12 +65,12 @@ ul {
 /* Post */
 /* Title properties */
 a.title {
-  color: #444444;
+  color: #808080;
   text-decoration: none;
 }
 
 a.title:hover {
-  color: #ca4242;
+  color: #000000;
   text-decoration: none;
 }
 
@@ -101,3 +101,13 @@ a.title:hover {
 .account-heading {
     font-size: 2.5rem;
   }
+
+
+  .pic {
+    height: 60px;
+    width: 100%;
+    background: url(/aboutimg.png) no-repeat center bottom;
+    background-size: 100%;
+    padding-top: 20vw;
+    object-fit: cover;
+}

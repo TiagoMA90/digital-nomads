@@ -1,6 +1,12 @@
 <!-- Extends from base.html -->
 {% extends "blog/base.html" %}
 {% block content %}
+  {% if user.is_authenticated %}
+    <h2>Welcome back, {{ user.username }} !</h2>
+    <p>Latest posts are a follows:</p>
+  {% else %}
+    <h1>Greetings stranger, welcome to our community!</h1>
+  {% endif %}
     {% for post in posts %}
         <article class="media panels">
           <img class="rounded img-frame" src="{{ post.author.profile.image.url }}" alt="">
@@ -12,7 +18,7 @@
               <small class="text-muted">• {{ post.date_posted|date:"N d, Y" }}</small>
             </div>
             <!-- Posts the Title of the Post -->
-            <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
+            <h2><a class="title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
             <!-- Posts the content of the Post -->
             <p class="article-content">{{ post.content|truncatewords_html:50|safe }}</p>
           </div>
