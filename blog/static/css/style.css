@@ -49,16 +49,16 @@ ul {
     background-color: #807a45;
   }
   
-.site-header .navbar-nav .nav-link {
+.header .navbar-nav .nav-link {
     color: #cbd5db;
     font-size: 1rem;
   }
   
-.site-header .navbar-nav .nav-link:hover {
+.header .navbar-nav .nav-link:hover {
     color: #ffffff;
   }
   
-.site-header .navbar-nav .nav-link.active {
+.header .navbar-nav .nav-link.active {
     font-weight: 500;
   }
   
@@ -82,7 +82,7 @@ a.title:hover {
 .img-frame {
     height: 65px;
     width: 65px;
-    margin-right: 16px;
+    margin-right: 20px;
   }
     
 .article-svg {
@@ -103,11 +103,31 @@ a.title:hover {
   }
 
 
-  .pic {
+.picabout {
     height: 60px;
     width: 100%;
-    background: url(/aboutimg.png) no-repeat center bottom;
+    background: url(/picabout.png) no-repeat center bottom;
     background-size: 100%;
     padding-top: 20vw;
     object-fit: cover;
+}
+
+
+.picheader  {
+    height: 50px;
+    width: 100%;
+    background: url(/picheader.webp) no-repeat center;
+    background-size: 100%;
+    padding-top:  15vw;
+    object-fit: cover;
+}
+
+/* Footer (Optional-Delete?) */
+.picfooter  {
+  height: 50px;
+  width: 100%;
+  background: url(/picheader.webp) no-repeat center bottom;
+  background-size: 100%;
+  padding-bottom:  20vw;
+  object-fit: cover;
 }
