@@ -12,9 +12,9 @@ body {
 .panels {
   background: #ffffff;
   padding: 10px 20px;
-  border: 1px solid #dddddd;
+  border: 1px dashed #dddddd;
   border-radius: 3px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 

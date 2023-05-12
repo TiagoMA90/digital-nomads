@@ -1,6 +1,7 @@
 <!-- Extends from base.html -->
 {% extends "blog/base.html" %}
 {% block content %}
+    <br>
     <article class="media panels">
         <img class="rounded img-frame" src="{{ object.author.profile.image.url }}" alt="Users Profile image">
         <div class="media-body">
@@ -19,7 +20,7 @@
         </div>
     </article>
     <section>
-        <div class="container">
+        <div class="container panels">
             <div class="row">
                 {% if object.author == user %}
                         <a class="btn btn-outline-warning" href="{% url 'post-update' object.id %}"><i class="fa-regular fa-pen-to-square"></i></a>
@@ -44,7 +45,7 @@
         <br>
     </section>
     <!-- Coment Section -->
-    <section>
+    <section class="panels">
         <h4>Comments:</h4>
         {% if not post.comments.all %}
             <em>No Comments...</em>
