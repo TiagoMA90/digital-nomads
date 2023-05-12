@@ -3,64 +3,70 @@
 
 /* Body section & Panels*/
 body {
-    background: #fafafa;
-    color: #333333;
-    margin-top: 5rem;
-  }
+  background: #fafafa;
+  color: #333333;
+  margin-top: 5rem;
+}
+
 
 .panels {
-    background: #ffffff;
-    padding: 10px 20px;
-    border: 1px solid #dddddd;
-    border-radius: 3px;
-    margin-bottom: 20px;
-  }
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
 
 .post-panel {
-    color: #000000;
-    padding-bottom: 1px;
-    margin-bottom: 4px;
-    border-bottom: 1px solid #e3e3e3
-  }
+  color: #000000;
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #e3e3e3
+}
+
 
 .post-panel a:hover {
-    color: #333;
-    text-decoration: none;
-  }
+  color: #333;
+  text-decoration: none;
+}
   
 /* Calligraphy */
-
 .logo  {
   font-family: 'Audiowide', sans-serif;
 }
 
 h1, h2, h3  {
-  font-family: 'Staatliches';
+  font-family: 'Staatliches', sans-serif;
   color: #444444;
   margin-top: 1rem;
   }
-  
+
+
 ul {
-    margin: 0;
-  }
-  
+  margin: 0;
+}
+
 /* Header properties */
 .bg-steel {
-    background-color: #807a45;
-  }
-  
+  background-color: #807a45;
+}
+
+
 .header .navbar-nav .nav-link {
-    color: #cbd5db;
-    font-size: 1rem;
-  }
-  
+  color: #cbd5db;
+  font-size: 1rem;
+}
+
+
 .header .navbar-nav .nav-link:hover {
-    color: #ffffff;
-  }
-  
+  color: #ffffff;
+}
+
+
 .header .navbar-nav .nav-link.active {
-    font-weight: 500;
-  }
+  font-weight: 500;
+}
   
 /* Post */
 /* Title properties */
@@ -68,6 +74,7 @@ a.title {
   color: #808080;
   text-decoration: none;
 }
+
 
 a.title:hover {
   color: #000000;
@@ -79,47 +86,54 @@ a.title:hover {
     white-space: pre-line;
   }
   
-.img-frame {
+
+  .img-frame {
     height: 65px;
     width: 65px;
     margin-right: 20px;
   }
     
+
 .article-svg {
-    width: 25px;
-    height: 25px;
-    vertical-align: middle;
-  }
-  
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+
 .account-img {
-    height: 125px;
-    width: 125px;
-    margin-right: 20px;
-    margin-bottom: 16px;
-  }
-  
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+
 .account-heading {
-    font-size: 2.5rem;
-  }
+  font-size: 2.5rem;
+}
 
 
 .picabout {
-    height: 60px;
-    width: 100%;
-    background: url(/picabout.png) no-repeat center bottom;
-    background-size: 100%;
-    padding-top: 20vw;
-    object-fit: cover;
+  height: 60px;
+  width: 100%;
+  background: url(/picabout.png) no-repeat center bottom;
+  background-size: 100%;
+  padding-top: 20vw;
+  object-fit: cover;
 }
 
 
 .picheader  {
-    height: 50px;
-    width: 100%;
-    background: url(/picheader.webp) no-repeat center;
-    background-size: 100%;
-    padding-top:  15vw;
-    object-fit: cover;
+  height: 50px;
+  width: 100%;
+  background: url(/picheader.webp) no-repeat center;
+  background-size: 100%;
+  padding-top:  15vw;
+  object-fit: cover;
+  position: relative;
+  text-align: center;
+  color: white;
 }
 
 /* Footer (Optional-Delete?) */
@@ -130,4 +144,21 @@ a.title:hover {
   background-size: 100%;
   padding-bottom:  20vw;
   object-fit: cover;
+}
+
+
+.centered {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Audiowide', sans-serif;
+  color: rgba(255, 255, 255, 0.37);
+}
+
+@media screen and (max-width: 690px) {
+
+  .centered {
+    font-size: 1.5rem;
+  }
 }

@@ -20,11 +20,13 @@
     {% endif %}
 </head>
 <body>
-  <div class="picheader"></div>
+  <div class="imgheader">
+    <div class="picheader"><h1 class="centered">Digital N<box-icon class="cog" name='cog' animation='spin' color='rgba(255, 0, 0, 0.37)' size="2rem"></box-icon>mads</h1></div>
+  </div>
     <header class="header">
       <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
         <div class="container">
-          <a class="navbar-brand mr-4 logo" href="{% url 'blog-home' %}"> Digital N<box-icon name='cog' animation='spin' color='#ffffff' size="1rem"></box-icon>mads</a>
+          <a class="navbar-brand mr-4 logo" href="{% url 'blog-home' %}">Digital N<box-icon name='cog' animation='spin' color='#ffffff' size="1rem"></box-icon>mads</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
           </button>
