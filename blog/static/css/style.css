@@ -67,6 +67,29 @@ ul {
 .header .navbar-nav .nav-link.active {
   font-weight: 500;
 }
+
+/* Logo on Header */
+.centered {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Audiowide', sans-serif;
+  color: rgba(255, 255, 255, 0.37);
+}
+
+
+.picheader  {
+  height: 50px;
+  width: 100%;
+  background: url(/picheader.webp) no-repeat center;
+  background-size: 100%;
+  padding-top:  15vw;
+  object-fit: cover;
+  position: relative;
+  text-align: center;
+  color: white;
+}
   
 /* Post */
 /* Title properties */
@@ -123,19 +146,6 @@ a.title:hover {
   object-fit: cover;
 }
 
-
-.picheader  {
-  height: 50px;
-  width: 100%;
-  background: url(/picheader.webp) no-repeat center;
-  background-size: 100%;
-  padding-top:  15vw;
-  object-fit: cover;
-  position: relative;
-  text-align: center;
-  color: white;
-}
-
 /* Footer (Optional-Delete?) */
 .picfooter  {
   height: 50px;
@@ -146,16 +156,7 @@ a.title:hover {
   object-fit: cover;
 }
 
-
-.centered {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: 'Audiowide', sans-serif;
-  color: rgba(255, 255, 255, 0.37);
-}
-
+/* Media query*/
 @media screen and (max-width: 690px) {
 
   .centered {
