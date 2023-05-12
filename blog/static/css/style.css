@@ -83,15 +83,15 @@ a.title:hover {
 
 /* Article Properties */
 .article-content {
-    white-space: pre-line;
-  }
+  white-space: pre-line;
+}
   
 
-  .img-frame {
-    height: 65px;
-    width: 65px;
-    margin-right: 20px;
-  }
+.img-frame {
+  height: 65px;
+  width: 65px;
+  margin-right: 20px;
+}
     
 
 .article-svg {
@@ -101,7 +101,7 @@ a.title:hover {
 }
 
 
-.account-img {
+.accountimg {
   height: 125px;
   width: 125px;
   margin-right: 20px;
@@ -109,7 +109,7 @@ a.title:hover {
 }
 
 
-.account-heading {
+.accountname {
   font-size: 2.5rem;
 }
 
