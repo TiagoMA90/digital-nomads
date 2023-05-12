@@ -15,7 +15,7 @@
                 <!-- Posts the Title of the Post -->
                 <h2 class="title">{{ object.title }}</h2>
                 <!-- Posts the content of the Post -->
-                <p class="article-content">{{ object.content|safe }}</p>
+                <p class="post-content">{{ object.content|safe }}</p>
             </div>
         </div>
     </article>
@@ -23,17 +23,21 @@
         <div class="container panels">
             <div class="row">
                 {% if object.author == user %}
-                        <a class="btn btn-outline-warning" href="{% url 'post-update' object.id %}"><i class="fa-regular fa-pen-to-square"></i></a>
-                        <a class="btn btn-outline-info" href="{% url 'post-delete' object.id %}"><i class="fa-solid fa-trash"></i></a>
+                    <pre> </pre>
+                    <a class="btn btn-outline-warning panels" href="{% url 'post-update' object.id %}"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <pre> </pre>
+                    <a class="btn btn-outline-info panels" href="{% url 'post-delete' object.id %}"><i class="fa-solid fa-trash"></i></a>
+                    <pre> </pre>
                 {% endif %}
                 <!-- Like Button -->
+                    <pre> </pre>
                 <form action="{% url 'like-post' post.pk %}" method="POST">
                     {% csrf_token %}
                     {% if user.is_authenticated %}
                         {% if liked %}
-                            <button class="btn btn-outline-danger" type="submit" name="post_id" value="{{ post.id }}"><i class="fa-solid fa-heart"></i></button>
+                        <button class="btn btn-outline-danger panels" type="submit" name="post_id" value="{{ post.id }}"><i class="fa-solid fa-heart"></i></button>
                         {% else %}
-                            <button class="btn btn-outline-danger" type="submit" name="post_id" value="{{ post.id }}"><i class="fa-regular fa-heart"></i></button>
+                            <button class="btn btn-outline-danger panels" type="submit" name="post_id" value="{{ post.id }}"><i class="fa-regular fa-heart"></i></button>
                         {% endif %}
                     {% else %}
                         <small class="text-muted">You must <a href="{% url 'login' %}">sign in</a>, in order to like this article!</small>
