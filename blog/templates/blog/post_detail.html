@@ -40,7 +40,7 @@
                             <button class="btn btn-outline-danger panels" type="submit" name="post_id" value="{{ post.id }}"><i class="fa-regular fa-heart"></i></button>
                         {% endif %}
                     {% else %}
-                        <small class="text-muted">You must <a href="{% url 'login' %}">sign in</a>, in order to like this article!</small>
+                        <small class="text-muted">You must <a href="{% url 'login' %}">sign in</a>, in order to Comment or Like this article!</small>
                     {% endif %}
                         - {{ total_likes }} found this post interesting!
                 </form>
@@ -54,15 +54,19 @@
         {% if not post.comments.all %}
             <em>No Comments...</em>
             <br>
-            <a href="{% url 'post-comment' post.pk %}">Add a Comment</a>
+            {% if user.is_authenticated %}
+                <a href="{% url 'post-comment' post.pk %}">Add a Comment</a>
+            {% endif %}
         {% else %}
-            <a href="{% url 'post-comment' post.pk %}">Add a Comment</a>
+            {% if user.is_authenticated %}
+                <a href="{% url 'post-comment' post.pk %}">Add a Comment</a>
+            {% endif %}
                 {% for comment in post.comments.all %}
                 <hr>
                 {{ comment.body}}
                 <br>
                 <small>
-                    <em>• {{ comment.name }} | {{ comment.date_commented}}</em>
+                    <em>• {{ comment.author.username }} | {{ comment.date_commented}}</em>
                 </small>
                 <hr>
             {% endfor %}
