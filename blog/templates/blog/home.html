@@ -28,7 +28,7 @@
     {% if is_paginated %}
       <!-- Sets the page to the first & previous page -->
       {% if page_obj.has_previous %}
-        <a class="btn btn-outline-secondary mb-4 panels" href="?page=1"><</a>
+        <a class="btn btn-outline-secondary mb-4 panels" href="?page=1"><i class="fa-solid fa-arrow-left"></i></a>
         <a class="btn btn-outline-secondary mb-4 panels" href="?page={{ page_obj.previous_page_number }}">Prev</a>
       {% endif %}
       <!-- displays the number of pages in the range of -3 & +3 -->
@@ -42,7 +42,7 @@
       <!-- Sets the page to the next & last page -->
       {% if page_obj.has_next %}
         <a class="btn btn-outline-secondary mb-4 panels" href="?page={{ page_obj.next_page_number }}">Next</a>
-        <a class="btn btn-outline-secondary mb-4 panels" href="?page={{ page_obj.paginator.num_pages }}">></a>
+        <a class="btn btn-outline-secondary mb-4 panels" href="?page={{ page_obj.paginator.num_pages }}"><i class="fa-solid fa-arrow-right""></i></a>
       {% endif %}
 
     {% endif %}

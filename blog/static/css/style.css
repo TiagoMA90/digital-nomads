@@ -161,6 +161,34 @@ ul {
   list-style-type: none;
 }
 
+a {
+  color: #807a45;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+.facebook {
+  color: blue;
+  font-size: x-large;
+}
+
+.instagram  {
+  color: purple;
+  font-size: x-large;
+}
+
+.youtube  {
+  color: red;
+  font-size: x-large;
+}
+
+.twitter {
+  color: cyan;
+  font-size: x-large;
+}
+
 /* Media queries*/
 @media screen and (max-width: 690px) {
 
