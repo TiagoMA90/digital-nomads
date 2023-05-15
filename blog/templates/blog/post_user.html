@@ -1,11 +1,28 @@
 <!-- Extends from base.html -->
 {% extends "blog/base.html" %}
 {% block content %}
+<br>
 {% if object_list %}
-    <h1 class="mb-3">{{ view.kwargs.username }} Posts</h1>
-    {% for post in posts %}
-        <article class="media panels">
-          <img class="rounded imgposter" src="{{ post.author.profile.image.url }}" alt="">
+  {% for post in posts %}
+    {% ifchanged post.author %}
+      <div class="media-body panels">
+        <div class="row align-items-center">
+          <div class="col-2">
+            <img class="rounded accountimg" src="{{ post.author.profile.image.url }}" alt="">
+          </div>
+          <div class="col-10">
+          <h2 class="account-heading">{{ view.kwargs.username }} message</h2>
+          {% if post.author.profile.bio %}
+            <p>{{ post.author.profile.bio }}</p>
+          {% else %}
+            <p>This user doesn't have a bio yet.</p>
+          {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endifchanged %}
+      <article class="media panels">
+        <!--COMMENTED to hide profile IMG on user posts <img class="rounded imgposter" src="{{ post.author.profile.image.url }}" alt="">-->
           <div class="media-body">
             <div class="article-metadata">
               <!-- Posts the Users Name of the Post -->
@@ -14,24 +31,24 @@
               <small class="text-muted">{{ post.date_posted|date:"N d, Y" }}</small>
             </div>
             <!-- Posts the Title of the Post -->
-            <h2><a class="title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
-            <!-- Posts the content of the Post -->
-            <p class="post-content">{{ post.content|truncatewords_html:50|safe }}</p>
+              <h2><a class="title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
+              <!-- Posts the content of the Post -->
+              <p class="post-content">{{ post.content|truncatewords_html:50|safe }}</p>
           </div>
-        </article>
+      </article>
     {% endfor %}
-    {% else %}
+  {% else %}
     <h3 class="text-center">{{ view.kwargs.username }} has not posted anything yet.</h3>
     <h2 class="text-center"><a class="nav-item nav-link" href="{% url 'blog-home' %}"><i class="fa-solid fa-person-through-window"></i></a></h2>
     <p class="text-center">Get me out of here! </p>
+  {% endif %}
+  <!-- Pagination -->
+  {% if is_paginated %}
+    <!-- Sets the page to the first & previous page -->
+    {% if page_obj.has_previous %}
+      <a class="btn btn-outline-secondary mb-4" href="?page=1"><i class="fa-solid fa-arrow-left"></i></a>
+      <a class="btn btn-outline-secondary mb-4" href="?page={{ page_obj.previous_page_number }}">Prev</a>
     {% endif %}
-    <!-- Pagination -->
-    {% if is_paginated %}
-      <!-- Sets the page to the first & previous page -->
-      {% if page_obj.has_previous %}
-        <a class="btn btn-outline-secondary mb-4" href="?page=1"><i class="fa-solid fa-arrow-left"></i></a>
-        <a class="btn btn-outline-secondary mb-4" href="?page={{ page_obj.previous_page_number }}">Prev</a>
-      {% endif %}
       <!-- displays the number of pages in the range of -3 & +3 -->
       {% for num in page_obj.paginator.page_range %}
         {% if page_obj.number == num %}
@@ -45,6 +62,6 @@
         <a class="btn btn-outline-secondary mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
         <a class="btn btn-outline-secondary mb-4" href="?page={{ page_obj.paginator.num_pages }}"><i class="fa-solid fa-arrow-right""></i></a>
       {% endif %}
+  {% endif %}
 
-    {% endif %}
 {% endblock %}
