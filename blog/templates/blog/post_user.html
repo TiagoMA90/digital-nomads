@@ -5,13 +5,13 @@
 {% if object_list %}
   {% for post in posts %}
     {% ifchanged post.author %}
-      <div class="media-body panels">
+      <div class="media-body bio-panels">
         <div class="row align-items-center">
           <div class="col-2">
             <img class="rounded accountimg" src="{{ post.author.profile.image.url }}" alt="">
           </div>
           <div class="col-10">
-          <h2 class="account-heading">{{ view.kwargs.username }} message</h2>
+          <h2 class="bio-title">{{ view.kwargs.username }} Overview</h2>
           {% if post.author.profile.bio %}
             <p>{{ post.author.profile.bio }}</p>
           {% else %}
