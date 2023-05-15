@@ -3,7 +3,7 @@
 {% block content %}
     <br>
     <article class="media panels">
-        <img class="rounded img-frame" src="{{ object.author.profile.image.url }}" alt="Users Profile image">
+        <img class="rounded imgposter" src="{{ object.author.profile.image.url }}" alt="Users Profile image">
         <div class="media-body">
             <div class="post-panel">
                     <!-- Posts the Users Name of the Post -->
@@ -30,14 +30,14 @@
                     <pre> </pre>
                 {% endif %}
                 <!-- Like Button -->
-                    <pre> </pre>
+                    <pre></pre>
                 <form action="{% url 'like-post' post.pk %}" method="POST">
                     {% csrf_token %}
                     {% if user.is_authenticated %}
                         {% if liked %}
                         <button class="btn btn-outline-danger panels" type="submit" name="post_id" value="{{ post.id }}"><i class="fa-solid fa-heart"></i></button>
                         {% else %}
-                            <button class="btn btn-outline-danger panels" type="submit" name="post_id" value="{{ post.id }}"><i class="fa-regular fa-heart"></i></button>
+                        <button class="btn btn-outline-danger panels" type="submit" name="post_id" value="{{ post.id }}"><i class="fa-regular fa-heart"></i></button>
                         {% endif %}
                     {% else %}
                         <small class="text-muted">You must <a href="{% url 'login' %}">sign in</a>, in order to Comment or Like this article!</small>
@@ -65,10 +65,10 @@
                 <hr>
                 {{ comment.body}}
                 <br>
+                <br>
                 <small>
-                    <em>• <a href="{% url 'post-user' comment.author.username %}">{{ comment.author.username }}</a> | {{ comment.date_commented}}</em>
+                    <em><img class="rounded-circle imgcommenter" src="{{ comment.author.profile.image.url }}" alt="Users Profile image"> • <a href="{% url 'post-user' comment.author.username %}">{{ comment.author.username }}</a> • {{ comment.date_commented}}</em>
                 </small>
-                <hr>
             {% endfor %}
         {% endif %}
     </section>

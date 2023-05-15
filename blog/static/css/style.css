@@ -27,7 +27,7 @@ body {
 
 
 .post-panel a:hover {
-  color: #333;
+  color: #333333;
   text-decoration: none;
 }
   
@@ -110,10 +110,18 @@ a.title:hover {
 }
   
 
-.img-frame {
+/* Comment section */
+.imgposter {
   height: 65px;
   width: 65px;
   margin-right: 20px;
+}
+
+
+.imgcommenter {
+  height: 30px;
+  width: 30px;
+  margin-right: 5px;
 }
     
 
@@ -161,6 +169,9 @@ ul {
   list-style-type: none;
 }
 
+
+/* Links and Icons */
+/* Overall links */
 a {
   color: #807a45;
 }
@@ -169,24 +180,37 @@ a:hover{
   text-decoration: none;
 }
 
-.facebook {
+/* Social Media & Icons*/
+
+.fa-person-through-window {
+  color: #333333;
+}
+
+.fa-person-through-window:hover {
+  color: #807a45;
+}
+
+
+.fa-brands {
+  color: #333333;
+  font-size: x-large;
+}
+
+.fa-facebook:hover {
   color: blue;
   font-size: x-large;
 }
 
-.instagram  {
+.fa-instagram:hover {
   color: purple;
-  font-size: x-large;
 }
 
-.youtube  {
+.fa-youtube:hover  {
   color: red;
-  font-size: x-large;
 }
 
-.twitter {
+.fa-twitter:hover  {
   color: cyan;
-  font-size: x-large;
 }
 
 /* Media queries*/

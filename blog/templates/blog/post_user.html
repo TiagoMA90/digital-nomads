@@ -5,7 +5,7 @@
     <h1 class="mb-3">{{ view.kwargs.username }} Posts</h1>
     {% for post in posts %}
         <article class="media panels">
-          <img class="rounded img-frame" src="{{ post.author.profile.image.url }}" alt="">
+          <img class="rounded imgposter" src="{{ post.author.profile.image.url }}" alt="">
           <div class="media-body">
             <div class="article-metadata">
               <!-- Posts the Users Name of the Post -->
@@ -22,7 +22,7 @@
     {% endfor %}
     {% else %}
     <h3 class="text-center">{{ view.kwargs.username }} has not posted anything yet.</h3>
-    <h2 class="text-center"><a class="nav-item nav-link" href="{% url 'blog-home' %}"><i class="fa-solid fa-person-through-window" style="color: #444444;"></i></a></h2>
+    <h2 class="text-center"><a class="nav-item nav-link" href="{% url 'blog-home' %}"><i class="fa-solid fa-person-through-window"></i></a></h2>
     <p class="text-center">Get me out of here! </p>
     {% endif %}
     <!-- Pagination -->
