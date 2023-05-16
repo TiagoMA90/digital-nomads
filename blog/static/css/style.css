@@ -243,3 +243,15 @@ ul {
     font-size: 1.0rem;
   }
 }
+
+.search-button {
+  background-color: #979052;
+  color: #cbd5db;
+  border-color: #807a45;
+}
+
+.search-button:hover {
+  background-color: #807a45;
+  color: #ffffff;
+  border-color: #979052;
+}

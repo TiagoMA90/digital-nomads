@@ -1,0 +1,12 @@
+<!-- Extends from base.html -->
+{% extends "blog/base.html" %}
+{% block content %}
+  {% if searches %}
+    <h1>Below are the results for "{{ searches }}"</h1>
+    {% for result in results %}
+    <h2><a href="{% url 'post-detail' pk=result.pk %}">{{ result.title }}</h2></a>
+    {% endfor %}
+  {% else %}
+    <h1>We couldn't find what you were looking for.</h1>
+  {% endif %}
+{% endblock %}

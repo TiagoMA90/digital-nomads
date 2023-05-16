@@ -12,6 +12,7 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse, reverse_lazy
 from .models import Post
 from .models import Comment
+from django.db.models import Q
 
 
 # Routing for the urls
@@ -24,6 +25,20 @@ def home(request):
 
 def about(request):
     return render(request, 'blog/about.html', {'title':'About'})
+
+
+def search(request):
+    if request.method == "POST":
+        searches = request.POST.get('searches')
+        results = Post.objects.filter(
+        Q(content__icontains=searches) |
+        Q(author__username__icontains=searches) |
+        Q(title__icontains=searches)
+)
+        return render(request, 'blog/search.html', {'searches': searches, 'results': results})
+    else:
+        return render(request, 'blog/search.html', {})
+
 
 
 class PostDetailView(DetailView):
