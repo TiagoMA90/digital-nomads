@@ -4,7 +4,7 @@
   {% if searches %}
     <h1><i class="fa-solid fa-magnifying-glass"></i> Below are the results for "{{ searches }}"</h1>
     {% for result in results %}
-      <h2 class="panels"><a href="{% url 'post-detail' pk=result.pk %}">• {{ result.title }}</h2></a>
+      <h2 class="panels"><a class="title" href="{% url 'post-detail' pk=result.pk %}">• {{ result.title }}</h2></a>
     {% endfor %}
     {% if results|length == 0 %}
       <h2 class="panels"><i class="fa-sharp fa-regular fa-circle-xmark"></i> No results found.</h2>
