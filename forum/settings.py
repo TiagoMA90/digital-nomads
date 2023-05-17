@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # Switch to false, when deployed
 DEBUG = False
 
-ALLOWED_HOSTS = ['digital-nomad.herokuapp.com, localhost']
+ALLOWED_HOSTS = ['digital-nomad.herokuapp.com', 'localhost']
 
 
 # Application definition
