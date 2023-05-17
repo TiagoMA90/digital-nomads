@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # Switch to false, when deployed
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['digital-nomad.herokuapp.com, localhost']
 
