@@ -22,3 +22,5 @@ urlpatterns = [
     path('about/', views.about, name='blog-about'),
     path('search/', views.search, name='blog-search'),
 ]
+
+handler404 = 'blog.views.error_404'
