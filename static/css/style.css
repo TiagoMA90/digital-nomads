@@ -1,0 +1,257 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Staatliches&display=swap');
+
+/* Body section & Panels properties */
+body {
+  background: #fafafa;
+  color: #333333;
+  margin-top: 5rem;
+}
+
+.panels {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px dashed #dddddd;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+/* User Bio properties */
+.bio-title  {
+  color: #807a45;
+}
+
+.bio-panels {
+  background: #333333;
+  color: #dddddd;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+/* Posts properties */
+.post-panel {
+  color: #444444;
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #e3e3e3
+}
+
+.post-panel a:hover {
+  color: #333333;
+  text-decoration: none;
+}
+  
+/* Calligraphy properties */
+/* Website Logo */
+.logo  {
+  font-family: 'Audiowide', sans-serif;
+}
+
+h1, h2, h3  {
+  font-family: 'Staatliches', sans-serif;
+  color: #444444;
+  margin-top: 1rem;
+}
+
+ul {
+  margin: 0;
+}
+
+/* Navigation & Header properties */
+.bg-steel {
+  background-color: #807a45;
+}
+
+.header .navbar-nav .nav-link {
+  color: #cbd5db;
+  font-size: 1rem;
+}
+
+.header .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+
+/* Logo on Header */
+.centered {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Audiowide', sans-serif;
+  color: rgba(255, 255, 255, 0.37);
+}
+
+/*Header & Footer image properties */
+/* Header */
+.picheader  {
+  height: 50px;
+  width: 100%;
+  background: url(/picheader.webp) no-repeat center;
+  background-size: 100%;
+  padding-top:  15vw;
+  object-fit: cover;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+/* Footer (Optional-Delete?) */
+.picfooter  {
+  height: 50px;
+  width: 100%;
+  background: url(/picheader.webp) no-repeat center bottom;
+  background-size: 100%;
+  padding-bottom:  20vw;
+  object-fit: cover;
+}
+  
+/* Post Section */
+/* Title properties */
+a.title {
+  color: #808080;
+  text-decoration: none;
+}
+
+/* User Image - Post properties */
+.imgposter {
+  height: 65px;
+  width: 65px;
+  margin-right: 20px;
+}
+
+a.title:hover {
+  color: #444444;
+  text-decoration: none;
+}
+
+/* Article properties */
+.post-content {
+  white-space: pre-line;
+}
+
+/* Linked-Image properties(responsiveness) */
+.post-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Comment Section */
+/* User Image - Comment properties */
+.imgcommenter {
+  height: 30px;
+  width: 30px;
+  margin-right: 5px;
+}
+
+.article-svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.accountimg {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.accountname {
+  font-size: 2.5rem;
+}
+
+/* About Image */
+.picabout {
+  height: 60px;
+  width: 100%;
+  background: url(/picabout.png) no-repeat center bottom;
+  background-size: 100%;
+  padding-top: 20vw;
+  object-fit: cover;
+}
+
+/* Links and Icons */
+/* Overall links */
+a {
+  color: #807a45;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Social Media & Icons*/
+.fa-person-through-window {
+  color: #333333;
+}
+
+.fa-person-through-window:hover {
+  color: #807a45;
+}
+
+.fa-brands {
+  color: #333333;
+  font-size: x-large;
+}
+
+.fa-facebook:hover {
+  color: blue;
+  font-size: x-large;
+}
+
+.fa-instagram:hover {
+  color: purple;
+}
+
+.fa-youtube:hover  {
+  color: red;
+}
+
+.fa-twitter:hover  {
+  color: cyan;
+}
+
+
+/* Media queries*/
+@media screen and (max-width: 690px) {
+
+  .centered {
+    font-size: 2.0rem;
+  }
+}
+
+@media screen and (max-width: 690px) {
+
+  .centered {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 445px) {
+
+  .centered {
+    font-size: 1.0rem;
+  }
+}
+
+.search-button {
+  background-color: #979052;
+  color: #cbd5db;
+  border-color: #807a45;
+}
+
+.search-button:hover {
+  background-color: #807a45;
+  color: #ffffff;
+  border-color: #979052;
+}
