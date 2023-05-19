@@ -31,7 +31,7 @@ TEMPLATES_DIR = [
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['digital-nomad.herokuapp.com', 'localhost', '8000-tiagoma90-digitalnomads-qn34z92wj42.ws-eu97.gitpod.io']
 
