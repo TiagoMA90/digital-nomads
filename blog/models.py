@@ -9,7 +9,7 @@ from django.core.validators import MaxLengthValidator
 # Post Model
 class Post(models.Model):
     title = models.CharField(max_length=150)                    # Title field for 150 characters
-    content = RichTextField(validators=[MaxLengthValidator(5000)])              # Text field
+    content = models.TextField(validators=[MaxLengthValidator(5000)])              # Text field
     date_posted = models.DateTimeField(default=timezone.now)    # Time Stamp for the defaults Time Zone
     author = models.ForeignKey(User, on_delete=models.CASCADE)  # User if User gets delete, so are its Posts
     likes = models.ManyToManyField(User, related_name='posts')
