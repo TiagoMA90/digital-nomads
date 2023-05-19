@@ -1,0 +1,82 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Staatliches&display=swap');
+/* Body section & Panels*/
+body {
+  background: #fafafa;
+  color: #333333;
+  margin-top: 5rem;
+}
+.panels {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px dashed #dddddd;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.bio-panels {
+  background: #333333;
+  color: #dddddd;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.bio-title  {
+  color: #807a45;
+}
+
+.post-panel {
+  color: #000000;
+  color: #444444;
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #e3e3e3
+@@ -100,7 +112,7 @@ a.title {
+
+
+a.title:hover {
+  color: #000000;
+  color: #444444;
+  text-decoration: none;
+}
+
+@@ -190,7 +202,6 @@ a:hover{
+  color: #807a45;
+}
+
+
+.fa-brands {
+  color: #333333;
+  font-size: x-large;
+}
+.fa-facebook:hover {
+  color: blue;
+  font-size: x-large;
+}
+.fa-instagram:hover {
+  color: purple;
+}
+.fa-youtube:hover  {
+  color: red;
+}
+.fa-twitter:hover  {
+  color: cyan;
+}
+/* Media queries*/
+@media screen and (max-width: 690px) {
+  .centered {
+    font-size: 2.0rem;
+  }
+}
+@media screen and (max-width: 690px) {
+  .centered {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 445px) {
+  .centered {
+    font-size: 1.0rem;
+  }
+}
