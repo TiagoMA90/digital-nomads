@@ -18,9 +18,8 @@ if os.path.isfile('env.py'):
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = [
-    os.path.join(BASE_DIR, 'templates'),
+    os.path.join(BASE_DIR, 'blog', 'templates'),
     os.path.join(BASE_DIR, 'users', 'templates'),
-    os.path.join(BASE_DIR, 'blog', 'templates')
 ]
 
 # Quick-start development settings - unsuitable for production
@@ -33,7 +32,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['digital-nomad.herokuapp.com', 'localhost', '8000-tiagoma90-digitalnomads-qn34z92wj42.ws-eu97.gitpod.io', '127.0.0.1']
+ALLOWED_HOSTS = ['digital-nomad.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -49,7 +48,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'cloudinary_storage',
     'django.contrib.staticfiles',
-    'cloudinary',
+    'cloudinary'
+    'ckeditor',
     'forum',
 ]
 
@@ -68,7 +68,7 @@ ROOT_URLCONF = 'forum.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': TEMPLATES_DIR,
+        'DIRS': [TEMPLATES_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -133,13 +133,15 @@ USE_TZ = True
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-STATIC_URL = '/static/'
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_URL = 'static/'
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 MEDIA = URL = '/media/'
+DEFAULT_FILE_STORAGE = os.path.join(BASE_DIR, 'staticfiles')
 
 CKEDITOR_CONFIGS = {
     'default': {
