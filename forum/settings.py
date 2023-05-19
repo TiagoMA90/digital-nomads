@@ -69,7 +69,7 @@ ROOT_URLCONF = 'forum.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATES_DIR],
+        'DIRS': TEMPLATES_DIR,
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -142,6 +142,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
+# DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 CKEDITOR_CONFIGS = {
