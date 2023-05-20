@@ -4,6 +4,8 @@ from django.dispatch import receiver
 from django.db.models.signals import post_save
 from PIL import Image
 import cloudinary
+from io import BytesIO
+import requests
 
 # Profiles 
 class Profile(models.Model):
@@ -16,25 +18,32 @@ class Profile(models.Model):
 
     # Profile Image sizing and saving
     def save(self, *args, **kwargs):
-        super().save()
+    super().save()
 
-        # Open the image using the Cloudinary SDK
-        cloudinary.config(
-            cloud_name='dmbdqco85',
-            api_key='572555385744258',
-            api_secret='0COw3jIp0nWL_2Lzjn7KTeGgihM'
-        )
-        cloudinary_image = cloudinary.uploader.upload(self.image.path)
+    # Open the image from Cloudinary using the image URL
+    response = requests.get(self.image.url)
+    user_img = Image.open(BytesIO(response.content))
+    
+    # If the image uploaded is more or equals to 351px, set it to 350px and save it
+    if user_img.width >= 351 or user_img.height >= 351:
+        output_size = (350, 350)
+        user_img.thumbnail(output_size)
+
+        # Create a BytesIO object to store the modified image
+        image_io = BytesIO()
+        user_img.save(image_io, format='JPEG')
+
+        # Generate a unique filename
+        filename = f"profile_img/{self.user.username}_avatar.jpg"
+
+        # Upload the modified image to Cloudinary
+        cloudinary_image = cloudinary.uploader.upload(image_io.getvalue(), public_id=filename)
 
         # Update the image field with the Cloudinary image URL
         self.image = cloudinary_image['secure_url']
 
-        # If the image uploaded is more or equals to 351px, set it to 350px and save it
-        user_img = Image.open(self.image.path)
-        if user_img.width >= 351 or user_img.height >= 351:
-            output_size = (350, 350)
-            user_img.thumbnail(output_size)
-            user_img.save(self.image.path)
+        # Save the model instance with the updated image URL
+        super().save(*args, **kwargs)
 
 
 # Signals for User/Profile
