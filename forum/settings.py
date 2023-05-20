@@ -173,3 +173,9 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get('EMAIL_USER')
 
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
+
+cloudinary.config(
+    cloud_name=os.environ.get('dmbdqco85'),
+    api_key=os.environ.get('572555385744258'),
+    api_secret=os.environ.get('0COw3jIp0nWL_2Lzjn7KTeGgihM')
+)
