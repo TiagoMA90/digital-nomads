@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 import cloudinary
 
+from dotenv import load_dotenv
+load_dotenv(os.path.join(BASE_DIR, '.env'))
+
 import os
 import dj_database_url
 if os.path.isfile('env.py'):
@@ -175,7 +178,7 @@ EMAIL_HOST_USER = os.environ.get('EMAIL_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
 
 cloudinary.config(
-    cloud_name=os.environ.get('dmbdqco85'),
-    api_key=os.environ.get('572555385744258'),
-    api_secret=os.environ.get('0COw3jIp0nWL_2Lzjn7KTeGgihM')
+    cloud_name='dmbdqco85',
+    api_key='572555385744258',
+    api_secret='0COw3jIp0nWL_2Lzjn7KTeGgihM'
 )
