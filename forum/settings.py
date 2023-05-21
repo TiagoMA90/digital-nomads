@@ -40,18 +40,22 @@ ALLOWED_HOSTS = ['digital-nomad.herokuapp.com', 'localhost', '127.0.0.1', '8000-
 # Application definition
 
 INSTALLED_APPS = [
-    'blog.apps.BlogConfig',
-    'users.apps.UsersConfig',
-    'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    'cloudinary_storage',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
+    
+    'cloudinary_storage',
     'cloudinary',
+
+    'django.contrib.staticfiles',
+    
+    'crispy_forms',
     'ckeditor',
+    
+    'blog.apps.BlogConfig',
+    'users.apps.UsersConfig',
     'forum',
 ]
 
