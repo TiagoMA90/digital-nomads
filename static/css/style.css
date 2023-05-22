@@ -170,7 +170,7 @@ a.title:hover {
 .picabout {
   height: 60px;
   width: 100%;
-  background: url(/picabout.png) no-repeat center bottom;
+  background: url(https://res.cloudinary.com/dmbdqco85/image/upload/v1684768313/aboutimg_jqt6s2.png) no-repeat center bottom;
   background-size: 100%;
   padding-top: 20vw;
   object-fit: cover;
