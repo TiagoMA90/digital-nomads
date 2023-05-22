@@ -7,11 +7,11 @@
 # Live Project
 - The live website can be found [here](https://digital-nomad.herokuapp.com/).
 
-## Purpose of the website.
+# Purpose of the website.
 - To provide a platform where users can share their stories as Digital nomads.
 - To promote the idea that Developers can be flexible on the job, while working and traveling.
 - To create a community and connect users in a "guild" of like minded people.
-- To allow users to share their ideas and help each other both behind the screen and during leisure.
+- To allow users to share their ideas and help each other both in front and behind the screen.
 
 # Features and Functionality for non-reg./reg Users & Superusers
 
@@ -43,15 +43,20 @@
 
 (ELABORTATE...)
 
-Development
+## Development
+The project started out as a forum for Ads of Events, where users could post Events taking place at a certain time in a certain location.
+Users would therefore open up a thread give a brief description of the Event, target the location with Google Maps API and set the Date. After an event took place, it ought to be automatically deleted.
+
+In the end, this project was simplified due to dateline limitations and time conciliations. It makes good use of familiar concepts such as Create Read Update Delete.
+Upon re-creating this project, the developer resorted the idea of a "forum" or "discussion board", similar to [reddit](https://www.reddit.com/) but more focused on the nomadic lifestyle.
+
 - This website was developed on Gitpod hosted by GitHub, making use of both Front-end and Back-end.
-
-
 
 Errors and Removed functionalities:
 - ckeditor - (traces of the code are still visible in the code) - Had trouble with assets such as "brown-paper" & others.
 - Imported and uploaded manually, but the interface was unrecognizable. Eventually moved back to models.TextField()
 
+Languages
 - HTML (markup language)
 - CSS (style sheet language)
 - Python (programming language)
