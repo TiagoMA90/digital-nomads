@@ -8,7 +8,7 @@ from PIL import Image
 # Profiles
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    image = CloudinaryField('image', default='v1684659602/media/profile_img/image0_1024_1024_watermark_boojhp')
+    image = CloudinaryField('image', default='v1684659602/media/profile_img/default_kpyvr1')
     bio = models.TextField(max_length=500, blank=True, null=True)
 
     def __str__(self):
