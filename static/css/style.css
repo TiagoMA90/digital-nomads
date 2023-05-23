@@ -14,6 +14,9 @@ body {
   border: 1px dashed #dddddd;
   border-radius: 3px;
   margin-bottom: 10px;
+  /* (Optional) Shadow for the panels */
+  box-shadow:  5px 5px 10px #a8a8a8,
+             -5px -5px 10px #ffffff;
 }
 
 /* User Bio properties */
