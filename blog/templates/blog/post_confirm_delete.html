@@ -2,12 +2,13 @@
 {% extends "blog/base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
-    <div>
+<br>
+    <div class="panels">
         <!-- Form to Post/Register a User -->
         <form method="POST">
             {% csrf_token %}
             <fieldset class="form-group">
-                <h1>You are about to delete the post entitled:</h1>
+                <h2>You are about to delete the post entitled:</h2>
                 <h2 class="panels">'{{ object.title }}'</h2>
                 <h2>Do you wish to proceed?</h2>
                 <!-- Loads Crispy Forms -->

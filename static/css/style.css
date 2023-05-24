@@ -194,11 +194,11 @@ ul {
 }
 
 /* Social Media & Icons*/
-.fa-person-through-window, .fa-file-circle-plus {
+.fa-person-through-window, .docplus {
   color: #333333;
 }
 
-.fa-person-through-window:hover, .fa-file-circle-plus:hover {
+.fa-person-through-window:hover, .docplus:hover {
   color: #807a45;
 }
 

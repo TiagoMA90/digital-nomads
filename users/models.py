@@ -39,6 +39,7 @@ class Profile(models.Model):
             except FileNotFoundError:
                 pass
 
+    # Delete User profile            
     def delete(self, *args, **kwargs):
         super().delete(*args, **kwargs)
 

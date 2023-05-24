@@ -3,10 +3,10 @@
 
 {% block content %}
   {% if user.is_authenticated %}
-    <h1>Welcome back, {{ user.username }}!</h1>
+    <h2>Welcome back, {{ user.username }}!</h2>
     <p>The latest posts are as follows:</p>
   {% else %}
-    <h1>Greetings stranger, welcome to our community!</h1>
+    <h2>Greetings stranger, welcome to our community!</h1>
     <p>The latest posts are as follows:</p>
   {% endif %}
 
@@ -55,7 +55,7 @@
 
   {% else %}
   <div class="panels">
-    <h2 class="text-center">This Forum is currently empty! Be the first one to post! <a class="nav-item nav-link" href="{% url 'post-create' %}"><i class="fa-solid fa-file-circle-plus"></i></a></h2>
+    <h2 class="text-center">This Forum is currently empty! Be the first one to post! <a class="nav-item nav-link" href="{% url 'post-create' %}"><i class="docplus fa-solid fa-file-circle-plus"></i></a></h2>
   </div>
   {% endif %}
 

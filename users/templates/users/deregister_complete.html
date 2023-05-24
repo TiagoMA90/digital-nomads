@@ -1,0 +1,9 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<br>
+  <div class="text-center panels">
+    <h2><i class="fa-solid fa-circle-info"></i></h2>
+    <h2>Your account has been deleted</h2>
+    <p>We are sad to see you go. You can still read the <a href="{% url 'blog-home' %}">community posts</a>.</p>
+  </div>
+{% endblock %}
