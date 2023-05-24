@@ -5,6 +5,8 @@ from django.contrib.auth.decorators import login_required
 from .forms import UserRegisterForm
 from .forms import UserUpdateForm
 from .forms import ProfileUpdateForm
+from .models import Profile
+from django.contrib.auth import logout
 
 # Function to create and save a User account
 def register(request):
@@ -43,3 +45,17 @@ def profile(request):
     }
 
     return render(request, 'users/profile.html', context)
+
+
+@login_required
+def delete_profile(request):
+    if request.method == 'POST':
+        user = request.user
+        profile = user.profile
+        profile.delete()
+        user.delete()
+        logout(request)
+        messages.success(request, 'Your profile has been deleted.')
+        return redirect('/about/')
+
+    return render(request, 'users/deregister.html')

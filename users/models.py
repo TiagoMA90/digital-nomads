@@ -39,6 +39,8 @@ class Profile(models.Model):
             except FileNotFoundError:
                 pass
 
+    def delete(self, *args, **kwargs):
+        super().delete(*args, **kwargs)
 
 # Signals for User/Profile
 @receiver(post_save, sender=User)

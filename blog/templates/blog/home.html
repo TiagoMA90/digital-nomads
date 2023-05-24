@@ -3,10 +3,11 @@
 
 {% block content %}
   {% if user.is_authenticated %}
-    <h2>Welcome back, {{ user.username }}!</h2>
+    <h1>Welcome back, {{ user.username }}!</h1>
     <p>The latest posts are as follows:</p>
   {% else %}
     <h1>Greetings stranger, welcome to our community!</h1>
+    <p>The latest posts are as follows:</p>
   {% endif %}
 
   {% if posts %}
