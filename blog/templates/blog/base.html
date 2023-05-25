@@ -29,41 +29,35 @@
         <div class="container">
           <a class="navbar-brand mr-4 logo" href="{% url 'blog-home' %}">Digital N<box-icon name='cog' animation='spin' color='#ffffff' size="1rem"></box-icon>mads</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarToggle">
             <div class="navbar-nav mr-auto">
-              <a class="nav-item nav-link" href="{% url 'blog-home' %}"><i class="fa-solid fa-signs-post"></i> Home</a>
-              <a class="nav-item nav-link" href="{% url 'blog-about' %}"><i class="fa-solid fa-circle-info"></i> About</a>
+              <a class="nav-item nav-link {% if request.path == '/' %}active{% endif %}" href="{% url 'blog-home' %}"><i class="fa-solid fa-signs-post"></i> Home</a>
+              <a class="nav-item nav-link {% if request.path == '/about/' %}active{% endif %}" href="{% url 'blog-about' %}"><i class="fa-solid fa-circle-info"></i> About</a>
             </div>
-          
+    
             <div class="navbar-nav">
-              <!--- If the User is logged in, display Logout in the nav-->
               {% if user.is_authenticated %}
-                <a class="nav-item nav-link" href="{% url 'post-create' %}"><i class="fa-solid fa-file-circle-plus"></i> Post</a>
-                <a class="nav-item nav-link" href="{% url 'profile' %}"><i class="fa-solid fa-gear"></i> Profile</a>
+                <a class="nav-item nav-link {% if request.path == '/post/create/' %}active{% endif %}" href="{% url 'post-create' %}"><i class="fa-solid fa-file-circle-plus"></i> Post</a>
+                <a class="nav-item nav-link {% if request.path == '/profile/' %}active{% endif %}" href="{% url 'profile' %}"><i class="fa-solid fa-gear"></i> Profile</a>
                 <a class="nav-item nav-link" href="{% url 'logout' %}"><i class="fa-solid fa-power-off"></i> Logout</a>
-                <!-- Move the search bar here -->
-                <form class="d-flex" method="POST" action="{% url 'blog-search' %}">
-                  {% csrf_token %}
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="searches" style="margin-right: 5px;">
-                  <button class="btn btn-outline-secondary search-button" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </form>
               {% else %}
-                <a class="nav-item nav-link" href="{% url 'login' %}"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
-                <a class="nav-item nav-link" href="{% url 'register' %}"><i class="fa-regular fa-address-card"></i> Register</a>
-                <!-- Move the search bar here -->
-                <form class="d-flex" method="POST" action="{% url 'blog-search' %}">
-                  {% csrf_token %}
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="searches" style="margin-right: 5px;">
-                  <button class="btn btn-outline-secondary search-button" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </form>
+                <a class="nav-item nav-link {% if request.path == '/login/' %}active{% endif %}" href="{% url 'login' %}"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                <a class="nav-item nav-link {% if request.path == '/register/' %}active{% endif %}" href="{% url 'register' %}"><i class="fa-regular fa-address-card"></i> Register</a>
               {% endif %}
+    
+              <form class="d-flex" method="POST" action="{% url 'blog-search' %}">
+                {% csrf_token %}
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="searches" style="margin-right: 5px;">
+                <button class="btn btn-outline-secondary search-button" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+              </form>
             </div>
           </div>
         </div>
       </nav>
     </header>
+    
     <main role="main" class="container">
       <div class="row">
         <div class="col-md-12">

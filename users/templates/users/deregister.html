@@ -4,7 +4,7 @@
   <div class="text-center panels">
     <h2><i class="fa-solid fa-circle-exclamation"></i></h2>
     <h2>WARNING: You are about to delete your User account!</h2>
-    <p>Are you sure you want to delete your profile? Your Posts & Comments will be eliminated. This action cannot be undone.</p>
+    <p>Are you sure you want to delete your Profile? Your Posts & Comments will be eliminated. This action cannot be undone.</p>
     <form action="{% url 'delete_profile' %}" method="post">
         {% csrf_token %}
         <button type="submit" class="btn btn-outline-danger panels">Delete</button>
