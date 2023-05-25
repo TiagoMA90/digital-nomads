@@ -54,6 +54,7 @@
 ## Footer
 - The Footer is best defined by Bootstraps template. It features a Slogan on the left side and on the right the Social Media links. At the very bottom, a copyright notice.
 - Above the Footer is the rest of the image shared with the Header. The keyboard of a laptop.
+- Users can open the Social Media links in new tabs.
 
 <img src="media/readme_img/footerpanel.png" alt="Footer">
 
@@ -75,13 +76,64 @@
 
 <img src="media/readme_img/aboutpanel.png" alt="About">
 
-(ELABORATE)
 ## Posts & Comments
-## Search Field
-## User Profile
-## Registration & Deletion
-## Log in/out
+- When Opening a Post, the details of that particlar Post is expanded, allowing Users to read the whole article.
+- Users can read and engage with the Post, by leaving Comments and Likes.
 
+<img src="media/readme_img/openpostandcommentpanels.png" alt="Open Posts and Comments">
+
+## Search Field
+- Users can use the Search functionality.
+- Upon making a valid search, the page should retrieve a list of Threads, by a word populated either in the Title, Body or Username of a Post.
+
+<img src="media/readme_img/charactersearch.png" alt="Search Field">
+
+- If no Post exhibit such word, than a template prompts users to give in a valid word.
+
+<img src="media/readme_img/wrongcharactersearch.png" alt="Search Field">
+
+- Otherwise, if not character was introduced in the search field, Users are requested to input a valid character.
+
+<img src="media/readme_img/nocharactersearch.png" alt="Search Field">
+
+## User Profile
+- The User profile can be best defined as a "Settings panel", where users can update their personal info.
+- The fields that can be updated include Username, Profile picture, E-mail and Bio.
+
+<img src="media/readme_img/profile.png" alt="Profile">
+s
+- Upon updating the Bio the User should have an Overview field.
+
+<img src="media/readme_img/overviewpanel.png" alt="Overview">
+
+- If a User created an account, but did not make any Posts, even though made Comments. The User profile remains inactive.
+
+<img src="media/readme_img/usernopostspanel.png" alt="User no Profile">
+
+## Registration & Deletion
+- The Registration page requests that Users input a Username, E-mail and Password.
+
+<img src="media/readme_img/registerationpanel.png" alt="Error 404">
+
+## Log in/out
+- The Log in page demands Users to input valid credentials, as per registered.
+
+<img src="media/readme_img/loginpanel.png" alt="Log in">
+
+- By Logging out, Users are fired with a Goodbye message.
+
+<img src="media/readme_img/logoutpanel.png" alt="Log out">
+
+## Deletion
+
+<img src="media/readme_img/deletionpanel.png" alt="Deletion">
+
+<img src="media/readme_img/deletionconfirmedpanel.png" alt="Deleted">
+
+## Error 404
+- If a User goes to a non-defined URL, then a 404 Error template is rendered, requesting users to leave that page.
+
+<img src="media/readme_img/404.png" alt="Error 404">
 
 
 Navbar items Home, About, Regions, Logo, Search, Bucket List, Write Post, Logout and Profile are available for registered users.
