@@ -1,3 +1,4 @@
+# Imports
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404
 from django.views.generic import ListView
@@ -10,12 +11,13 @@ from django.contrib.auth.mixins import UserPassesTestMixin
 from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect
 from django.urls import reverse, reverse_lazy
+from django.db.models import Q
 from .models import Post
 from .models import Comment
-from django.db.models import Q
 
 
 # Routing for the urls
+# Home
 def home(request):
     context= {
         'posts': Post.objects.all()
@@ -23,10 +25,17 @@ def home(request):
     return render(request, 'blog/home.html')
 
 
+# About
 def about(request):
     return render(request, 'blog/about.html', {'title':'About'})
 
 
+# 404
+def error_404(request, exception):
+    return render(request, '404.html', status=404)
+
+
+# Search Bar
 def search(request):
     if request.method == "POST":
         searches = request.POST.get('searches')
@@ -34,13 +43,13 @@ def search(request):
         Q(content__icontains=searches) |
         Q(author__username__icontains=searches) |
         Q(title__icontains=searches)
-)
+        )
         return render(request, 'blog/search.html', {'searches': searches, 'results': results})
     else:
         return render(request, 'blog/search.html', {})
 
 
-
+# Post View
 class PostDetailView(DetailView):
     model = Post
 
@@ -156,7 +165,3 @@ def LikeView(request, pk):
         liked = True
 
     return HttpResponseRedirect(reverse('post-detail', args=[str(pk)]))
-
-
-def error_404(request, exception):
-    return render(request, '404.html', status=404)

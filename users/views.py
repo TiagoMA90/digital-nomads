@@ -1,3 +1,4 @@
+# Imports
 from django.shortcuts import render
 from django.shortcuts import redirect
 from django.contrib import messages
@@ -7,6 +8,7 @@ from .forms import UserUpdateForm
 from .forms import ProfileUpdateForm
 from .models import Profile
 from django.contrib.auth import logout
+
 
 # Function to create and save a User account
 def register(request):
@@ -20,14 +22,15 @@ def register(request):
         form = UserRegisterForm()
     return render(request, 'users/register.html', {'form': form})
 
-# Decorator for Users to be required to log in and display the User profile
+
 @login_required
+# Function to update a User profile
 def profile(request):
     if request.method == 'POST':
         profile_form = ProfileUpdateForm(request.POST, request.FILES, instance = request.user.profile)
         user_form = UserUpdateForm(request.POST, instance = request.user)
 
-        # If the profile and user forms are valid, save both forms, execute the following message and redirect/refresh the profile
+        # If the profile and user forms are valid, save both forms
         if profile_form.is_valid() and user_form.is_valid():
             profile_form.save()
             user_form.save()
@@ -46,6 +49,7 @@ def profile(request):
 
 
 @login_required
+# Function to delete a User profile
 def delete_profile(request):
     if request.method == 'POST':
         user = request.user

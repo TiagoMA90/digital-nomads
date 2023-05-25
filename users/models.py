@@ -5,6 +5,7 @@ from django.db.models.signals import post_save
 from cloudinary.models import CloudinaryField
 from PIL import Image
 
+
 # Profiles
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -42,6 +43,7 @@ class Profile(models.Model):
     # Delete User profile            
     def delete(self, *args, **kwargs):
         super().delete(*args, **kwargs)
+
 
 # Signals for User/Profile
 @receiver(post_save, sender=User)
