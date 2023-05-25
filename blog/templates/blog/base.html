@@ -5,14 +5,14 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <meta name="description" content="Base template for the Digital Nomads">
+    <meta name="keywords" content="Digital, Nomads, Blog, Forum, Discussion, Board">
+    <meta name="author" content="TiagoMA90">
     <!-- Bootstrap & CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
     <!-- Displays the favicon -->
     <link rel="icon" href="https://res.cloudinary.com/dmbdqco85/image/upload/v1684873455/media/profile_img/favicon_peylh8.png" type="image/x-icon">
-    
     <!-- Display the title of the page accordingly -->
     {% if title %}
         <title>Digital Nomads - {{ title }}</title>
@@ -36,17 +36,18 @@
               <a class="nav-item nav-link {% if request.path == '/' %}active{% endif %}" href="{% url 'blog-home' %}"><i class="fa-solid fa-signs-post"></i> Home</a>
               <a class="nav-item nav-link {% if request.path == '/about/' %}active{% endif %}" href="{% url 'blog-about' %}"><i class="fa-solid fa-circle-info"></i> About</a>
             </div>
-    
             <div class="navbar-nav">
+              <!-- If the User is authenticated display this links -->
               {% if user.is_authenticated %}
                 <a class="nav-item nav-link {% if request.path == '/post/create/' %}active{% endif %}" href="{% url 'post-create' %}"><i class="fa-solid fa-file-circle-plus"></i> Post</a>
                 <a class="nav-item nav-link {% if request.path == '/profile/' %}active{% endif %}" href="{% url 'profile' %}"><i class="fa-solid fa-gear"></i> Profile</a>
                 <a class="nav-item nav-link" href="{% url 'logout' %}"><i class="fa-solid fa-power-off"></i> Logout</a>
+                <!-- Otherwise display this links -->
               {% else %}
                 <a class="nav-item nav-link {% if request.path == '/login/' %}active{% endif %}" href="{% url 'login' %}"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
                 <a class="nav-item nav-link {% if request.path == '/register/' %}active{% endif %}" href="{% url 'register' %}"><i class="fa-regular fa-address-card"></i> Register</a>
               {% endif %}
-    
+              <!-- Search Box -->
               <form class="d-flex" method="POST" action="{% url 'blog-search' %}">
                 {% csrf_token %}
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="searches" style="margin-right: 5px;">
@@ -57,11 +58,10 @@
         </div>
       </nav>
     </header>
-    
+    <!-- Renders the Board Panel for Posts --> 
     <main role="main" class="container">
       <div class="row">
         <div class="col-md-12">
-
           <!-- Display the alert.info message from  -->
           {% if messages %}
             {% for messages in messages %}
@@ -74,24 +74,19 @@
           {% endblock %}
         </div>
     </main>
-    <!-- IMG footer delete?-->
+    <!-- Render Header image as footer -->
       <div class="picfooter"></div>
-      
       <footer class="bg-light text-center text-lg-start">
-        <!-- Grid container -->
         <div class="container p-4">
-          <!--Grid row-->
           <div class="row">
-            <!--Grid column-->
+            <!-- Slogan for the footer -->
             <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
               <h5 class="text-uppercase">Coding never felt so good!</h5>
               <p>
                 "There's nothing better than a permanent vacation."
               </p>
             </div>
-            <!--Grid column-->
-      
-            <!--Grid column-->
+            <!-- Social media links -->
             <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
               <h5 class="text-uppercase">Follow us:</h5>
               <p>
@@ -101,20 +96,14 @@
                 <a class="twitter" href="https://www.twitter.com/" aria-label="Link to Twitter" target="_blank"><i class="fa-brands fa-twitter"></i></a>
               </p>
             </div>
-            <!--Grid column-->
           </div>
-          <!--Grid row-->
         </div>
-        <!-- Grid container -->
-      
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
           © 2023 Copyright • 
           <a class="text-dark" href="#">Digital Nomads</a>
         </div>
-        <!-- Copyright -->
       </footer>
-
     <!-- Optional JavaScript -->
     <script src="https://kit.fontawesome.com/9a3068bd82.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>

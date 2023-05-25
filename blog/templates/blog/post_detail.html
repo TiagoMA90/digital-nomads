@@ -1,15 +1,16 @@
 <!-- Extends from base.html -->
 {% extends "blog/base.html" %}
 {% block content %}
-    <br>
+<br>
     <article class="media panels">
+        <!-- Displays the Users Profile image -->
         <img class="rounded imgposter" src="{{ object.author.profile.image.url }}" alt="Users Profile image">
         <div class="media-body">
             <div class="post-panel">
-                    <!-- Posts the Users Name of the Post -->
-                    <a href="{% url 'post-user' object.author.username %}">{{ object.author }}</a>
-                    <!-- Posts the Date of the Post -->
-                    <small class="text-muted"> • {{ object.date_posted|date:"N d, Y" }}</small>
+                <!-- Posts the Users Name of the Post -->
+                <a href="{% url 'post-user' object.author.username %}">{{ object.author }}</a>
+                <!-- Posts the Date of the Post -->
+                <small class="text-muted"> • {{ object.date_posted|date:"N d, Y" }}</small>
             </div>
             <div>
                 <!-- Posts the Title of the Post -->
@@ -22,6 +23,7 @@
     <section>
         <div class="container panels">
             <div class="row">
+                <!-- If the authenticated User is the Author of this Post, allow the following: -->
                 {% if object.author == user %}
                     <pre> </pre>
                     <a class="btn btn-outline-secondary panels" href="{% url 'post-update' object.id %}"><i class="fa-regular fa-pen-to-square"></i></a>
@@ -32,15 +34,19 @@
                     <pre> </pre>
                 <form action="{% url 'like-post' post.pk %}" method="POST">
                     {% csrf_token %}
+                    <!-- If the User is authenticated, allow the following: -->
                     {% if user.is_authenticated %}
+                        <!-- Like/Dislike -->
                         {% if liked %}
                         <button class="btn btn-outline-danger panels" type="submit" name="post_id" value="{{ post.id }}"><i class="fa-solid fa-heart"></i></button>
                         {% else %}
                         <button class="btn btn-outline-danger panels" type="submit" name="post_id" value="{{ post.id }}"><i class="fa-regular fa-heart"></i></button>
                         {% endif %}
+                    <!-- Otherwise, if not authenticated, render the following: -->
                     {% else %}
                         <small class="text-muted">You must <a href="{% url 'login' %}">sign in</a>, in order to Comment or Like this article!</small>
                     {% endif %}
+                        <!-- Renders the ammount of Likes -->
                         - {{ total_likes }} of the Nomads found this post interesting!
                 </form>
             </div>
@@ -50,21 +56,27 @@
     <!-- Coment Section -->
     <section class="panels">
         <h4>Comments:</h4>
+        <!-- If there are no Comments in place, render: -->
         {% if not post.comments.all %}
             <em>No Comments...</em>
             <br>
+            <!-- If the User is autheticated allow the possibility to Comment -->
             {% if user.is_authenticated %}
                 <a href="{% url 'post-comment' post.pk %}">Add a Comment</a>
             {% endif %}
+        <!-- Otherwise, if there are Comment, display: -->
         {% else %}
+            <!-- If the User is autheticated allow the possibility to Comment -->
             {% if user.is_authenticated %}
                 <a href="{% url 'post-comment' post.pk %}">Add a Comment</a>
             {% endif %}
+                <!-- Renders the Comments -->
                 {% for comment in post.comments.all %}
                 <hr>
                 {{ comment.body}}
                 <br>
                 <br>
+                <!-- Renders the Commenter Profile image, Username and Time Stamp -->
                 <small>
                     <em><img class="rounded-circle imgcommenter" src="{{ comment.author.profile.image.url }}" alt="Users Profile image"> • <a href="{% url 'post-user' comment.author.username %}">{{ comment.author.username }}</a> • {{ comment.date_commented}}</em>
                 </small>
@@ -73,5 +85,4 @@
     </section>
     <br>
     <br>
-
 {% endblock %}

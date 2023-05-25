@@ -2,7 +2,9 @@
 {% extends "blog/base.html" %}
 {% block content %}
 <br>
+<!-- Renders posts by user -->
 {% if object_list %}
+  <!-- Displays the Posts created by the User -->
   {% for post in posts %}
     {% ifchanged post.author %}
       <div class="media-body bio-panels">
@@ -12,8 +14,10 @@
           </div>
           <div class="col-10">
           <h2 class="bio-title">{{ view.kwargs.username }} Overview</h2>
+          <!-- If the User has a Bio, display the Overview -->
           {% if post.author.profile.bio %}
             <p>{{ post.author.profile.bio }}</p>
+          <!-- Otherwise, if the User doesnt have a Bio, render generic message -->
           {% else %}
             <p>This user doesn't have a bio yet.</p>
           {% endif %}
@@ -63,5 +67,4 @@
         <a class="btn btn-outline-secondary mb-4" href="?page={{ page_obj.paginator.num_pages }}"><i class="fa-solid fa-arrow-right""></i></a>
       {% endif %}
   {% endif %}
-
 {% endblock %}

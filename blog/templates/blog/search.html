@@ -1,17 +1,21 @@
 <!-- Extends from base.html -->
 {% extends "blog/base.html" %}
 {% block content %}
+<br>
+  <!-- If a User inputs characters in the Search Bar, render the following message and Keywords: -->
   {% if searches %}
-    <h1><i class="fa-solid fa-magnifying-glass"></i> Below are the results for "{{ searches }}"</h1>
+    <h2><i class="fa-solid fa-magnifying-glass"></i> Below are the results for "{{ searches }}"</h2>
+    <!-- Renders the Results -->
     {% for result in results %}
       <h2 class="panels"><a class="title" href="{% url 'post-detail' pk=result.pk %}">• {{ result.title }}</a></h2>
     {% endfor %}
+    <!-- If no results are retrieved, display the following: -->
     {% if results|length == 0 %}
       <h2 class="panels"><i class="fa-sharp fa-regular fa-circle-xmark"></i> No results found.</h2>
     {% endif %}
+  <!-- If the User doesn't input a character and hits the Search icon, display the following: -->
   {% else %}
-    <h1><i class="fa-solid fa-magnifying-glass"></i> We couldn't find what you were looking for.</h1>
+    <h2><i class="fa-solid fa-magnifying-glass"></i> We couldn't find what you were looking for.</h2>
     <h2 class="panels"><i class="fa-solid fa-circle-info"></i> Make sure to enter a valid word!</h2>
   {% endif %}
-
 {% endblock %}
