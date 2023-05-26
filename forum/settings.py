@@ -146,7 +146,9 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 CKEDITOR_CONFIGS = {
     'default': {
-        'width': 'auto',
+        'toolbar': 'full',
+        'height': 300,
+        'width': '100%',
     },
 }
 
