@@ -144,6 +144,11 @@ a.title:hover {
   height: auto;
 }
 
+/* width for ckeditor */
+.django-ckeditor-widget{
+  width: 100%;
+}
+
 /* Comment Section */
 /* User Image - Comment properties */
 .imgcommenter {

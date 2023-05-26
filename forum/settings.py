@@ -31,7 +31,7 @@ TEMPLATES_DIR = [
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['digital-nomad.herokuapp.com', 'localhost', '127.0.0.1']
 
@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
+    'ckeditor',
     'forum',
 ]
 
@@ -142,6 +143,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'width': 'auto',
+    },
+}
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

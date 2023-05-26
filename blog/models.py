@@ -2,13 +2,14 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 from django.urls import reverse
+from ckeditor.fields import RichTextField
 from django.core.validators import MaxLengthValidator
 
 
 # Post Model
 class Post(models.Model):                                                          # The Post should displays and allows the following:
     title = models.CharField(max_length=150)                                       # Title field for 150 characters
-    content = models.TextField(validators=[MaxLengthValidator(5000)])              # Text field set for 5k characters
+    content = RichTextField(validators=[MaxLengthValidator(5000)])                 # Text field set for 5k characters
     date_posted = models.DateTimeField(default=timezone.now)                       # Time Stamp for the default Time Zone
     author = models.ForeignKey(User, on_delete=models.CASCADE)                     # Username, if User gets delete so are its Posts
     likes = models.ManyToManyField(User, related_name='posts')                     # Likes in relation to a Post
