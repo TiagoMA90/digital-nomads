@@ -135,6 +135,15 @@ s
 
 <img src="media/readme_img/404.png" alt="Error 404">
 
+## Planning & Agile:
+This project was planed using Agile methodology and MoSCoW prioritization..
+For such, the Project was best illustrated by 1 Milestone entitled "Submit the project to CI before Deadline" giving the Developer freedom to achieve all issues/tasks flexibly by the deadline.
+Through out development new issues were added/removed that started from "Todo" moved into "In Progress" and finlized in "Done".
+Issues were assigned to the sole Developer [TiagoMA90](https://github.com/TiagoMA90) and have been labelled as "could-have", "should-have" and "must-have".
+Once completed, Issues were marked as "done", and once all were done, the Milestone was closed.
+
+[Screenshots]
+(Elaborate)
 
 Navbar items Home, About, Regions, Logo, Search, Bucket List, Write Post, Logout and Profile are available for registered users.
 The Navbar is fixed to the top of the screen even when the user is scrolling down the page to allow easier navigation.
@@ -149,7 +158,47 @@ Users would therefore open up a thread give a brief description of the Event, ta
 In the end, this project was simplified due to dateline limitations and time conciliations. It makes good use of familiar concepts such as Create Read Update Delete.
 Upon re-creating this project, the developer resorted the idea of a "forum" or "discussion board", similar to [reddit](https://www.reddit.com/) but more focused on the nomadic lifestyle.
 
-## Features
+## Manual Testing and Website Functionality:
+
+Manual testing has been performed for its overall purpose.
+The website has proven to exhibit a dynamic functionality and responsive interactivity, both in the Front & Back-End.
+After consecutive reherasls and manual testing, the website employd the desired role and met the final goal set by the Developer.
+
+Based on the solid foundations of CRUD. Testing was perfromed:
+- By navigating and accessing links in the Website.
+- By Creating, Reading, Updating and Deleting an account for a Registered User.
+- By Creating, Reading, Updating and Deleting Posts as/of a Registered User.
+- By Creating and Reading Comments on a Post, as a Registered User.
+- By Liking and Disliking a Post, as a Registered User.
+- By Populating the Homepage with Posts in order to activate Pagination.
+- By inputing and retrieving results from the Search box.
+- By Reseting the Password of an account, via Email.
+- By manipulating Posts, Users, Comments, Likes as a Superuser in the Admin panel.
+
+By Clicking the links in the navigation panel, Users are redirected to the assigned pages.
+- By clicking on "Home", Users are sent to the Homepage, where the board of Posts can be found. From here Users can browse Posts and select one to Read.
+- By clicking on "About", Users are sent to the About page. Within that page, Users can read the introduction the mission Goal of the Website. User may navigate to the Registeration and Login pages.
+- By clicking on "Post", Users are redirected to the Post Form, of which they must input a Title and Body to create a Thread. Posts are submitted by clicking the Submit Button. (Users mut be logged in in order to Post, otherwise they are prompt to the Login page.)
+- Once a Post has been succesfully created, It can be accessed for reading by the whole community.
+- Authors of that particular Thread can Edit, Delete, Like/Dislike and Comment that Post. Respectively that functionslity is achieved by clicking the following icons at the end of the Thread. The "Pencil", "Bin", "Heart" and the "Add Comment" links.
+- Other Users can Like/Dislike and/or Comment that Post, by clicking the same icons, as stated above.
+- Comments cannot be updated or deleted by anyone once submited, except by Administrators. To submited a comment once in the Commnt page, Users must click the button "Submit Comment".
+- By clicking on "Profile", Users are sent to the Profile Panel, where they can update their Username, E-Mail, Bio and Profile Image. To Update such fields, Users should click the "Update" button.
+- By clicking on "Register", Users are sent to the Register page, where Users are requested to input a Username, input an E-mail and Password. Users are not requested to confirm their newly accounts via inbox. Usres may created multiple accounts using the same e-mail.
+- By clicking on "Login", Users are sent to the Log in page. From there Users are requested to input their log in credentials, Username and Password. If by any chance the User does not remember the Password, they can still reset the password by clickig in "Reset password?".
+- By clickign in "Reset password", Users are requiered to input their e-mail. From there, an e-mail is dispacthed to the given e-mail with further details on how to reset the Password. (An hyperlink is generated and sent to User. The User must click that link in order to procceed)
+- By Reseting the Password, Users are required to input a new Password.
+- By clicking a "Username" within the Posts, Users are sent to that particular User page. This page render all of the posts created by that particular User. The Bio is included.
+- If the User did not create any Posts, the profile can still be accessible, but render a page informing visitors that particular User has not many any Posts.
+- By clicking on "Logout", Users are logged out and sent a farewell message page. From there they can go back to the Log in page.
+- By clicking on "Delete Profile" Usuers are warned if they wish to proceed to execute such action. If "Delete" is clicked, Users are automatically logged out and the account is eliminated. (Profile, Posts & Comments associated with that User account are deleted). If "Cancel" is clicked, the User is sent back to the Profile.
+- By clicking in any of Social Media links, located in the "Footer", Users are redirected to external pages opened in a new tabs. This ensures the Website is not overidden by exteranal pages.
+
+Bugs and Excluded :
+- The ckeditor failed to render properly in the body of the Post. Eventually ckeditor was removed from the project altogether, give Users the possibility to write a basic TextField.
+
+[Screenshots]
+(Elaborate)
 
 - This website was developed on Gitpod hosted by GitHub, making use of both Front-end and Back-end.
 
