@@ -220,5 +220,86 @@ Frameworks
 
 and  and deployed on Heroku.
 
-# Depolyment
-(ELABORATE)
+# Development & Deployment
+The project was developed using GitHub and GitPod platforms...
+- Navigate to: "Repositories" and create "New".
+- Mark the following fields: ✓ Public ✓ Add a README file.
+- Select template: "Code-Institute-Org/python-essentials-template".
+- Add a Repository name: "digital-nomads".
+- ...and create Repository.
+
+... and suffered various executions using the inbuild Terminal.
+
+For Commits on this project, the following commands ran:
+- "git add ." <- Stages before commiting.
+- "git commit -m "written imperative declaration"" <- Declares changes and updates.
+- "git push" <- Push all updates to the GitHub Repository.
+
+To run the server locally (Debug = True), the following command ran:
+- python manage.py runserver <- Loads the website on the in-built Terminal.
+
+During development migrations to the database were made.
+To make migrations the following commands ran:
+- "python manage.py makemigrations" <- Creates a new database migration
+- "python manage.py migrate" <- Applies pending migrations
+
+To create a new Django project, in the currenct directory, the followig command ran:
+- "django-admin startproject NAMEOFTHEPROJECT ." <- Starts the project
+
+To create the app the following command ran:
+- "python3 manage.py startapp blog" <- Creates a folder for the app withing the project
+
+To install Django libraries and Set up:
+From the new workspace, navigate to the Terminal and run:
+
+- "pip3 install 'django<4' gunicorn" <-Runs the /admin
+
+To install the supporting libraries the following command ran:
+- "pip3 install dj_database_url==0.5.0 psycopg2" <- Installs Python packages and PostgreSQL adapter
+
+To install Cloudinary the following command ran:
+- "pip3 install dj3-cloudinary-storage" <- Installs Cloudinary
+
+To install AlAuth the following command ran:
+- "pip3 install django-allauth" <- Installs allauth
+
+To istall crispy-forms the following command ran:
+- "pip3 install django-crispy-forms==1.14.0"  <- Installs crispy
+
+To install Pillow the following command ran:
+- "pip3 install django Pillow" <- Installs Pillow
+
+To install Summernote the following command ran:
+- "pip3 install django-summernote" <- Installs summernote((!) Unisntalled/or Ignored by the Developer)
+
+To install Ckeditor, the folowing command ran:
+- "pip install django-ckeditor" <- Installs ckeditor((!) Uninstalled/or Ignored by the Developer)
+
+To create or update Requirements.txt, the following command ran:
+- "pip3 freeze --local > requirements.txt"  <-Runs the requirements
+
+To install the requirements set on Requirements.txt the following command ran:
+- "pip install -r requirements.txt" <- Installs requirements
+
+To clear the cache, the following command ran:
+- "pip cache purge" <- Clears the cache
+
+The database is being hosted on ElephantSQL:
+- Create an account(with GitHub) and select TinyTurtle plan.
+- From Details collect the URL and paste it on Heroku Config Var.
+
+The static files are being hosted on Cloudinary:
+- Create and account (with GitHub)
+- From the dashboard collect the API Environment variable and paste it on Heroku Config VAR.
+
+...and hosted on Heroku:
+
+- After creating an Heroku Free account, and applying for Student Pack
+- Navigate to: "Create new app" add a unique name "digital-nomad" and select "Europe" region. Click "Create App"
+- Head over to "Settings" tab and apply the respective config VARs
+- Move to "Deploy" section and select "Github" method"
+- From here search for the repository name "digitals-nomads", from the GitHub account.
+- Hit "Connect" and "Enable Automatic Deploys" to keep the the repository in parallel to Heroku.
+- Manually "Deploy Main Branch".
+- Upon successful deployment, retrieve the link for the mock terminal.
+- The live app can be found here.
