@@ -158,12 +158,6 @@ Once completed, the issues were marked as "done," and when all of them were comp
 
 [SCREENSHOTS] (ELABORATE)
 
-## Navbar items Home, About, Regions, Logo, Search, Bucket List, Write Post, Logout, and Profile are available for registered users.
-The Navbar is fixed to the top of the screen even when the user is scrolling down the page to allow easier navigation.
-The logo is linked to the Homepage, and each menu item is linked to its respective page to allow easier navigation.
-The search bar allows users to easily search for a keyword they are looking for.
-The navigation menu collapses on small/medium devices to optimize the menu for smaller screen sizes, as per Bootstrap.
-
 ## Development Process
 The project started out as a forum for Ads of Events, where users could post events taking place at a certain time in a certain location.
 Users would open up a thread, give a brief description of the event, target the location with Google Maps API, and set the date. After an event took place, it would be automatically deleted.
