@@ -13,6 +13,32 @@
 - To create a community and connect users in a "guild" of like minded people.
 - To allow users to share their ideas and help each other both in front and behind the screen.
 
+# Design:
+The website was designed with the intent to allow Users to browse Posts easily and perform all CRUD functionalities.
+It relied on colours that should be appealing to the User, especially for those who might use the Website on a daily basis.
+
+For such, it makes use of a colour palette of a mere greenish, brownish and yellowish blend (COLOR # HERE) for the Navigation bar.
+This gives a rustic feeling and is often associated with the nomadic camper life at the beach, desert and mountain.
+
+The background is best defined by a grayish white (COLOR # HERE) and body of the Post with a lighter gray (COLOR # HERE), bordered by dashed lines.
+The buttons in the Post borrow the same patterns and render a shadow beneath them to contrast the body.
+This gives the illusion the User is writting a post on a piece of paper/document.
+
+[IMG COLOR PALLETE]
+
+For a website where its functionality consists on writing and reading articles, the Fonts used for this Website were both "Audiowide" and "Staatliches".
+A choice that should appeal to a Users readability and block them from distractions of a complex design.
+The Fonts and Logo on the Navigation bar are dyed in white, while the Body presents itself with a dark grayish tone that doesn't stand to much from the article.
+Links in the Navigation bar are highlighted by white tone when hovered, and bold when active.
+Links change color uppon hover, particularly the Title of the Post, the Username in a Post/Comment, the Social Media Links and links that redirect to other pages.
+Icons were also integrated to the website, to give a much more asthetic touch and association of functionality of the Website.
+The Navigation bar, Footer and pages in the Body makes use of Icons.
+The Logo states "Digital Nomads" and is animated by an icon, to give the idea that devs are on the move. Red was the chosen color, to highlight it from the rest of the name.
+Both the Header & Footer have an image attached to it, of a somebody Networking, to give the impression that they are typing and readig Posts. Hence the screen at the top and the hand at the bottom.
+
+The structure of the website is cohrent and the base.html is present in all page. The skeleton of the body is consistant for pages.
+
+
 # Features and Functionality for non-reg./reg Users & Superusers
 
 ## Non-Registered Users (Visitors)
