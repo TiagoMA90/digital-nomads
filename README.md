@@ -151,9 +151,10 @@ The structure of the website is coherent, and the base.html is present on all pa
 
 ## Planning & Agile:
 This project was planned using Agile methodology and MoSCoW prioritization.
+
 For this purpose, the project was illustrated by one milestone titled "Submit the project to CI before Deadline," providing the developer with the freedom to accomplish all issues/tasks flexibly by the deadline.
 Throughout the development process, new issues were added/removed, starting from "Todo," progressing to "In Progress," and finally being finalized in "Done."
-The issues were assigned to the sole developer, [TiagoMA90](https://github.com/TiagoMA90), and labeled as "could-have," "should-have," and "must-have."
+The issues were assigned to the sole developer, [TiagoMA90](https://github.com/TiagoMA90), and labeled as "could-have," "should-have," and "must-have". "won't -have" was not included for this project.
 Once completed, the issues were marked as "done," and when all of them were completed, the milestone was closed.
 
 [SCREENSHOTS] (ELABORATE)
@@ -165,8 +166,8 @@ Users would open up a thread, give a brief description of the event, target the 
 In the end, this project was simplified due to deadline limitations and time constraints. It makes good use of familiar concepts such as Create Read Update Delete.
 Upon re-creating this project, the developer rethought the idea of a "forum" or "discussion board," similar to [reddit](https://www.reddit.com/), but more focused on the nomadic lifestyle.
 
-## Manual Testing and Website Functionality:
-
+...............
+## Manual Testing and Website Functionality: (MAKE A TESTS.MD)
 Manual testing has been performed for its overall purpose.
 The website has proven to exhibit dynamic functionality and responsive interactivity, both in the Front & Back-End.
 After consecutive rehearsals and manual testing, the website employed the desired role and met the final goal set by the developer.
@@ -192,27 +193,22 @@ By clicking the links in the navigation panel, users are redirected to the assig
 - Comments cannot be updated or deleted by anyone once submitted, except by administrators. To submit a comment on the Comment page, users must click the "Submit Comment" button.
 - By clicking on "Profile," users are sent to the
 
-Bugs and Excluded features:
-- The ckeditor failed to render properly in the body of the Post. Eventually ckeditor was removed from the project altogether, give Users the possibility to write a basic TextField.
+[TEST WITH:]
+Lighthouse
+[Wave](https://wave.webaim.org/)
+[W3validatro](https://validator.w3.org/)
+[W3jigsaw](https://jigsaw.w3.org/css-validator/)
+[Pep8CI](https://pep8ci.herokuapp.com/)
 
 [SCREENSHOTS] (ELABORATE)
+...........
 
 - This website was developed on Gitpod hosted by GitHub, making use of both Front-end and Back-end.
 
-Errors and Removed functionalities:
-- ckeditor - (traces of the code are still visible in the code) - Had trouble with assets such as "brown-paper" & others.
-- Imported and uploaded manually, but the interface was unrecognizable. Eventually moved back to models.TextField()
-
-Languages
-- HTML (markup language)
-- CSS (style sheet language)
-- Python (programming language)
-
-Frameworks
-- Bootsrap (css framework)
-- Django (web framework)
-
-and  and deployed on Heroku.
+Bugs, Errors and Removed functionalities:
+- The ckeditor failed to render properly in the body of the Post. Eventually ckeditor was removed from the project altogether, giving Users the possibility to write a basic TextField.
+- After getting it to work, the layout of the tool box felt off. After stylizing with on .css it failed to render properly. on Heroku. The localserver everything worked fine.
+- The developer would like to re-implement if when time allows.
 
 # Development & Deployment
 The project was developed using GitHub and GitPod platforms...
@@ -296,4 +292,24 @@ The static files are being hosted on Cloudinary:
 - Hit "Connect" and "Enable Automatic Deploys" to keep the the repository in parallel to Heroku.
 - Manually "Deploy Main Branch".
 - Upon successful deployment, retrieve the link for the mock terminal.
-- The live app can be found here.
+- The live app can be found [here](digital-nomad.herokuapp.com).
+
+# Languages
+- HTML (markup language)
+- CSS (style sheet language)
+- Python (programming language)
+
+## Frameworks
+- Bootsrap (css framework)
+- Django (web framework)
+
+## Other forms of development
+[Favicon.cc](https://www.favicon.cc/) - Favicon generator
+[CI Python Linter](https://pep8ci.herokuapp.com/) - CI Python testing tool
+[Github](https://github.com/) - Host for the repository
+[Gitpod](https://gitpod.io/) - Code editor
+[ElephantSQL](https://www.elephantsql.com/) - Database
+[Cloudinary](https://cloudinary.com/) - Static & Media host
+[Heroku](https://id.heroku.com/) - Cloud platform/Host the live project
+
+# Credits
