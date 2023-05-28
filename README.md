@@ -4,6 +4,8 @@
 - No desks, no cubicles, no offices.
 - It is a platform for nomads in the digital world to share their personal adventures, tips and recommendations when working and exploring the world.
 
+<img src="media/readme_img/bytesdev.png" alt="website overview">
+
 # Live Project
 - The live website can be found [here](https://digital-nomad.herokuapp.com/).
 
@@ -156,6 +158,9 @@ For this purpose, the project was illustrated by one milestone titled "Submit th
 Throughout the development process, new issues were added/removed, starting from "Todo," progressing to "In Progress," and finally being finalized in "Done."
 The issues were assigned to the sole developer, [TiagoMA90](https://github.com/TiagoMA90), and labeled as "could-have," "should-have," and "must-have". "won't -have" was not included for this project.
 Once completed, the issues were marked as "done," and when all of them were completed, the milestone was closed.
+
+<img src="media/readme_img/agile.png" alt="agile methodology">
+<img src="media/readme_img/agilelabels.png" alt="agile methodology">
 
 [SCREENSHOTS] (ELABORATE)
 
