@@ -1,8 +1,9 @@
 
 # Digital Nomads
-- Digital Nomads is a website that allows developers to share their experiences outside the office.
-- No desks, no cubicles, no offices.
-- It is a platform for nomads in the digital world to share their personal adventures, tips and recommendations when working and exploring the world.
+Digital Nomads is a website that allows developers to share their experiences outside the office. The app is forum/blog type of website designed to allow Users to convey their personal experiences as Digital Nomads.
+A platform where Users can share their adventures, tips and recommendations when working and exploring the world.
+
+No desks, no cubicles, no offices.
 
 <img src="media/readme_img/bytesdev.png" alt="website overview">
 
@@ -16,30 +17,35 @@
 - To allow users to share their ideas and help each other both in front and behind the screen.
 
 # Design:
-The website was designed with the intent to allow users to browse posts easily and perform all CRUD functionalities. It relied on colors that should be appealing to the user, especially for those who might use the website on a daily basis.
+The website was designed with the intent to allow users to browse posts easily and perform all CRUD functionalities. It relied heavily on colors that should be appealing to the user, especially for those who might use the website on a daily basis.
 
-For such, it makes use of a color palette of a mere greenish, brownish, and yellowish blend (COLOR # HERE) for the navigation bar. This gives a rustic feeling and is often associated with the nomadic camper life at the beach, desert, and mountain.
+For such, it makes use of a colour palette of a mere greenish, brownish, and yellowish blend (COLOR # HERE) for the navigation bar.
+This gives a rustic feeling and is often associated with the nomadic camper life at the beach, desert, and mountain.
 
-The background is best defined by a grayish white (COLOR # HERE), and the body of the post has a lighter gray (COLOR # HERE), bordered by dashed lines. The buttons in the post borrow the same patterns and render a shadow beneath them to contrast the body. This gives the illusion that the user is writing a post on a piece of paper/document.
+The background is best defined by a grayish white (COLOR # HERE), and the body of the post simple white (COLOR # HERE), bordered by dashed lines.
+The buttons in the post borrow the same patterns and render a shadow beneath them to contrast the body of the page. This gives the illusion that the User is writing a post on a piece of paper/document.
 
 [IMG for COLOR PALETTE]
 
-For a website where its functionality consists of writing and reading articles, the fonts used for this website were "Audiowide" and "Staatliches." A choice that should appeal to a user's readability and block them from distractions of a complex design. The fonts and logo on the navigation bar are dyed in white, while the body presents itself with a dark grayish tone that doesn't stand too much from the article. Links in the navigation bar are highlighted by a white tone when hovered, and bold when active. Links change color upon hover, particularly the title of the post, the username in a post/comment, the social media links, and links that redirect to other pages.
+For a website where its functionality consists essentially of writing and reading articles, the fonts used for this website were "Audiowide" and "Staatliches." A choice that should appeal to a user's readability and block them from distractions or a complex design. The fonts and logo on the navigation bar are dyed in white, while the body presents itself with a dark grayish tone that doesn't stand too much from the article.
+Links in the navigation bar are highlighted by a white tone when hovered, and bold when active. Links change color upon hover, particularly the title of the post, the username in a post/comment, the social media links and links that redirect users to other pages.
 
-Icons were also integrated into the website to give a much more aesthetic touch and association of functionality of the website. The navigation bar, footer, and pages in the body make use of icons. The logo states "Digital Nomads" and is animated by an icon to give the idea that devs are on the move. Red was the chosen color to highlight it from the rest of the name. Both the header and footer have an image attached to them, of somebody networking, to give the impression that they are typing and reading posts. Hence the screen at the top and the hand at the bottom.
-
+Icons were also integrated into the website to give a much more appellant aesthetic touch and association of functionality of the website.
+The navigation bar, footer, and pages in the body make use of icons. The logo states "Digital Nomads" and is animated by an icon to give the idea that devs are on the move. Red was the chosen color to highlight it from the rest of the name.
+Both the header and footer have an image attached to them of somebody networking, to give the impression that they are typing and reading posts. Hence the screen at the top and the user hands at the bottom.
 
 ## Navbar, Header & Favicon
-- The Navbar features from left to right the [Logo], [Home], [About], [Login], [Register], and the [Search] fields. Furthermore, for Users who are logged in, the [Post], [Profile], and [Logout] links. The links guide Users to the respective pages and remain "active" when and if on that page, with the exception of [Post].
-- The Header features an image that splits in half, sharing the rest with the Footer. The screen of a laptop can be seen together with the Logo of the website.
-- On the browser's tab, the Favicon and Logo of the website can be found—a red gear.
-- 
+- The Navbar features from left to right the [Logo], [Home], [About], [Login], [Register] and the [Search] fields. Furthermore, for Users who are logged in, the [Post], [Profile] and [Logout] links.
+- The links guide Users to the respective pages and remain "active" when and if on that page, with the exception of [Post].
+- The Header features an image that splits in half, sharing the rest with the Footer.
+- On the browser's tab, the Favicon and Logo of the website can be found, a red cog.
+
 <img src="media/readme_img/headernavpanel.png" alt="Navigation & Header">
 
 ## Footer
 - The Footer is best defined by Bootstrap's template. It features a slogan on the left side and on the right, the Social Media links. At the very bottom, a copyright notice.
 - Above the Footer is the rest of the image shared with the Header: the keyboard of a laptop.
-- Users can open the Social Media links in new tabs.
+- Users can open the Social Media links and respective pages on new tabs.
 
 <img src="media/readme_img/footerpanel.png" alt="Footer">
 
@@ -47,12 +53,12 @@ Icons were also integrated into the website to give a much more aesthetic touch 
 - The homepage displays all of the posts that users create.
 - If users are logged in, they are greeted with a message followed by their usernames.
 - If no posts are present on the homepage, a message is displayed encouraging users to create a post.
-- 
+
 <img src="media/readme_img/nopostspanel.png" alt="No Posts">
 
 - If the forum has been populated with posts, then the posts are displayed and organized in a vertical fashion, with the newest at the top and the oldest at the bottom.
 - For each post, the username, picture, date, title, and body (truncated by 50 words) are displayed.
-- Every 6 posts, a new page for pagination is created, allowing users to easily navigate from page to page.
+- For every 6 posts, a new page for pagination is created, allowing users to easily navigate from page to page.
 
 <img src="media/readme_img/pagination.png" alt="Pagination">
 
@@ -73,7 +79,7 @@ Icons were also integrated into the website to give a much more aesthetic touch 
 
 <img src="media/readme_img/charactersearch.png" alt="Search Field">
 
-- If no Post exhibit such word, than a template prompts Users to give in a valid word.
+- If no Post exhibits such word, than a template prompts Users to give in a valid word.
 
 <img src="media/readme_img/wrongcharactersearch.png" alt="Search Field">
 
@@ -91,7 +97,7 @@ Icons were also integrated into the website to give a much more aesthetic touch 
 
 <img src="media/readme_img/overviewpanel.png" alt="Overview">
 
-- If a User created an account, but did not make any Posts, even though made Comments. The User profile still remains inactive. This compels users to Post.
+- If a User created an account, but did not make any Posts, even though made a Comment. The User profile remains inactive. This compels users to Post.
 
 <img src="media/readme_img/usernopostspanel.png" alt="User no Profile">
 
@@ -110,6 +116,7 @@ Icons were also integrated into the website to give a much more aesthetic touch 
 <img src="media/readme_img/logoutpanel.png" alt="Log out">
 
 ## Deletion
+- If a User deletes the Profile/account, then the User is automatically logged out and the account eliminated. (This includes all Posts, Comments, Porfile Image and Username)
 
 <img src="media/readme_img/deletionpanel.png" alt="Deletion">
 
@@ -154,10 +161,17 @@ The structure of the website is coherent, and the base.html is present on all pa
 ## Planning & Agile:
 This project was planned using Agile methodology and MoSCoW prioritization.
 
-For this purpose, the project was illustrated by one milestone titled "Submit the project to CI before Deadline," providing the developer with the freedom to accomplish all issues/tasks flexibly by the deadline.
-Throughout the development process, new issues were added/removed, starting from "Todo," progressing to "In Progress," and finally being finalized in "Done."
-The issues were assigned to the sole developer, [TiagoMA90](https://github.com/TiagoMA90), and labeled as "could-have," "should-have," and "must-have". "won't -have" was not included for this project.
-Once completed, the issues were marked as "done," and when all of them were completed, the milestone was closed.
+For this purpose, the project was illustrated by one Milestone entitled "Submit the project to CI before Deadline," providing the developer with the freedom to accomplish all issues/tasks flexibly before dates deadline.
+Throughout the development process, new issues were added/removed, starting from "Todo," progressing to "In Progress," and finally being finalized in "Done".
+The issues were assigned to the sole developer, [TiagoMA90](https://github.com/TiagoMA90) and labeled as "could-have," "should-have,", "must-have" and "won't -have".
+
+In order of priority, with 21 User Stories, the [Project](https://github.com/users/TiagoMA90/projects/7/views/1):
+- 8 x must-have
+- 8 x should-have
+- 5 x could-have
+- 1 x wont-have
+
+Once completed, the issues were marked as "done" and the milestone closed.
 
 <img src="media/readme_img/agile.png" alt="agile methodology">
 <img src="media/readme_img/agilelabels.png" alt="agile methodology">
@@ -309,12 +323,12 @@ The static files are being hosted on Cloudinary:
 - Django (web framework)
 
 ## Other forms of development
-[Favicon.cc](https://www.favicon.cc/) - Favicon generator
-[CI Python Linter](https://pep8ci.herokuapp.com/) - CI Python testing tool
-[Github](https://github.com/) - Host for the repository
-[Gitpod](https://gitpod.io/) - Code editor
-[ElephantSQL](https://www.elephantsql.com/) - Database
-[Cloudinary](https://cloudinary.com/) - Static & Media host
-[Heroku](https://id.heroku.com/) - Cloud platform/Host the live project
+- [Favicon.cc](https://www.favicon.cc/) - Favicon generator
+- [CI Python Linter](https://pep8ci.herokuapp.com/) - CI Python testing tool
+- [Github](https://github.com/) - Host for the repository
+- [Gitpod](https://gitpod.io/) - Code editor
+- [ElephantSQL](https://www.elephantsql.com/) - Database
+- [Cloudinary](https://cloudinary.com/) - Static & Media host
+- [Heroku](https://id.heroku.com/) - Cloud platform/Host the live project
 
 # Credits
