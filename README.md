@@ -26,38 +26,7 @@ For a website where its functionality consists of writing and reading articles, 
 
 Icons were also integrated into the website to give a much more aesthetic touch and association of functionality of the website. The navigation bar, footer, and pages in the body make use of icons. The logo states "Digital Nomads" and is animated by an icon to give the idea that devs are on the move. Red was the chosen color to highlight it from the rest of the name. Both the header and footer have an image attached to them, of somebody networking, to give the impression that they are typing and reading posts. Hence the screen at the top and the hand at the bottom.
 
-The structure of the website is coherent, and the base.html is present on all pages. The skeleton of the body is consistent for all pages.
 
-# Features and Functionality for Non-Registered Users, Registered Users, and Superusers
-
-## Non-Registered Users (Visitors):
-- Visitors can read all posts from /home/.
-- Visitors can read all users' posts from /username/.
-- Visitors can create a user account through /register/.
-- Visitors can navigate to the Home/About/Login/Register pages.
-- Visitors can navigate through the pagination of /home/ and /username/.
-- Visitors can access external links on users' posts/comments and footer.
-
-## Registered Users (CRUD) can do the above as a Visitor, moreover:
-- Users can log in/out through the "Log In/Out" functionality.
-- Users can create posts through the "Post" functionality.
-- Users can update their posts through the "Update" functionality.
-- Users can delete their posts through the "Delete" functionality.
-- Users can like/dislike all posts through the "Like/Dislike" functionality.
-- Users can navigate to the Profile tab and update their "Bio".
-- Users can navigate to the Profile tab and upload a profile picture.
-- Comments cannot be deleted by anyone except Superusers.
-
-## Superusers can manipulate information through the /admin/ panel:
-- CRUD posts.
-- Change passwords.
-- Create/update/delete users.
-- Delete comments.
-- Promote users to Superuser.
-
-(ELABORTATE...)
-
-# Design
 ## Navbar, Header & Favicon
 - The Navbar features from left to right the [Logo], [Home], [About], [Login], [Register], and the [Search] fields. Furthermore, for Users who are logged in, the [Post], [Profile], and [Logout] links. The links guide Users to the respective pages and remain "active" when and if on that page, with the exception of [Post].
 - The Header features an image that splits in half, sharing the rest with the Footer. The screen of a laptop can be seen together with the Logo of the website.
@@ -148,6 +117,37 @@ The structure of the website is coherent, and the base.html is present on all pa
 - If a User goes to a non-defined URL, then a 404 Error template is rendered, requesting users to leave that page.
 
 <img src="media/readme_img/404.png" alt="Error 404">
+
+
+# Features and Functionality for Non-Registered Users, Registered Users, and Superusers
+The structure of the website is coherent, and the base.html is present on all pages. The skeleton of the body is consistent for all pages.
+
+## Non-Registered Users (Visitors):
+- Visitors can read all posts from /home/.
+- Visitors can read all users' posts from /username/.
+- Visitors can create a user account through /register/.
+- Visitors can navigate to the Home/About/Login/Register pages.
+- Visitors can navigate through the pagination of /home/ and /username/.
+- Visitors can access external links on users' posts/comments and footer.
+
+## Registered Users (CRUD) can do the above as a Visitor, moreover:
+- Users can log in/out through the "Log In/Out" functionality.
+- Users can create posts through the "Post" functionality.
+- Users can update their posts through the "Update" functionality.
+- Users can delete their posts through the "Delete" functionality.
+- Users can like/dislike all posts through the "Like/Dislike" functionality.
+- Users can navigate to the Profile tab and update their "Bio".
+- Users can navigate to the Profile tab and upload a profile picture.
+- Comments cannot be deleted by anyone except Superusers.
+
+## Superusers can manipulate information through the /admin/ panel:
+- CRUD posts.
+- Change passwords.
+- Create/update/delete users.
+- Delete comments.
+- Promote users to Superuser.
+
+(ELABORTATE...)
 
 ## Planning & Agile:
 This project was planned using Agile methodology and MoSCoW prioritization.
