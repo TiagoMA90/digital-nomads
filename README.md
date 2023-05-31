@@ -215,11 +215,22 @@ By clicking the links in the navigation panel, users are redirected to the assig
 [TEST WITH:]
 Lighthouse
 [Wave](https://wave.webaim.org/)
-[W3validatro](https://validator.w3.org/)
-[W3jigsaw](https://jigsaw.w3.org/css-validator/)
-[Pep8CI](https://pep8ci.herokuapp.com/)
 
-[SCREENSHOTS] (ELABORATE)
+## Validation 
+
+Via URL of the deployed website on Heroku, pages of this website were validated through validator.w3.org & jigsaw.w3.org.
+No errors or warnings were found whatsoever, after corrections have been applied.
+
+The HTML structure and format passed through the official [W3validator](https://validator.w3.org/) with no issues.
+[See the report](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdigital-nomad.herokuapp.com%2F)
+<img src="media/readme_img/w3validator.png" alt="w3validator">
+
+The CSS styling was tested and validated through [W3jigsaw](https://jigsaw.w3.org/css-validator/)
+No errors were found whatsoever, however bootstrap returned 967 Warnings.
+[See the report](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdigital-nomad.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+<img src="media/readme_img/jigsawvalidator.png" alt="jigsawvalidator">
+
+[Pep8CI](https://pep8ci.herokuapp.com/)
 ...........
 
 - This website was developed on Gitpod hosted by GitHub, making use of both Front-end and Back-end.
