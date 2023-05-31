@@ -19,7 +19,7 @@ from .models import Comment
 # Routing for the urls
 # Home
 def home(request):
-    context= {
+    context = {
         'posts': Post.objects.all()
     }
     return render(request, 'blog/home.html')
@@ -27,7 +27,7 @@ def home(request):
 
 # About
 def about(request):
-    return render(request, 'blog/about.html', {'title':'About'})
+    return render(request, 'blog/about.html', {'title': 'About'})
 
 
 # 404
@@ -40,11 +40,14 @@ def search(request):
     if request.method == "POST":
         searches = request.POST.get('searches')
         results = Post.objects.filter(
-        Q(content__icontains=searches) |
-        Q(author__username__icontains=searches) |
-        Q(title__icontains=searches)
-        )
-        return render(request, 'blog/search.html', {'searches': searches, 'results': results})
+            Q(content__icontains=searches) |
+            Q(author__username__icontains=searches) |
+            Q(title__icontains=searches)
+            )
+
+        return render(
+            request, 'blog/search.html', (
+                {'searches': searches, 'results': results}))
     else:
         return render(request, 'blog/search.html', {})
 
@@ -58,10 +61,10 @@ class PostDetailView(DetailView):
         click = get_object_or_404(Post, id=self.kwargs['pk'])
         total_likes = click.total_likes()
         liked = False
-        
+
         if click.likes.filter(id=self.request.user.id).exists():
             liked = True
-            
+
         context["total_likes"] = total_likes
         context["liked"] = liked
 
@@ -104,7 +107,7 @@ class PostUpdateView(UserPassesTestMixin, LoginRequiredMixin, UpdateView):
 class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Post
     success_url = '/'
-    
+
     def test_func(self):
         post = self.get_object()
         if self.request.user == post.author:
