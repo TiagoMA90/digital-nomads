@@ -27,8 +27,9 @@ def register(request):
 # Function to update a User profile
 def profile(request):
     if request.method == 'POST':
-        profile_form = ProfileUpdateForm(request.POST, request.FILES, instance = request.user.profile)
-        user_form = UserUpdateForm(request.POST, instance = request.user)
+        profile_form = ProfileUpdateForm(
+                request.POST, request.FILES, instance=request.user.profile)
+        user_form = UserUpdateForm(request.POST, instance=request.user)
 
         # If the profile and user forms are valid, save both forms
         if profile_form.is_valid() and user_form.is_valid():
@@ -39,9 +40,8 @@ def profile(request):
         profile_form = ProfileUpdateForm(instance=request.user.profile)
         user_form = UserUpdateForm(instance=request.user)
 
-
     context = {
-        'profile_form': profile_form, 
+        'profile_form': profile_form,
         'user_form': user_form
     }
 
@@ -61,6 +61,6 @@ def delete_profile(request):
 
     return render(request, 'users/deregister.html')
 
-    
+
 def deregister_complete(request):
     return render(request, 'users/deregister_complete.html')
