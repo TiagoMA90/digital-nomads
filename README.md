@@ -244,7 +244,7 @@ Bugs, Errors and Removed functionalities:
 # Errors & Bugs
 ## Bug while Spaming
 Upon manual testing, if a User creates a Post and the Post is submitted & written while spaming the same character/different characters but in the same paragraph, without a single space. The Title and Body exhibit a bug, where the text crosses over to the right side of the border of the Post model. (The same error was found, with ckeditor installed)
-- Solution: Unsolved. No solution was founded The Posts should be written by s Human. (Ought to be fixed in the future, perhaps post-assessment)
+- Solution: Unsolved. No solution was founded The Posts should be written by s Human. (Ought to be fixed in the future, when time is available, perhaps post-assessment)
 
 <img src="media/readme_img/bugontype.png" alt="Bug while spaming a letter">
 
