@@ -34,6 +34,9 @@ Icons were also integrated into the website to give a much more appellant aesthe
 The navigation bar, footer, and pages in the body make use of icons. The logo states "Digital Nomads" and is animated by an icon to give the idea that devs are on the move. Red was the chosen color to highlight it from the rest of the name.
 Both the header and footer have an image attached to them of somebody networking, to give the impression that they are typing and reading posts. Hence the screen at the top and the user hands at the bottom.
 
+The Fonts displayed in this website were imported from Google Fonts
+The Icon displayed in the Footer of this website was imported from FontAwesome ad Boxicon
+
 ## Navbar, Header & Favicon
 - The Navbar features from left to right the [Logo], [Home], [About], [Login], [Register] and the [Search] fields. Furthermore, for Users who are logged in, the [Post], [Profile] and [Logout] links.
 - The links guide Users to the respective pages and remain "active" when and if on that page, with the exception of [Post].
@@ -213,25 +216,23 @@ By clicking the links in the navigation panel, users are redirected to the assig
 - By clicking on "Profile," users are sent to the
 
 [TEST WITH:]
-Lighthouse
-[Wave](https://wave.webaim.org/)
+Lighthouse (ELABORATE)
+[Wave](https://wave.webaim.org/)(ELABORATE)
 
 ## Validation 
-
 Via URL of the deployed website on Heroku, pages of this website were validated through validator.w3.org & jigsaw.w3.org.
 No errors or warnings were found whatsoever, after corrections have been applied.
 
-The HTML structure and format passed through the official [W3validator](https://validator.w3.org/) with no issues.
+The .html template structure and format passed through the official [W3validator](https://validator.w3.org/) with no issues.
 [See the report](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdigital-nomad.herokuapp.com%2F)
 <img src="media/readme_img/w3validator.png" alt="w3validator">
 
-The CSS styling was tested and validated through [W3jigsaw](https://jigsaw.w3.org/css-validator/)
-No errors were found whatsoever, however bootstrap returned 967 Warnings.
+The .css styling file was tested and validated through [W3jigsaw](https://jigsaw.w3.org/css-validator/)
 [See the report](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdigital-nomad.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 <img src="media/readme_img/jigsawvalidator.png" alt="jigsawvalidator">
 
-[Pep8CI](https://pep8ci.herokuapp.com/)
-...........
+The .py models, views and urls format were tested and validated through [Pep8CI](https://pep8ci.herokuapp.com/)
+<img src="media/readme_img/cilinter.png" alt="pep8 ci linter">
 
 - This website was developed on Gitpod hosted by GitHub, making use of both Front-end and Back-end.
 
@@ -239,6 +240,25 @@ Bugs, Errors and Removed functionalities:
 - The ckeditor failed to render properly in the body of the Post. Eventually ckeditor was removed from the project altogether, giving Users the possibility to write a basic TextField.
 - After getting it to work, the layout of the tool box felt off. After stylizing with on .css it failed to render properly. on Heroku. The localserver everything worked fine.
 - The developer would like to re-implement if when time allows.
+
+# Errors & Bugs
+## Bug while Spaming
+Upon manual testing, if a User creates a Post and the Post is submitted & written while spaming the same character/different characters but in the same paragraph, without a single space. The Title and Body exhibit a bug, where the text crosses over to the right side of the border of the Post model. (The same error was found, with ckeditor installed)
+- Solution: Unsolved. No solution was founded The Posts should be written by s Human. (Ought to be fixed in the future, perhaps post-assessment)
+
+<img src="media/readme_img/bugontype.png" alt="Bug while spaming a letter">
+
+## Missing "etag" and assets"
+Upon deploying the project to Heroku, the static files were either corrupted or missing. The ckeditor in particluar exhibited many errors and this resulted in frustration utltimatly leading the developer to abandon this type of RichTextEditor for the time being (Ought to be implemented in the future, perhaps post-assessment). After ckeditor suffered a successful fupload forits assets from the local static files to cloudinary, the developer still insisted on keeping the Posts model simple with TextField for the time being.
+- Solution: Solved by deleting the static folder in Cloudinary, running "pip cache purge" in the terminal of working environment of GitPod and re-deploying on Heroku.
+
+<img src="media/readme_img/collectstaticerror.png" alt="Example of collectstaticerror">
+
+## Building Image
+Upon opening booting the working environment, the repository displayed the same error over and over when trying to access the project on GitPod. This error is persistent and hass been documented since the developers CI-PP3(Python).
+- Solution: Unsolved. Hit "Continue with Default Image".
+
+<img src="media/readme_img/imagebuild.png" alt="Image Build error">
 
 # Development & Deployment
 The project was developed using GitHub and GitPod platforms...
@@ -324,17 +344,25 @@ The static files are being hosted on Cloudinary:
 - Upon successful deployment, retrieve the link for the mock terminal.
 - The live app can be found [here](digital-nomad.herokuapp.com).
 
-# Languages
+## Languages & Frameworks
 - HTML (markup language)
 - CSS (style sheet language)
 - Python (programming language)
-
-## Frameworks
 - Bootsrap (css framework)
 - Django (web framework)
 
 ## Other forms of development
 - [Favicon.cc](https://www.favicon.cc/) - Favicon generator
+- [Convertio](https://convertio.co/de/) - Image converter
+- [Google Fonts](https://fonts.google.com/) - Source of fonts
+- [FontAwesome](https://fontawesome.com/) - Source of icons
+- [Boxicons](https://boxicons.com/?query=) - Source of icons
+- [Bytes.dev](https://ui.dev/amiresponsive?url=https://tiagoma90.github.io/rock-paper-scissors/) - Testing screen sizes
+- Chrome DevTools - Testing tool
+- [WAVE Evaluation tool](https://wave.webaim.org/) - Testing tool
+- [W3validator](https://validator.w3.org/) with no issues.
+- [W3jigsaw](https://jigsaw.w3.org/css-validator/)
+- [Pep8CI](https://pep8ci.herokuapp.com/)
 - [CI Python Linter](https://pep8ci.herokuapp.com/) - CI Python testing tool
 - [Github](https://github.com/) - Host for the repository
 - [Gitpod](https://gitpod.io/) - Code editor
@@ -343,3 +371,11 @@ The static files are being hosted on Cloudinary:
 - [Heroku](https://id.heroku.com/) - Cloud platform/Host the live project
 
 # Credits
+The following sources were resorted in the creation of this website:
+- [Code Institute](https://learn.codeinstitute.net/dashboard) was used as guidance platform for the development of this project (Django & Bootstrap).
+- [freeCodeCamp](https://www.youtube.com/@freecodecamp) was used as orientation platform for the development of this project (Django videos).
+- [Codemy](https://www.youtube.com/@Codemycom) video tutorials from this particular chanel were used as a reference on how establish(Django videos).
+- [stackOverflow](https://stackoverflow.com/) was used as a solution platform for broken code.
+- [Slack](https://code-institute-room.slack.com/?redir=%2Farchives%2FC026PTF46F5%2Fp1682785940128589%3Fthread_ts%3D1682778905.761519%26cid%3DC026PTF46F5)(#project-portfolio-4) was used as a solution platform for broken code and guidance on how to procceed on blockades.
+- [Bootstrap](https://getbootstrap.com/) documentation was used for styling html under classes.
+- [Djangoproject](https://www.djangoproject.com/) documentation was used as a solution platform for broken code and overall functionality under.
