@@ -193,6 +193,24 @@ ul {
   list-style-type: none;
 }
 
+/* Modal properties*/
+.modal-button {
+  color: #807a45;
+}
+
+.modal-button:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.modal-close {
+  background: #807a45;
+  padding: 10px 20px;
+  border: 1px dashed #dddddd;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
 /* Social Media & Icons*/
 .fa-person-through-window, .docplus {
   color: #333333;
