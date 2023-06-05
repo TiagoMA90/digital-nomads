@@ -20,9 +20,9 @@
             <h5 class="modal-title bio-title mx-auto">Mission statement</h5>
           </div>
           <div class="modal-body text-center">
-            <p>Ever wanted to share your nomadic lifestyle, meet like-minded people, reveal your hacks and find and solutions for your problems?</p>
+            <p>Ever wanted to share your nomadic lifestyle with others, meet like-minded people, reveal your hacks and find solutions for your problems?</p>
+            <p>Digital Nomads is a platform where you can disclose your ideas.</p>
             <p><a class="modal-button {% if request.path == '/register/' %}active{% endif %}" href="{% url 'register' %}">Join</a> our community!</p>
-            <p>Digital Nomads is a platform where you can disclose ideas with others.</p>
             <p>No desks, no cubicles, no offices...</p>
           </div>
           <div class="modal-footer">
@@ -41,7 +41,7 @@
         if (!modalShown) {
           $('#home-modal').modal('show');
     
-          // Add click event listener to close button
+          // Event Listener to close the Modal
           $('#home-modal .modal-footer button').on('click', function() {
             $('#home-modal').modal('hide');
             sessionStorage.setItem('modalShown', true);
