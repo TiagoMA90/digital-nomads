@@ -9,11 +9,11 @@
     {% ifchanged post.author %}
       <div class="media-body bio-panels">
         <div class="row align-items-center">
-          <div class="col-2">
+          <div class="col-md-3 col-sm-4">
             <img class="rounded accountimg" src="{{ post.author.profile.image.url }}" alt="">
           </div>
-          <div class="col-10">
-          <h2 class="bio-title">{{ view.kwargs.username }} Overview</h2>
+          <div class="col-md-9 col-sm-8">
+            <h2 class="bio-title">{{ view.kwargs.username }} Overview</h2>
           <!-- If the User has a Bio, display the Overview -->
           {% if post.author.profile.bio %}
             <p>{{ post.author.profile.bio }}</p>

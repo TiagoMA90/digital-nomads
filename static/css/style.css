@@ -248,6 +248,20 @@ a:hover {
 
 
 /* Media queries*/
+@media (max-width: 756px) {
+  .bio-panels {
+    text-align: center;
+  }
+
+  .accountimg {
+    margin: 0 auto;
+  }
+  
+  .bio-title {
+    text-align: center;
+  }
+}
+
 @media screen and (max-width: 690px) {
 
   .centered {
