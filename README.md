@@ -22,8 +22,6 @@ The website was designed with the intent to allow users to browse posts easily a
 For such, it makes use of a colour palette of a mere greenish, brownish, and yellowish blend (#807a45) for the navigation bar.
 This gives a rustic feeling that is often associated with the nomadic camper life at the beach, desert, and mountain.s
 
-The structure of the website is coherent, and the base.html is present on all pages. The skeleton of the body is consistent for all pages.
-
 The background is best defined by a grayish white (#fafafa), and the body of the post simple white (#ffffff), bordered by dashed lines.
 The buttons in the post borrow the same patterns and render a shadow beneath them to contrast the body from the page. This gives the illusion that the User is writing a post on a piece of paper/document.
 
@@ -40,11 +38,28 @@ Both the header and footer have an image attached to them of somebody networking
 The Fonts displayed in this website were imported from Google Fonts, the Icons displayed in the Footer imported from FontAwesome and Boxicons.
 
 # Wireframes
+The structure of the website is coherent, and the base.html is present on all pages. The skeleton of the body is consistent for all pages.
+The Website cane be more or less defined for its complexity like this:
+
+- Reading the Home page:
+<img src="media/readme_img/homewireframes.png" alt="Home Wireframes">
+
+- Reading the About page:
 <img src="media/readme_img/aboutwireframes.png" alt="About Wireframes">
+
+- Reading, Editing or Deelting a Post:
 <img src="media/readme_img/postwireframes.png" alt="Post Wireframes">
+
+- Creating a Post:
 <img src="media/readme_img/formwireframes.png" alt="Form Wireframes">
+
+- Registering an Account:
 <img src="media/readme_img/registerwireframes.png" alt="Register Wireframes">
+
+- Reading Posts by a User
 <img src="media/readme_img/userwireframes.png" alt="User Wireframes">
+
+- Using the Search functionality and retrieving Posts
 <img src="media/readme_img/searchwireframes.png" alt="Search Wireframes">
 
 ## Navbar, Header & Favicon
@@ -284,9 +299,9 @@ The static files are being hosted on Cloudinary:
 ## Languages & Frameworks
 - HTML (markup language)
 - CSS (style sheet language)
-- Python (programming language)
+- jQuery (js framework)
 - Bootsrap (css framework)
-- Django (web framework)
+- Django (python framework)
 
 ## Other forms of development
 - [Favicon.cc](https://www.favicon.cc/) - Favicon generator
