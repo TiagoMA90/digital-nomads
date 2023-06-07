@@ -1,6 +1,6 @@
 
 # Digital Nomads
-Digital Nomads is a website that allows developers to share their experiences outside the office. The app is forum/blog type of website designed to allow Users to convey their personal experiences as Digital Nomads.
+Digital Nomads is a website that allows developers to share their experiences outside the office. The app is a forum/blog type of website designed to allow Users to convey their personal experiences as Digital Nomads.
 A platform where Users can share their adventures, tips and recommendations when working and exploring the world.
 
 No desks, no cubicles, no offices.
@@ -19,23 +19,33 @@ No desks, no cubicles, no offices.
 # Design:
 The website was designed with the intent to allow users to browse posts easily and perform all CRUD functionalities. It relied heavily on colors that should be appealing to the user, especially for those who might use the website on a daily basis.
 
-For such, it makes use of a colour palette of a mere greenish, brownish, and yellowish blend (COLOR # HERE) for the navigation bar.
-This gives a rustic feeling and is often associated with the nomadic camper life at the beach, desert, and mountain.
+For such, it makes use of a colour palette of a mere greenish, brownish, and yellowish blend (#807a45) for the navigation bar.
+This gives a rustic feeling that is often associated with the nomadic camper life at the beach, desert, and mountain.s
 
-The background is best defined by a grayish white (COLOR # HERE), and the body of the post simple white (COLOR # HERE), bordered by dashed lines.
-The buttons in the post borrow the same patterns and render a shadow beneath them to contrast the body of the page. This gives the illusion that the User is writing a post on a piece of paper/document.
+The structure of the website is coherent, and the base.html is present on all pages. The skeleton of the body is consistent for all pages.
 
-[IMG for COLOR PALETTE]
+The background is best defined by a grayish white (#fafafa), and the body of the post simple white (#ffffff), bordered by dashed lines.
+The buttons in the post borrow the same patterns and render a shadow beneath them to contrast the body from the page. This gives the illusion that the User is writing a post on a piece of paper/document.
+
+<img src="media/readme_img/colourpalette.png" alt="Colours">
 
 For a website where its functionality consists essentially of writing and reading articles, the fonts used for this website were "Audiowide" and "Staatliches." A choice that should appeal to a user's readability and block them from distractions or a complex design. The fonts and logo on the navigation bar are dyed in white, while the body presents itself with a dark grayish tone that doesn't stand too much from the article.
 Links in the navigation bar are highlighted by a white tone when hovered, and bold when active. Links change color upon hover, particularly the title of the post, the username in a post/comment, the social media links and links that redirect users to other pages.
+<img src="media/readme_img/googlefonts.png" alt="Google Fonts">
 
 Icons were also integrated into the website to give a much more appellant aesthetic touch and association of functionality of the website.
 The navigation bar, footer, and pages in the body make use of icons. The logo states "Digital Nomads" and is animated by an icon to give the idea that devs are on the move. Red was the chosen color to highlight it from the rest of the name.
 Both the header and footer have an image attached to them of somebody networking, to give the impression that they are typing and reading posts. Hence the screen at the top and the user hands at the bottom.
 
-The Fonts displayed in this website were imported from Google Fonts
-The Icon displayed in the Footer of this website was imported from FontAwesome ad Boxicon
+The Fonts displayed in this website were imported from Google Fonts, the Icons displayed in the Footer imported from FontAwesome and Boxicons.
+
+# Wireframes
+<img src="media/readme_img/aboutwireframes.png" alt="About Wireframes">
+<img src="media/readme_img/postwireframes.png" alt="Post Wireframes">
+<img src="media/readme_img/formwireframes.png" alt="Form Wireframes">
+<img src="media/readme_img/registerwireframes.png" alt="Register Wireframes">
+<img src="media/readme_img/userwireframes.png" alt="User Wireframes">
+<img src="media/readme_img/searchwireframes.png" alt="Search Wireframes">
 
 ## Navbar, Header & Favicon
 - The Navbar features from left to right the [Logo], [Home], [About], [Login], [Register] and the [Search] fields. Furthermore, for Users who are logged in, the [Post], [Profile] and [Logout] links.
@@ -72,7 +82,7 @@ The Icon displayed in the Footer of this website was imported from FontAwesome a
 
 ## Posts & Comments
 - When opening a Post, the details of that particular Post is expanded, allowing Users to read the whole article.
-- Users can read and engage with the Post, by leaving Comments and Likes.
+- Users can read and engage with the Post, by leaving Comments and Likes, when clicking the respective buttons.
 
 <img src="media/readme_img/openpostandcommentpanels.png" alt="Open Posts and Comments">
 
@@ -93,6 +103,7 @@ The Icon displayed in the Footer of this website was imported from FontAwesome a
 ## User Profile
 - The User profile can be best defined as a "Settings panel" where users can update their personal info.
 - The fields that can be updated include Username, Profile picture, E-mail and Bio.
+- By default, the users profile picture is the logo of the website.
 
 <img src="media/readme_img/profile.png" alt="Profile">
 
@@ -132,8 +143,6 @@ The Icon displayed in the Footer of this website was imported from FontAwesome a
 
 
 # Features and Functionality for Non-Registered Users, Registered Users, and Superusers
-The structure of the website is coherent, and the base.html is present on all pages. The skeleton of the body is consistent for all pages.
-
 ## Non-Registered Users (Visitors):
 - Visitors can read all posts from /home/.
 - Visitors can read all users' posts from /username/.
@@ -187,78 +196,6 @@ Users would open up a thread, give a brief description of the event, target the 
 
 In the end, this project was simplified due to deadline limitations and time constraints. It makes good use of familiar concepts such as Create Read Update Delete.
 Upon re-creating this project, the developer rethought the idea of a "forum" or "discussion board," similar to [reddit](https://www.reddit.com/), but more focused on the nomadic lifestyle.
-
-...............
-## Manual Testing and Website Functionality: (MAKE A TESTS.MD)
-Manual testing has been performed for its overall purpose.
-The website has proven to exhibit dynamic functionality and responsive interactivity, both in the Front & Back-End.
-After consecutive rehearsals and manual testing, the website employed the desired role and met the final goal set by the developer.
-
-Based on the solid foundations of CRUD, testing was performed:
-- By navigating and accessing links on the website.
-- By Creating, Reading, Updating, and Deleting an account for a registered user.
-- By Creating, Reading, Updating, and Deleting posts as a registered user.
-- By Creating and Reading comments on a post as a registered user.
-- By Liking and Disliking a post as a registered user.
-- By Populating the homepage with posts to activate Pagination.
-- By inputting and retrieving results from the search box.
-- By Resetting the password of an account via email.
-- By manipulating posts, users, comments, and likes as a superuser in the Admin panel.
-
-By clicking the links in the navigation panel, users are redirected to the assigned pages.
-- By clicking on "Home," users are sent to the homepage, where the board of posts can be found. From here, users can browse posts and select one to read.
-- By clicking on "About," users are sent to the About page. Within that page, users can read the introduction and the mission goal of the website. Users may navigate to the Registration and Login pages.
-- By clicking on "Post," users are redirected to the Post Form, where they must input a title and body to create a thread. Posts are submitted by clicking the Submit Button. (Users must be logged in to post; otherwise, they are prompted to the Login page.)
-- Once a post has been successfully created, it can be accessed and read by the entire community.
-- Authors of that particular thread can Edit, Delete, Like/Dislike, and Comment on that post. Respectively, these functionalities are achieved by clicking the following icons at the end of the thread: the "Pencil," "Bin," "Heart," and the "Add Comment" links.
-- Other users can Like/Dislike and/or Comment on that post by clicking the same icons mentioned above.
-- Comments cannot be updated or deleted by anyone once submitted, except by administrators. To submit a comment on the Comment page, users must click the "Submit Comment" button.
-- By clicking on "Profile," users are sent to the
-
-[TEST WITH:]
-Lighthouse (ELABORATE)
-[Wave](https://wave.webaim.org/)(ELABORATE)
-
-## Validation 
-Via URL of the deployed website on Heroku, pages of this website were validated through validator.w3.org & jigsaw.w3.org.
-No errors or warnings were found whatsoever, after corrections have been applied.
-
-The .html template structure and format passed through the official [W3validator](https://validator.w3.org/) with no issues.
-[See the report](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdigital-nomad.herokuapp.com%2F)
-<img src="media/readme_img/w3validator.png" alt="w3validator">
-
-The .css styling file was tested and validated through [W3jigsaw](https://jigsaw.w3.org/css-validator/)
-[See the report](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdigital-nomad.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
-<img src="media/readme_img/jigsawvalidator.png" alt="jigsawvalidator">
-
-The .py models, views and urls format were tested and validated through [Pep8CI](https://pep8ci.herokuapp.com/)
-<img src="media/readme_img/cilinter.png" alt="pep8 ci linter">
-
-- This website was developed on Gitpod hosted by GitHub, making use of both Front-end and Back-end.
-
-Bugs, Errors and Removed functionalities:
-- The ckeditor failed to render properly in the body of the Post. Eventually ckeditor was removed from the project altogether, giving Users the possibility to write a basic TextField.
-- After getting it to work, the layout of the tool box felt off. After stylizing with on .css it failed to render properly. on Heroku. The localserver everything worked fine.
-- The developer would like to re-implement if when time allows.
-
-# Errors & Bugs
-## Bug while Spaming
-Upon manual testing, if a User creates a Post and the Post is submitted & written while spaming the same character/different characters but in the same paragraph, without a single space. The Title and Body exhibit a bug, where the text crosses over to the right side of the border of the Post model. (The same error was found, with ckeditor installed)
-- Solution: Unsolved. No solution was founded The Posts should be written by s Human. (Ought to be fixed in the future, when time is available, perhaps post-assessment)
-
-<img src="media/readme_img/bugontype.png" alt="Bug while spaming a letter">
-
-## Missing "etag" and assets"
-Upon deploying the project to Heroku, the static files were either corrupted or missing. The ckeditor in particluar exhibited many errors and this resulted in frustration utltimatly leading the developer to abandon this type of RichTextEditor for the time being (Ought to be implemented in the future, perhaps post-assessment). After ckeditor suffered a successful fupload forits assets from the local static files to cloudinary, the developer still insisted on keeping the Posts model simple with TextField for the time being.
-- Solution: Solved by deleting the static folder in Cloudinary, running "pip cache purge" in the terminal of working environment of GitPod and re-deploying on Heroku.
-
-<img src="media/readme_img/collectstaticerror.png" alt="Example of collectstaticerror">
-
-## Building Image
-Upon opening booting the working environment, the repository displayed the same error over and over when trying to access the project on GitPod. This error is persistent and hass been documented since the developers CI-PP3(Python).
-- Solution: Unsolved. Hit "Continue with Default Image".
-
-<img src="media/readme_img/imagebuild.png" alt="Image Build error">
 
 # Development & Deployment
 The project was developed using GitHub and GitPod platforms...
