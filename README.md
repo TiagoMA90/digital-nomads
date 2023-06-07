@@ -183,27 +183,24 @@ The Website cane be more or less defined for its complexity like this:
 - Delete comments.
 - Promote users to Superuser.
 
-(ELABORTATE...)
-
 ## Planning & Agile:
 This project was planned using Agile methodology and MoSCoW prioritization.
 
 For this purpose, the project was illustrated by one Milestone entitled "Submit the project to CI before Deadline," providing the developer with the freedom to accomplish all issues/tasks flexibly before dates deadline.
 Throughout the development process, new issues were added/removed, starting from "Todo," progressing to "In Progress," and finally being finalized in "Done".
-The issues were assigned to the sole developer, [TiagoMA90](https://github.com/TiagoMA90) and labeled as "could-have," "should-have,", "must-have" and "won't -have".
+The issues were assigned to the sole developer and labeled as "could-have," "should-have,", "must-have" and "won't -have".
 
-In order of priority, with 21 User Stories, the [Project](https://github.com/users/TiagoMA90/projects/7/views/1):
+In order of priority, with 21 User Stories, the [Project](https://github.com/users/TiagoMA90/projects/7/views/1) has:
 - 8 x must-have
 - 8 x should-have
 - 5 x could-have
 - 1 x wont-have
 
-Once completed, the issues were marked as "done" and the milestone closed.
+Once completed, the issues were marked as "done" and the milestone consequently closed.
 
 <img src="media/readme_img/agile.png" alt="agile methodology">
 <img src="media/readme_img/agilelabels.png" alt="agile methodology">
 
-[SCREENSHOTS] (ELABORATE)
 
 ## Development Process
 The project started out as a forum for Ads of Events, where users could post events taking place at a certain time in a certain location.
