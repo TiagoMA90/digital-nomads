@@ -133,7 +133,9 @@ The Website cane be more or less defined for its complexity like this:
 ## Registration & Deletion
 - The Registration page requests Users to input a Username, E-mail and Password.
 
-<img src="media/readme_img/registerationpanel.png" alt="Error 404">
+<img src="media/readme_img/registerationpanel.png" alt="Registration">
+<img src="media/readme_img/registerationconfirmedpanel.png" alt="Registration Confirmed">
+
 
 ## Log in/out
 - The Log in page demands Users to input valid credentials, as per registered.
