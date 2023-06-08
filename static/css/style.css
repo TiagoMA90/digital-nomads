@@ -21,7 +21,7 @@ body {
 
 /* User Bio properties */
 .bio-title  {
-  color: #ffffff;
+  color: #807a45;
 }
 
 .bio-panels {
@@ -64,7 +64,7 @@ ul {
 
 /* Navigation & Header properties */
 .bg-steel {
-  background-color: #333333;
+  background-color: #807a45;
 }
 
 .header .navbar-nav .nav-link {
@@ -182,7 +182,7 @@ a.title:hover {
 /* Links and Icons */
 /* Overall links */
 a {
-  color: #333333;
+  color: #807a45;
 }
 
 a:hover{
@@ -195,7 +195,7 @@ ul {
 
 /* Modal properties*/
 .modal-button {
-  color: #cbd5db;
+  color: #807a45;
 }
 
 .modal-button:hover {
@@ -204,7 +204,7 @@ ul {
 }
 
 .modal-close {
-  background: #444444;
+  background: #807a45;
   padding: 10px 20px;
   border: 1px dashed #dddddd;
   border-radius: 3px;
@@ -217,7 +217,7 @@ ul {
 }
 
 .fa-person-through-window:hover, .docplus:hover {
-  color: #808080;
+  color: #807a45;
 }
 
 a:hover {
@@ -284,13 +284,13 @@ a:hover {
 }
 
 .search-button {
-  background-color: #444444;
+  background-color: #979052;
   color: #cbd5db;
-  border-color: #333333;
+  border-color: #807a45;
 }
 
 .search-button:hover {
-  background-color: #333333;
+  background-color: #807a45;
   color: #ffffff;
-  border-color: #444444;
+  border-color: #979052;
 }
