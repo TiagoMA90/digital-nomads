@@ -17,8 +17,7 @@ def register(request):
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
-            messages.success(request, f'Your account has been successfully created, {username}!')
-            return redirect('blog-home')
+            return redirect('register_complete')
     else:
         form = UserRegisterForm()
     return render(request, 'users/register.html', {'form': form})
@@ -65,3 +64,6 @@ def delete_profile(request):
 
 def deregister_complete(request):
     return render(request, 'users/deregister_complete.html')
+
+def register_complete(request):
+    return render(request, 'users/register_complete.html')

@@ -26,6 +26,8 @@ from users.views import delete_profile
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/', user_views.register, name='register'),
+    path('register/complete/', user_views.register_complete,
+        name='register_complete'),
     path('login/', auth_views.LoginView.as_view(
         template_name='users/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(
