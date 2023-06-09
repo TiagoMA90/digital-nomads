@@ -20,7 +20,7 @@
             </div>
         </div>
     </article>
-    <section>
+    <div>
         <div class="container panels">
             <div class="row">
                 <!-- If the authenticated User is the Author of this Post, allow the following: -->
@@ -52,9 +52,9 @@
             </div>
         </div>
         <br>
-    </section>
+    </div>
     <!-- Coment Section -->
-    <section class="panels">
+    <div class="panels">
         <h4>Comments:</h4>
         <!-- If there are no Comments in place, render: -->
         {% if not post.comments.all %}
@@ -82,7 +82,7 @@
                 </small>
             {% endfor %}
         {% endif %}
-    </section>
+            </div>
     <br>
     <br>
 {% endblock %}
