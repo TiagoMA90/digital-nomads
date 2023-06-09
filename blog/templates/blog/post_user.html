@@ -10,7 +10,7 @@
       <div class="media-body bio-panels">
         <div class="row align-items-center">
           <div class="col-md-3 col-sm-4">
-            <img class="rounded accountimg" src="{{ post.author.profile.image.url }}" alt="">
+            <img class="rounded accountimg" src="{{ post.author.profile.image.url }}" alt="Profile Picture">
           </div>
           <div class="col-md-9 col-sm-8">
             <h2 class="bio-title">{{ view.kwargs.username }} Overview</h2>
@@ -42,8 +42,7 @@
       </article>
     {% endfor %}
   {% else %}
-    <h3 class="text-center">{{ view.kwargs.username }} has not posted anything yet.</h3>
-    <h2 class="text-center"><a class="nav-item nav-link" href="{% url 'blog-home' %}"><i class="fa-solid fa-person-through-window"></i></a></h2>
+    <h3 class="text-center">{{ view.kwargs.username }} has not posted anything yet.<br><a class="nav-item nav-link" href="{% url 'blog-home' %}" aria-label="Home"><i class="fa-solid fa-person-through-window"></i></a></h3>
     <p class="text-center">Get me out of here! </p>
   {% endif %}
   <!-- Pagination -->
