@@ -20,16 +20,17 @@ Based on the solid foundations of CRUD, testing was performed:
 ## Functionalities
 - By clicking on "Home," users are sent to the homepage, where the board of posts can be found. From here, users can browse posts and select one to read.
 - By clicking on "About," users are sent to the About page. Within that page, users can read the introduction and the mission goal of the website. Users may navigate to the Registration and Login pages.
-- By clicking on "Post," users are redirected to the Post Form, where they must input a title & body to create a thread. Posts are submitted by clicking the Submit Button. (Users must be logged in to post; otherwise, they are prompted to the Login page.)
+- By clicking on "Register", users are sent to Register Form page. Within that page, users may give in a Username and Passwrd(x2) in order to create an account. Once the "Submit" button is clicked, the account is created and Users may log in to they User account.
+- By clicking on "Login", users are requested to use their credentials (Username & Password) to access their User accounts. Once "Log in" is clicked, Users are in and can start  CRUDing functionalities withing the website.
+- By clicking "Logout", users are logged out, their accounts closed and redirected to a template with a farewell message.
+- By clicking on "Post," users are redirected to the Post Form, where they must input a title & body to create a thread. Posts are submitted by clicking the Submit Button. (Users must be logged in to post; otherwise, they are prompted to visit the Login page.)
 - Once a post has been successfully created, it can be accessed and read by the entire community.
 - Authors of that particular thread can Edit, Delete, Like/Dislike, and Comment on that post. Respectively, these functionalities are achieved by clicking the following icons at the end of the thread: the "Pencil," "Bin," "Heart," and the "Add Comment" links.
 - Other users can Like/Dislike and/or Comment on that post by clicking the same icons mentioned above.
-- Comments cannot be updated or deleted by anyone once submitted, except by administrators. To submit a comment on the Comment page, users must click the "Submit Comment" button.
-- By clicking on "Profile," users are sent to the
-
-...........................................
-
-...........................................
+- Comments cannot be Updated or Deleted by anyone once submitted, except by administrators. To submit a comment on the Comment page, users must click the "Submit Comment" button, once the body has been populated.
+- By clicking on "Profile," users are sent to the settings panel, where one can Read, Update or Delete the profile.
+- Inside the Profile page, Users may Edit the Username, Profile Picture and E-Mail by clicking the "Update Button. Users can also Delete the Profile by clicking the "Delete Profile" Button. Once the Profile is deleted the account is eliminated along woth the Posts and Comments associated with that account.
+- By inputting characters/words in the Seach box, Users may filter Posts by a particular word. Once the "Magnifying Glass" is clicked, the Website retrieves Posts containing words in the Title, Body or Username of a Post. Users may click a particluar post, after retrieved, to open it and read it.
 
 
 ## Lighthouse & WAVE
@@ -52,8 +53,7 @@ It retrieved Alerts however, for Redundant links (example links found in the nav
 Refer to the templates names:
 <img src="media/readme_img/wave.png" alt="wave">
 
-In order to achieve auspicious ratings, the website underwent various changes on its styling in order to please both WAVE and Lighthouse 
-...........................................
+In order to achieve auspicious ratings, the website underwent various changes on its styling in order to please both WAVE and Lighthouse.
 
 ## Validation 
 Via URL of the deployed website on Heroku, all pages were validated through validator.w3.org & jigsaw.w3.org.
@@ -70,7 +70,7 @@ Refer to the following links:
 [/post/update/](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdigital-nomad.herokuapp.com%2Fpost%2F68%2Fupdate)
 [/user/user/](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdigital-nomad.herokuapp.com%2Fuser%2Fuser)
 
-The Developer investigated the error, but found no solution, as "xt-muted"><ul><li>Yo" is not found int the /register/ template.
+The Developer investigated the error, but found no solution was found. The /register/ template has no such bootstrap class.
 When time allows, the error ought to suffer a correction.
 <img src="media/readme_img/registererror.png" alt="register error">
 
