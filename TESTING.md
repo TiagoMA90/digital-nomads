@@ -31,16 +31,50 @@ Based on the solid foundations of CRUD, testing was performed:
 
 ...........................................
 
-[TEST WITH:]
-Lighthouse (ELABORATE)
-[Wave](https://wave.webaim.org/)(ELABORATE)
+
+## Lighthouse & WAVE
+This website, under Ingognito mode, was scanned for Performance, Accessibility, Best Practices and SEO for both Desktop and Mobile devices under the Lighthouse function provided by Chrome DevTools, with favorable scores.
+
+Both devices exhibited scores above 90% for Performance, Accessibility and SEO, with the exception for Mobiles on Performance, due to image size and extension uploaded by Users.
+Lighthouse failed to run and validate a "error 404" page.
+
+Refer to the links for the templates:
+<img src="media/readme_img/lighthousedesktop.png" alt="lighthousedesktop">
+<img src="media/readme_img/lighthousemobile.png" alt="lighthousemobile">
+
+This website, under Ingognito mode, was scanned for Errors, Contrast Errors, Alerts, Features, Structural Elements and Aria for both Desktop with Chromes extension [Wave](https://wave.webaim.org/).
+
+After several tests and corrections, the website went under examination for all its pages and retrieved no Errors, whatsoever.
+The website is responsive and displays a pleasing style to the viewers, with colors contrasting each other. Aria labels have been applied together with Structural Elements and Features.
+
+It retrieved Alerts however, for Redundant links (example links found in the navigation bar from base.html also found in the body of a page.), Suspicious alternative text and Skipped heading level.
+
+Refer to the templates names:
+<img src="media/readme_img/wave.png" alt="wave">
+
+In order to achieve auspicious ratings, the website underwent various changes on its styling in order to please both WAVE and Lighthouse 
 ...........................................
 
 ## Validation 
-Via URL of the deployed website on Heroku, pages of this website were validated through validator.w3.org & jigsaw.w3.org.
-No errors or warnings were found whatsoever, after several corrections have been applied.
+Via URL of the deployed website on Heroku, all pages were validated through validator.w3.org & jigsaw.w3.org.
+No errors or warnings were found whatsoever, after several corrections have been applied with the exception of /register/
 
-The .html template structure and format passed through the official [W3validator](https://validator.w3.org/) with no issues.
+The website went under various editions in order to comply with markup validity.
+Refer to the following links:
+[home](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdigital-nomad.herokuapp.com%2F)
+[/about/](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdigital-nomad.herokuapp.com%2Fabout%2F)
+[/login/](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdigital-nomad.herokuapp.com%2Flogin%2F)
+[/logout/](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdigital-nomad.herokuapp.com%2Flogout%2F)
+[/register/](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdigital-nomad.herokuapp.com%2Fregister%2F)
+[/post/new/](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdigital-nomad.herokuapp.com%2Fpost%2Fnew%2F)
+[/post/update/](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdigital-nomad.herokuapp.com%2Fpost%2F68%2Fupdate)
+[/user/user/](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdigital-nomad.herokuapp.com%2Fuser%2Fuser)
+
+The Developer investigated the error, but found no solution, as "xt-muted"><ul><li>Yo" is not found int the /register/ template.
+When time allows, the error ought to suffer a correction.
+<img src="media/readme_img/registererror.png" alt="register error">
+
+Otherwise, the .html template structure and format passed through the official [W3validator](https://validator.w3.org/) with no issues.
 [See the report](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdigital-nomad.herokuapp.com%2F)
 <img src="media/readme_img/w3validator.png" alt="w3validator">
 
