@@ -330,3 +330,4 @@ The following sources were resorted in the creation of this website:
 - [Slack](https://code-institute-room.slack.com/?redir=%2Farchives%2FC026PTF46F5%2Fp1682785940128589%3Fthread_ts%3D1682778905.761519%26cid%3DC026PTF46F5)(#project-portfolio-4) was used as a solution platform for broken code and guidance on how to procceed on blockades.
 - [Bootstrap](https://getbootstrap.com/) documentation was used for styling html under classes.
 - [Djangoproject](https://www.djangoproject.com/) documentation was used as a solution platform for broken code and overall functionality under.
+- The Header/Footer image is originally from taken from [CNN Underscored](https://edition.cnn.com/cnn-underscored/travel/working-remotely-while-traveling) blog post.
