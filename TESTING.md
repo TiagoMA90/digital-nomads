@@ -1,7 +1,5 @@
 # Testing:
-## Manual testing
-
-Manual testing has been performed for its overall purpose.
+Testing has been performed for its overall purpose.
 The website has proven to exhibit dynamic functionality and responsive interactivity, both in the Front & Back-End.
 After consecutive rehearsals and manual testing, the website employed the desired role and met the final goal set by the developer.
 
@@ -31,6 +29,33 @@ Based on the solid foundations of CRUD, testing was performed:
 - By clicking on "Profile," users are sent to the settings panel, where one can Read, Update or Delete the profile.
 - Inside the Profile page, Users may Edit the Username, Profile Picture and E-Mail by clicking the "Update Button. Users can also Delete the Profile by clicking the "Delete Profile" Button. Once the Profile is deleted the account is eliminated along with the Posts and Comments associated with that account.
 - By inputting characters/words in the Seach box, Users may filter Posts with a particular word of interest. Once the "Magnifying Glass" is clicked, the Website retrieves Posts containing words in the Title, Body or Username of a Post. Users may click a particluar post, after retrieved, to open and read it.
+
+## Manual testing
+Manual testing has been performed by exploiting test case scenarios.
+
+| Scenario | Case | Condition | Steps | Expectation | Result | Mark |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| Visit the Home page | click on Home link | Reg./Non-Reg. Users | - On the navbar of the webite click on Home | Opens the Homepage in the same page | The Home page is open | Approved |
+| Visit the About page | click on About link | Reg./Non-Reg. Users | - On the navbar of the website click on About | Opens the About page in the same page | The About page is open | Approved  
+| Visit the Login page | click on Login link | Reg./Non-Reg. Users | - On the navbar of the website click on Login | Opens the Login page in the same page | The Login page is open | Approved  
+| Log into a User account | On the Login page input the Login credentials and hit Login | Registered Users | - Input the login credentials(Username/Password) -> Click Login | Logs the User | The User is logged in | Approved   
+| Log out from a User account | click on Logout link | Registered Users | (if authenticated) - On the navbar of th website click on Logout | Logs the User out | The User is logged out | Approved  
+| Visit the Register page | click on Register link | Reg./Non-Reg. Users | - On the navbar of the website click on Registern | Opens the Register page in the same page | The Register page is open | Approved  
+| Register a User account | On the Register page, input the requested credentials and click Sign Up | Reg./Non-Reg. Users | - Input the Username/E-mail/Password1/Password2 -> Click Sign Up | Creates an User account | A User account is created | Approved  
+| Deregister a User Account | from the User profile click Delete Account | Registered Users | (if authenticated) - Access the User profile -> Click Delete Account -> Confirm by clicking Delete |Deletes the User accoutn | The User account is eliminated | Approved  
+| Use the Search Box | On the Searchbox, enter a valid keyword & click the search button | Reg./Non-Reg. Users | - Click on the Seachbox -> Enter a keyword -> click the search button | Retrieves a list of Posts containing a valid keyword | A list of Posts containing a valid keyword is retrieved | Approved  
+| Update the User Profile | On the User profile, update the given Username, E-mail or Bio | Registered Users | (if authenticated) - Click on the User Profile -> Update the Username/E-mail/Bio -> click the Update button | Updates the User profile | The User profile is updated  | Approved  
+| Upload a User Profile picture | Upload a Profile picture | Registered Users | (if authenticated) - Click on the User Profile -> Click on "Choose a file" and upload a picture from your local device -> click the Update button | Updates the User profile picture | The User profile picture is updated | Approved  
+| Visit a User Profile | click the Username | Reg./Non-Reg. Users | - From a list of posts -> Click on an authors Username | Accesses a User profile | The User profile is accessed | Approved  
+
+(CONTINUE HERE)
+| Reset/Forgot the User Password | + | + | - + | + | + | Approved  
+| Create a Post | + | + | - + | + | + | Approved  
+| Read/Open a Post | + | + | - + | + | + | Approved  
+| Update a Post | + | + | - + | + | + | Approved  
+| Delete a Post | + | + | - + | + | + | Approved  
+| Write a Comment | + | + | - + | + | + | Approved  
+| Like/Dislike a Post | + | + | - + | + | + | Approved  
 
 
 ## Lighthouse & WAVE
