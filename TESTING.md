@@ -35,27 +35,25 @@ Manual testing has been performed by exploiting test case scenarios.
 
 | Scenario | Case | Condition | Steps | Expectation | Result | Mark |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-| Visit the Home page | click on Home link | Reg./Non-Reg. Users | - On the navbar of the webite click on Home | Opens the Homepage in the same page | The Home page is open | Approved |
-| Visit the About page | click on About link | Reg./Non-Reg. Users | - On the navbar of the website click on About | Opens the About page in the same page | The About page is open | Approved  
-| Visit the Login page | click on Login link | Reg./Non-Reg. Users | - On the navbar of the website click on Login | Opens the Login page in the same page | The Login page is open | Approved  
+| Visit the Home page | Click on Home link | Reg./Non-Reg. Users | - On the navbar of the webite click on Home | Opens the Homepage in the same page | The Home page is open | Approved |
+| Visit the About page | Click on About link | Reg./Non-Reg. Users | - On the navbar of the website click on About | Opens the About page in the same page | The About page is open | Approved  
+| Visit the Login page | Click on Login link | Reg./Non-Reg. Users | - On the navbar of the website click on Login | Opens the Login page in the same page | The Login page is open | Approved  
 | Log into a User account | On the Login page input the Login credentials and hit Login | Registered Users | - Input the login credentials(Username/Password) -> Click Login | Logs the User | The User is logged in | Approved   
-| Log out from a User account | click on Logout link | Registered Users | (if authenticated) - On the navbar of th website click on Logout | Logs the User out | The User is logged out | Approved  
-| Visit the Register page | click on Register link | Reg./Non-Reg. Users | - On the navbar of the website click on Registern | Opens the Register page in the same page | The Register page is open | Approved  
+| Log out from a User account | Click on Logout link | Registered Users | (if authenticated) - On the navbar of th website click on Logout | Logs the User out | The User is logged out | Approved  
+| Visit the Register page | Click on Register link | Reg./Non-Reg. Users | - On the navbar of the website click on Registern | Opens the Register page in the same page | The Register page is open | Approved  
 | Register a User account | On the Register page, input the requested credentials and click Sign Up | Reg./Non-Reg. Users | - Input the Username/E-mail/Password1/Password2 -> Click Sign Up | Creates an User account | A User account is created | Approved  
 | Deregister a User Account | from the User profile click Delete Account | Registered Users | (if authenticated) - Access the User profile -> Click Delete Account -> Confirm by clicking Delete |Deletes the User accoutn | The User account is eliminated | Approved  
 | Use the Search Box | On the Searchbox, enter a valid keyword & click the search button | Reg./Non-Reg. Users | - Click on the Seachbox -> Enter a keyword -> click the search button | Retrieves a list of Posts containing a valid keyword | A list of Posts containing a valid keyword is retrieved | Approved  
-| Update the User Profile | On the User profile, update the given Username, E-mail or Bio | Registered Users | (if authenticated) - Click on the User Profile -> Update the Username/E-mail/Bio -> click the Update button | Updates the User profile | The User profile is updated  | Approved  
-| Upload a User Profile picture | Upload a Profile picture | Registered Users | (if authenticated) - Click on the User Profile -> Click on "Choose a file" and upload a picture from your local device -> click the Update button | Updates the User profile picture | The User profile picture is updated | Approved  
-| Visit a User Profile | click the Username | Reg./Non-Reg. Users | - From a list of posts -> Click on an authors Username | Accesses a User profile | The User profile is accessed | Approved  
-
-(CONTINUE HERE)
-| Reset/Forgot the User Password | + | + | - + | + | + | Approved  
-| Create a Post | + | + | - + | + | + | Approved  
-| Read/Open a Post | + | + | - + | + | + | Approved  
-| Update a Post | + | + | - + | + | + | Approved  
-| Delete a Post | + | + | - + | + | + | Approved  
-| Write a Comment | + | + | - + | + | + | Approved  
-| Like/Dislike a Post | + | + | - + | + | + | Approved  
+| Update the User Profile | On the User profile, update the given Username, E-mail or Bio | Registered Users | (if authenticated) - Click on the User Profile -> Update the Username/E-mail/Bio -> Click the Update button | Updates the User profile | The User profile is updated  | Approved  
+| Upload a User Profile picture | Upload a Profile picture | Registered Users | (if authenticated) - Click on the User Profile -> Click on "Choose a file" and upload a picture from your local device -> Click the Update button | Updates the User profile picture | The User profile picture is updated | Approved  
+| Visit a User Profile | Click the Username | Reg./Non-Reg. Users | - From a list of posts -> Click on an authors Username | Accesses a User profile | The User profile is accessed | Approved  
+| Reset/Forgot the User Password | Click on the Reset Password link on the Login Page and submit an e-mail | Registered Users | - On the Login page lick on the Reset Password link -> Introduce the E-mail -> Click on "Submit Password button | E-mails a link to the User e-mail with a link to reset the Password | An e-mail is dispatched with a reset link for the Password | Approved  
+| Create a Post | Click on Post | Registered Users | (if authenticated) - On the navbar click on Post -> Input the Title* and Content* fields -> Click Submit | Creates a Post visible at Home | A Post is created | Approved  
+| Read/Open a Post | Click on a Post to open | Reg./Non-Reg. Users | - From Home and the list of Posts displayed on the same page, click on the title of a Post | Opens a truncated Post | A Post is open | Approved  
+| Update/Edit a Post | Click on Update | Registered Users | (if authenticated) - Inside of a Post click on the Edit icon -> Edit the Title or Body of the Post -> Click on Submit | Updates a User-Post Title* or Content* | A Post is updated | Approved  
+| Delete a Post | Click on Delete | Registered Users | (if authenticated) - Inside of a User-Post click on the Bin icon -> Click on Confirm | Deletes a User-Post | Deletes a Post | The Post is Deleted | + | Approved  
+| Write a Comment | Click on Add a Comment | Registered Users | - From a inside of a Post click on Add a Comment -> Write the body of a Comment -> Click on Submit Comment | Add a Comment to a Post | A Comment is added to a Post | Approved  
+| Like/Dislike a Post | Click on the Like Icon | Registered Users | (if authenticated) - From a inside of a Post click on the Like icon (to like) &/or click again (to unlike) | Likes/Dislikes a Post | A Post is Liked/Disliked | Approved  
 
 
 ## Lighthouse & WAVE
