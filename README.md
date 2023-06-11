@@ -134,7 +134,7 @@ The Website can be more or less defined for its complexity like this:
 - The Registration page requests Users to input a Username, E-mail and Password.
 
 <img src="media/readme_img/registerationpanel.png" alt="Registration">
-<img src="media/readme_img/registerationconfirmedpanel.png" alt="Registration Confirmed">
+<img src="media/readme_img/registrationconfirmedpanel.png" alt="Registration Confirmed">
 
 
 ## Log in/out
