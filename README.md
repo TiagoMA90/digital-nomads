@@ -20,7 +20,7 @@ No desks, no cubicles, no offices.
 The website was designed with the intent to allow users to browse posts easily and perform all CRUD functionalities. It relied heavily on colors that should be appealing to the user, especially for those who might use the website on a daily basis.
 
 For such, it makes use of a colour palette of a mere greenish, brownish, and yellowish blend (#807a45) for the navigation bar.
-This gives a rustic feeling that is often associated with the nomadic camper life at the beach, desert, and mountain.s
+This gives a rustic feeling that is often associated with the nomadic camper life at the beach, desert, and mountains.
 
 The background is best defined by a grayish white (#fafafa), and the body of the post simple white (#ffffff), bordered by dashed lines.
 The buttons in the post borrow the same patterns and render a shadow beneath them to contrast the body from the page. This gives the illusion that the User is writing a post on a piece of paper/document.
@@ -39,7 +39,7 @@ The Fonts displayed in this website were imported from Google Fonts, the Icons d
 
 # Wireframes
 The structure of the website is coherent, and the base.html is present on all pages. The skeleton of the body is consistent for all pages.
-The Website cane be more or less defined for its complexity like this:
+The Website can be more or less defined for its complexity like this:
 
 - Reading the Home page:
 <img src="media/readme_img/homewireframes.png" alt="Home Wireframes">
@@ -47,7 +47,7 @@ The Website cane be more or less defined for its complexity like this:
 - Reading the About page:
 <img src="media/readme_img/aboutwireframes.png" alt="About Wireframes">
 
-- Reading, Editing or Deelting a Post:
+- Reading, Editing or Deleting a Post:
 <img src="media/readme_img/postwireframes.png" alt="Post Wireframes">
 
 - Creating a Post:
@@ -107,7 +107,7 @@ The Website cane be more or less defined for its complexity like this:
 
 <img src="media/readme_img/charactersearch.png" alt="Search Field">
 
-- If no Post exhibits such word, than a template prompts Users to give in a valid word.
+- If no Post exhibits such word, then a template prompts Users to give in a valid word.
 
 <img src="media/readme_img/wrongcharactersearch.png" alt="Search Field">
 
@@ -166,7 +166,7 @@ The Website cane be more or less defined for its complexity like this:
 - Visitors can create a user account through /register/.
 - Visitors can navigate to the Home/About/Login/Register pages.
 - Visitors can navigate through the pagination of /home/ and /username/.
-- Visitors can access external links on users' posts/comments and footer.
+- Visitors can access external links on users posts/comments and footer.
 
 ## Registered Users (CRUD) can do the above as a Visitor, moreover:
 - Users can log in/out through the "Log In/Out" functionality.
@@ -193,10 +193,31 @@ Throughout the development process, new issues were added/removed, starting from
 The issues were assigned to the sole developer and labeled as "could-have," "should-have,", "must-have" and "won't -have".
 
 In order of priority, with 21 User Stories, the [Project](https://github.com/users/TiagoMA90/projects/7/views/1) has:
-- 8 x must-have
-- 8 x should-have
-- 5 x could-have
-- 1 x wont-have
+## must-have:
+- Register a user account
+- Log into a User account
+- Log out from a User account
+- Create Posts
+- Open Posts
+- Read Posts
+- Edit Posts
+- Delete Posts
+## should-have
+- Upload a Profile picture
+- Delete a User Account
+- Reset the Password via E-mail
+- Navigate through Pagination
+- Add/Remove Likes
+- View number of Likes
+- Write Comments
+- View Comments
+## could-have
+- Write a User Profile/Bio
+- Update user Info
+- Filter Posts through the Search bar
+- Fileter Post by Username
+## wont-have
+- Create Posts using ckeditor
 
 Once completed, the issues were marked as "done" and the milestone consequently closed.
 
@@ -238,7 +259,7 @@ To create a new Django project, in the currenct directory, the followig command 
 - "django-admin startproject NAMEOFTHEPROJECT ." <- Starts the project
 
 To create the app the following command ran:
-- "python3 manage.py startapp blog" <- Creates a folder for the app withing the project
+- "python3 manage.py startapp NAMOFTHEAPP" <- Creates a folder for the app withing the project
 
 To install Django libraries and Set up:
 From the new workspace, navigate to the Terminal and run:
@@ -289,11 +310,11 @@ The static files are being hosted on Cloudinary:
 - Navigate to: "Create new app" add a unique name "digital-nomad" and select "Europe" region. Click "Create App"
 - Head over to "Settings" tab and apply the respective config VARs
 - Move to "Deploy" section and select "Github" method"
-- From here search for the repository name "digitals-nomads", from the GitHub account.
+- From here search for the repository name "digital-nomads", from the GitHub account.
 - Hit "Connect" and "Enable Automatic Deploys" to keep the the repository in parallel to Heroku.
 - Manually "Deploy Main Branch".
 - Upon successful deployment, retrieve the link for the mock terminal.
-- The live app can be found [here](digital-nomad.herokuapp.com).
+- The live app can be found [here](https://digital-nomad.herokuapp.com/).
 
 ## Languages & Frameworks
 - HTML (markup language)
@@ -313,6 +334,7 @@ The static files are being hosted on Cloudinary:
 - [WAVE Evaluation tool](https://wave.webaim.org/) - Testing tool
 - [W3validator](https://validator.w3.org/) with no issues.
 - [W3jigsaw](https://jigsaw.w3.org/css-validator/)
+- [JSHint](https://jshint.com/)
 - [Pep8CI](https://pep8ci.herokuapp.com/)
 - [CI Python Linter](https://pep8ci.herokuapp.com/) - CI Python testing tool
 - [Github](https://github.com/) - Host for the repository
@@ -322,7 +344,7 @@ The static files are being hosted on Cloudinary:
 - [Heroku](https://id.heroku.com/) - Cloud platform/Host the live project
 
 # Credits
-The following sources were resorted in the creation of this website:
+The following sources and references were resorted for the creation of this website:
 - [Code Institute](https://learn.codeinstitute.net/dashboard) was used as guidance platform for the development of this project (Django & Bootstrap).
 - [freeCodeCamp](https://www.youtube.com/@freecodecamp) was used as orientation platform for the development of this project (Django videos).
 - [Codemy](https://www.youtube.com/@Codemycom) video tutorials from this particular chanel were used as a reference on how establish(Django videos).
@@ -331,3 +353,6 @@ The following sources were resorted in the creation of this website:
 - [Bootstrap](https://getbootstrap.com/) documentation was used for styling html under classes.
 - [Djangoproject](https://www.djangoproject.com/) documentation was used as a solution platform for broken code and overall functionality under.
 - The Header/Footer image is originally from taken from [CNN Underscored](https://edition.cnn.com/cnn-underscored/travel/working-remotely-while-traveling) blog post.
+
+# Testing
+For testing, please refer to [TESTING.md](https://github.com/TiagoMA90/digital-nomads/blob/main/TESTING.md)

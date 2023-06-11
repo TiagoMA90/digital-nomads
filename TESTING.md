@@ -54,7 +54,7 @@ Manual testing has been performed by exploiting test case scenarios.
 | Delete a Post | Click on Delete | Registered Users | (if authenticated) - Inside of a User-Post click on the Bin icon -> Click on Confirm | Deletes a User-Post | Deletes a Post | The Post is Deleted | + | Approved  
 | Write a Comment | Click on Add a Comment | Registered Users | - From a inside of a Post click on Add a Comment -> Write the body of a Comment -> Click on Submit Comment | Add a Comment to a Post | A Comment is added to a Post | Approved  
 | Like/Dislike a Post | Click on the Like Icon | Registered Users | (if authenticated) - From a inside of a Post click on the Like icon (to like) &/or click again (to unlike) | Likes/Dislikes a Post | A Post is Liked/Disliked | Approved  
-
+| Visit the Socila Media pages | Click on Social Media link | Reg./Non-Reg. Users | - On the footer of the website click on a Social media icon | Opens a Social Media page on another tab | A Social media page is open | Approved  
 
 ## Lighthouse & WAVE
 This website, under Ingognito mode, was scanned for Performance, Accessibility, Best Practices and SEO for both Desktop and Mobile devices under the Lighthouse function provided by Chrome DevTools, with favorable scores.
