@@ -19,10 +19,10 @@ No desks, no cubicles, no offices.
 # Design:
 The website was designed with the intent to allow users to browse posts easily and perform all CRUD functionalities. It relied heavily on colors that should be appealing to the user, especially for those who might use the website on a daily basis.
 
-For such, it makes use of a colour palette of a mere greenish, brownish, and yellowish blend (#807a45) for the navigation bar.
+For such, it makes use of a colour palette of a mere greenish, brownish, and yellowish blend for the navigation bar.
 This gives a rustic feeling that is often associated with the nomadic camper life at the beach, desert, and mountains.
 
-The background is best defined by a grayish white (#fafafa), and the body of the post simple white (#ffffff), bordered by dashed lines.
+The background is best defined by a grayish white and the body of the post white, bordered by dashed lines.
 The buttons in the post borrow the same patterns and render a shadow beneath them to contrast the body from the page. This gives the illusion that the User is writing a post on a piece of paper/document.
 
 <img src="media/readme_img/colourpalette.png" alt="Colours">
@@ -38,7 +38,7 @@ Both the header and footer have an image attached to them of somebody networking
 The Fonts displayed in this website were imported from Google Fonts, the Icons displayed in the Footer imported from FontAwesome and Boxicons.
 
 # Wireframes
-The structure of the website is coherent, and the base.html is present on all pages. The skeleton of the body is consistent for all pages.
+The structure of the website is coherent and the base.html is present on all pages. The skeleton of the body is consistent for the whole website.
 The Website can be more or less defined for its complexity like this:
 
 - Reading the Home page:
