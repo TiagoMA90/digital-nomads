@@ -62,6 +62,10 @@ The Website can be more or less defined for its complexity like this:
 - Using the Search functionality and retrieving Posts
 <img src="media/readme_img/searchwireframes.png" alt="Search Wireframes">
 
+## Relationship Diagram
+
+<img src="media/readme_img/relationshipdiagram.png" alt="Relationship Diagram">
+
 ## Navbar, Header & Favicon
 - The Navbar features from left to right the [Logo], [Home], [About], [Login], [Register] and the [Search] fields. Furthermore, for Users who are logged in, the [Post], [Profile] and [Logout] links.
 - The links guide Users to the respective pages and remain "active" when and if on that page, with the exception of [Post].
@@ -224,6 +228,11 @@ Once completed, the issues were marked as "done" and the milestone consequently 
 <img src="media/readme_img/agile.png" alt="agile methodology">
 <img src="media/readme_img/agilelabels.png" alt="agile methodology">
 
+## Ideas to Implement in the future:
+The Developer would like to:
+- add a tab with a list of all Registered Users.
+- add a tab with a chatroom for Registered Users.
+- reinstate ckedior
 
 ## Development Process
 The project started out as a forum for Ads of Events, where users could post events taking place at a certain time in a certain location.
@@ -243,58 +252,61 @@ The project was developed using GitHub and GitPod platforms...
 ... and suffered various executions using the inbuild Terminal.
 
 For Commits on this project, the following commands ran:
-- "git add ." <- Stages before commiting.
-- "git commit -m "written imperative declaration"" <- Declares changes and updates.
-- "git push" <- Push all updates to the GitHub Repository.
+- ```git add .``` <- Stages before commiting.
+- ```git commit -m "written imperative declaration"``` <- Declares changes and updates.
+- ```git push``` <- Push all updates to the GitHub Repository.
 
 To run the server locally (Debug = True), the following command ran:
-- python manage.py runserver <- Loads the website on the in-built Terminal.
+- ```python manage.py runserver``` <- Loads the website on the in-built Terminal.
 
 During development migrations to the database were made.
 To make migrations the following commands ran:
-- "python manage.py makemigrations" <- Creates a new database migration
-- "python manage.py migrate" <- Applies pending migrations
+- ```python manage.py makemigrations``` <- Creates a new database migration
+- ```python manage.py migrate``` <- Applies pending migrations
 
 To create a new Django project, in the currenct directory, the followig command ran:
-- "django-admin startproject NAMEOFTHEPROJECT ." <- Starts the project
+- ```django-admin startproject NAMEOFTHEPROJECT .``` <- Starts the project
 
 To create the app the following command ran:
-- "python3 manage.py startapp NAMOFTHEAPP" <- Creates a folder for the app withing the project
+- ```python3 manage.py startapp NAMOFTHEAPP``` <- Creates a folder for the app withing the project
 
 To install Django libraries and Set up:
 From the new workspace, navigate to the Terminal and run:
 
-- "pip3 install 'django<4' gunicorn" <-Runs the /admin
+- ```pip3 install 'django<4' gunicorn``` <-Runs the /admin
 
 To install the supporting libraries the following command ran:
-- "pip3 install dj_database_url==0.5.0 psycopg2" <- Installs Python packages and PostgreSQL adapter
+- ```pip3 install dj_database_url==0.5.0 psycopg2``` <- Installs Python packages and PostgreSQL adapter
 
 To install Cloudinary the following command ran:
-- "pip3 install dj3-cloudinary-storage" <- Installs Cloudinary
+- ```pip3 install dj3-cloudinary-storage``` <- Installs Cloudinary
 
 To install AlAuth the following command ran:
-- "pip3 install django-allauth" <- Installs allauth
+- ```pip3 install django-allauth``` <- Installs allauth
 
 To istall crispy-forms the following command ran:
-- "pip3 install django-crispy-forms==1.14.0"  <- Installs crispy
+- ```pip3 install django-crispy-forms==1.14.0```  <- Installs crispy
 
 To install Pillow the following command ran:
-- "pip3 install django Pillow" <- Installs Pillow
+- ```pip3 install django Pillow``` <- Installs Pillow
 
 To install Summernote the following command ran:
-- "pip3 install django-summernote" <- Installs summernote((!) Unisntalled/or Ignored by the Developer)
+- ```pip3 install django-summernote``` <- Installs summernote((!) Unisntalled/or Ignored by the Developer)
 
 To install Ckeditor, the folowing command ran:
-- "pip install django-ckeditor" <- Installs ckeditor((!) Uninstalled/or Ignored by the Developer)
+- ```pip install django-ckeditor``` <- Installs ckeditor((!) Uninstalled/or Ignored by the Developer)
 
 To create or update Requirements.txt, the following command ran:
-- "pip3 freeze --local > requirements.txt"  <-Runs the requirements
+- ```pip3 freeze --local > requirements.txt```  <-Runs the requirements
 
 To install the requirements set on Requirements.txt the following command ran:
-- "pip install -r requirements.txt" <- Installs requirements
+- ```pip install -r requirements.txt``` <- Installs requirements
 
 To clear the cache, the following command ran:
-- "pip cache purge" <- Clears the cache
+- ```pip cache purge``` <- Clears the cache
+
+To hide the env.py, the following command ran (adding it to .gitignore was still visible to the public):
+- ```git rm --cached env.py``` <- Removes env.py from the repository
 
 The database is being hosted on ElephantSQL:
 - Create an account(with GitHub) and select TinyTurtle plan.
