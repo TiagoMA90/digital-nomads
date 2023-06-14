@@ -64,6 +64,16 @@ The Website can be more or less defined for its complexity like this:
 
 ## Relationship Diagram
 
+The relationship diagram between models are straight and to the Point.
+The Profile associated to a User creates Posts and can make Comments to a particluar Post.
+
+- A Post created by a User, features the Title(Charfield), Content(TextField), Date Posted(DateTimeField), name of the Author(ForeignKey) and Likes(ManyToManyFieldd) once submited.
+- The Comments model takes a similar approach, inheriting the Post(ForeignKey) and displaying the Body(TextField) of the comment, Date Commented(dateTimeField) and once again the Author(ForeignKey) of the comment.
+- The Profile flaunts the User(OneToOne), an Image(CloudinaryField) and the Bio(TextField.)
+
+Under Barkers notation.
+One/Many Profiles can create many Posts. Many Comments can be created in many Posts, by many Profiles:
+
 <img src="media/readme_img/relationshipdiagram.png" alt="Relationship Diagram">
 
 ## Navbar, Header & Favicon
@@ -349,6 +359,7 @@ The static files are being hosted on Cloudinary:
 - [JSHint](https://jshint.com/)
 - [Pep8CI](https://pep8ci.herokuapp.com/)
 - [CI Python Linter](https://pep8ci.herokuapp.com/) - CI Python testing tool
+- [Diagrams](https://app.diagrams.net/) - Diagram set up
 - [Github](https://github.com/) - Host for the repository
 - [Gitpod](https://gitpod.io/) - Code editor
 - [ElephantSQL](https://www.elephantsql.com/) - Database
@@ -367,4 +378,9 @@ The following sources and references were resorted for the creation of this webs
 - The Header/Footer image is originally from taken from [CNN Underscored](https://edition.cnn.com/cnn-underscored/travel/working-remotely-while-traveling) blog post.
 
 # Testing
-For testing, please refer to [TESTING.md](https://github.com/TiagoMA90/digital-nomads/blob/main/TESTING.md)
+For Manual testing, please refer to [TESTING.md](https://github.com/TiagoMA90/digital-nomads/blob/main/TESTING.md)
+
+The Assessor may also log in to the Administration panel with the following<details>
+- Username: assessor
+- Password: HelloWorld
+</details>
