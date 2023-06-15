@@ -206,7 +206,7 @@ For this purpose, the project was illustrated by one Milestone entitled "Submit 
 Throughout the development process, new issues were added/removed, starting from "Todo," progressing to "In Progress," and finally being finalized in "Done".
 The issues were assigned to the sole developer and labeled as "could-have," "should-have,", "must-have" and "won't -have".
 
-In order of priority, with 21 User Stories, the [Project](https://github.com/users/TiagoMA90/projects/7/views/1) has:
+In order of priority, with 23 User Stories, the [Project](https://github.com/users/TiagoMA90/projects/7/views/1) has:
 ## must-have:
 - Register a user account
 - Log into a User account
@@ -225,11 +225,13 @@ In order of priority, with 21 User Stories, the [Project](https://github.com/use
 - View number of Likes
 - Write Comments
 - View Comments
+- Access 404 Not Found
 ## could-have
 - Write a User Profile/Bio
 - Update user Info
 - Filter Posts through the Search bar
 - Fileter Post by Username
+- Read the About section
 ## wont-have
 - Create Posts using ckeditor
 
