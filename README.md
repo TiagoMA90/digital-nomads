@@ -65,10 +65,11 @@ The Website can be more or less defined for its complexity like this:
 ## Relationship Diagram
 
 The relationship diagram between models are straight and to the Point.
-From an individual perspective a single Profile associated to a User can create multiples Posts and can write multiple Comments to multiple Posts.
+From an individual perspective a single Profile associated to a User can create multiples Posts and can write multiple Comments to multiple Posts, furthermore send multiple messages via Contact.
 
 - A Post created by a User, features the Title(Charfield), Content(TextField), Date Posted(DateTimeField), name of the Author(ForeignKey) and Likes(ManyToManyFieldd) once submited.
-- The Comments model takes a similar approach, inheriting the Post(ForeignKey) and displaying the Body(TextField) of the comment, Date Commented(dateTimeField) and once again the Author(ForeignKey) of the comment.
+- The Comments model takes a similar approach, inheriting the Post(ForeignKey) and displaying the Body(TextField) of the comment, Date Commented(DateTimeField) and once again the Author(ForeignKey) of the comment.
+- The Contact form makes use of name(CharField), email(EmailField), subject(Charfield), message(TextField), created_at(DateTimeField)
 - The Profile flaunts the User(OneToOne), an Image(CloudinaryField) and the Bio(TextField.)
 
 Under Barkers notation.
