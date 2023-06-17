@@ -65,7 +65,7 @@ The Website can be more or less defined for its complexity like this:
 ## Relationship Diagram
 
 The relationship diagram between models are straight and to the Point.
-The Profile associated to a User creates Posts and can make Comments to a particluar Post.
+From an individual perspective a single Profile associated to a User can create multiples Posts and can write multiple Comments to multiple Posts.
 
 - A Post created by a User, features the Title(Charfield), Content(TextField), Date Posted(DateTimeField), name of the Author(ForeignKey) and Likes(ManyToManyFieldd) once submited.
 - The Comments model takes a similar approach, inheriting the Post(ForeignKey) and displaying the Body(TextField) of the comment, Date Commented(dateTimeField) and once again the Author(ForeignKey) of the comment.
@@ -206,7 +206,7 @@ For this purpose, the project was illustrated by one Milestone entitled "Submit 
 Throughout the development process, new issues were added/removed, starting from "Todo," progressing to "In Progress," and finally being finalized in "Done".
 The issues were assigned to the sole developer and labeled as "could-have," "should-have,", "must-have" and "won't -have".
 
-In order of priority, with 23 User Stories, the [Project](https://github.com/users/TiagoMA90/projects/7/views/1) has:
+In order of priority, with 24 User Stories, the [Project](https://github.com/users/TiagoMA90/projects/7/views/1) has:
 ## must-have:
 - Register a user account
 - Log into a User account
@@ -232,6 +232,7 @@ In order of priority, with 23 User Stories, the [Project](https://github.com/use
 - Filter Posts through the Search bar
 - Fileter Post by Username
 - Read the About section
+- Submit Feedback via Contact Us
 ## wont-have
 - Create Posts using ckeditor
 
