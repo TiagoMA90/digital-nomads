@@ -246,6 +246,9 @@ a:hover {
   color: cyan;
 }
 
+.fa-github:hover  {
+  color: black;
+}
 
 /* Media queries*/
 @media (max-width: 756px) {

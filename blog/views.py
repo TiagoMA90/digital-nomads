@@ -14,6 +14,8 @@ from django.urls import reverse, reverse_lazy
 from django.db.models import Q
 from .models import Post
 from .models import Comment
+from .models import Contact 
+from .forms import ContactForm
 
 
 # Routing for the urls
@@ -168,3 +170,19 @@ def LikeView(request, pk):
         liked = True
 
     return HttpResponseRedirect(reverse('post-detail', args=[str(pk)]))
+
+
+# Contact Views
+def contact(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'blog/contact_success.html')
+    else:
+        form = ContactForm()
+    
+    context = {
+        'form': form,
+    }
+    return render(request, 'blog/contact.html', context)
