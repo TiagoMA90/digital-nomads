@@ -358,9 +358,9 @@ The static files are being hosted on Cloudinary:
 - [Bytes.dev](https://ui.dev/amiresponsive?url=https://tiagoma90.github.io/rock-paper-scissors/) - Testing screen sizes
 - Chrome DevTools - Testing tool
 - [WAVE Evaluation tool](https://wave.webaim.org/) - Testing tool
-- [W3validator](https://validator.w3.org/) with no issues.
-- [W3jigsaw](https://jigsaw.w3.org/css-validator/)
-- [JSHint](https://jshint.com/)
+- [W3validator](https://validator.w3.org/) HTML validation tool
+- [W3jigsaw](https://jigsaw.w3.org/css-validator/) - CSS validation tool
+- [JSHint](https://jshint.com/) - Javascript testing tool
 - [Pep8CI](https://pep8ci.herokuapp.com/)
 - [CI Python Linter](https://pep8ci.herokuapp.com/) - CI Python testing tool
 - [Diagrams](https://app.diagrams.net/) - Diagram set up
