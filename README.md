@@ -171,7 +171,6 @@ One/Many Profiles can create many Posts. Many Comments can be created in many Po
 - If a User deletes the Profile/account, then the User is automatically logged out and the account eliminated. (This includes all Posts, Comments, Porfile Image and Username)
 
 <img src="media/readme_img/deletionpanel.png" alt="Deletion">
-
 <img src="media/readme_img/deletionconfirmedpanel.png" alt="Deleted">
 
 ## Contact Us
@@ -216,11 +215,12 @@ One/Many Profiles can create many Posts. Many Comments can be created in many Po
 ## Planning & Agile:
 This project was planned using Agile methodology and MoSCoW prioritization.
 
-For this purpose, the project was illustrated by one Milestone entitled "Submit the project to CI before Deadline," providing the developer with the freedom to accomplish all issues/tasks flexibly before dates deadline.
+For this purpose, the project was illustrated by one initial Milestone entitled "Submit the project to CI before Deadline," providing the developer with the freedom to accomplish all issues/tasks flexibly before dates deadline. It was later broken into "User(CRUD)", "Post(CRUD)", "Comment(CR) & Like(U)", "Template(R)".
+
 Throughout the development process, new issues were added/removed, starting from "Todo," progressing to "In Progress," and finally being finalized in "Done".
 The issues were assigned to the sole developer and labeled as "could-have," "should-have,", "must-have" and "won't -have".
 
-In order of priority, with 24 User Stories, the [Project](https://github.com/users/TiagoMA90/projects/7/views/1) has:
+In order of priority, with 25 User Stories, the [Project](https://github.com/users/TiagoMA90/projects/7/views/1) has:
 ## must-have:
 - Register a user account
 - Log into a User account
@@ -246,6 +246,7 @@ In order of priority, with 24 User Stories, the [Project](https://github.com/use
 - Filter Posts through the Search bar
 - Fileter Post by Username
 - Read the About section
+- Read the Guild section
 - Submit Feedback via Contact Us
 ## wont-have
 - Create Posts using ckeditor

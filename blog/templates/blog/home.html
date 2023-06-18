@@ -78,7 +78,7 @@
   <!-- Otherwise, if there are no posts, display this message -->
   {% else %}
     <div class="panels">
-      <h2 class="text-center">This Forum is currently empty! Be the first one to post! <a class="nav-item nav-link" href="{% url 'post-create' %}"><i class="docplus fa-solid fa-file-circle-plus"></i></a></h2>
+      <h2 class="text-center">This Forum is currently empty! Be the first one to post!<br><a class="nav-item nav-link" href="{% url 'post-create' %}" aria-label="Post"><i class="docplus fa-solid fa-file-circle-plus"></i></a></h2>
     </div>
   {% endif %}
   <br>

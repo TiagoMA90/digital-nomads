@@ -18,7 +18,7 @@
             {% endfor %}
         </div>
     {% else %}
-        <h2 class="text-center">There are no Nomads in this Guild! Be the first one to join!<br><a class="nav-item nav-link" href="{% url 'register' %}"><i class="fa-solid fa-user-pen"></i></a></h2>
+        <h2 class="text-center">There are no Nomads in this Guild! Be the first one to join!<br><a class="nav-item nav-link" href="{% url 'register' %}" aria-label="register"><i class="fa-solid fa-user-pen"></i></a></h2>
     {% endif %}
 </div>
 <br>
