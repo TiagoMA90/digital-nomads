@@ -110,6 +110,12 @@ One/Many Profiles can create many Posts. Many Comments can be created in many Po
 
 <img src="media/readme_img/aboutpanel.png" alt="About">
 
+## Guild
+- The Guild page renders a panel containing all registered-Users. It also encourages users to Register if the panel is empty.
+
+<img src="media/readme_img/emptyguild.png" alt="Empty Guild">
+<img src="media/readme_img/usersguild.png" alt="Users Guild">
+
 ## Posts & Comments
 - When opening a Post, the details of that particular Post is expanded, allowing Users to read the whole article.
 - Users can read and engage with the Post, by leaving Comments and Likes, when clicking the respective buttons.
@@ -167,6 +173,13 @@ One/Many Profiles can create many Posts. Many Comments can be created in many Po
 <img src="media/readme_img/deletionpanel.png" alt="Deletion">
 
 <img src="media/readme_img/deletionconfirmedpanel.png" alt="Deleted">
+
+## Contact Us
+- The Contact Us page requests Users to fill in a form and submit their message to the administration panel, this includes the name, e-mail, subject and message.
+- Once the message has been sumitted, Users are with an appreciation message.
+
+<img src="media/readme_img/contactus.png" alt="Contact Us">
+<img src="media/readme_img/contactussuccess.png" alt="Contact Success">
 
 ## Error 404
 - If a User goes to a non-defined URL, then a 404 Error template is rendered, requesting users to leave that page.

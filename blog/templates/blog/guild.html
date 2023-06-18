@@ -5,7 +5,8 @@
 <!-- Renders guild page -->
 <div class="panels">
     {% if profiles %}
-    <h2 class="text-center">Guild of Digital Nomads</h2>
+        <h2 class="text-center">Guild of Digital Nomads</h2>
+        <hr>
         <div class="row">
             {% for profile in profiles %}
                 <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
@@ -17,7 +18,7 @@
             {% endfor %}
         </div>
     {% else %}
-          <h2 class="text-center">There are no Nomads in this Guild! Be the first one to join! <a class="nav-item nav-link" href="{% url 'register' %}"><i class="fa-solid fa-user-pen"></i></a></h2>
+        <h2 class="text-center">There are no Nomads in this Guild! Be the first one to join!<br><a class="nav-item nav-link" href="{% url 'register' %}"><i class="fa-solid fa-user-pen"></i></a></h2>
     {% endif %}
 </div>
 <br>
