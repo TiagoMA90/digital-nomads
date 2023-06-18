@@ -361,7 +361,6 @@ The static files are being hosted on Cloudinary:
 - [W3validator](https://validator.w3.org/) HTML validation tool
 - [W3jigsaw](https://jigsaw.w3.org/css-validator/) - CSS validation tool
 - [JSHint](https://jshint.com/) - Javascript testing tool
-- [Pep8CI](https://pep8ci.herokuapp.com/)
 - [CI Python Linter](https://pep8ci.herokuapp.com/) - CI Python testing tool
 - [Diagrams](https://app.diagrams.net/) - Diagram set up
 - [Github](https://github.com/) - Host for the repository
