@@ -38,6 +38,8 @@ Manual testing has been performed by exploiting test case scenarios.
 | Visit the Home page | Click on Home link | Reg./Non-Reg. Users | - On the navbar of the webite click on Home | Opens the Homepage in the same page | The Home page is open | Approved |
 | Visit the About page | Click on About link | Reg./Non-Reg. Users | - On the navbar of the website click on About | Opens the About page in the same page | The About page is open | Approved  
 | Visit the Login page | Click on Login link | Reg./Non-Reg. Users | - On the navbar of the website click on Login | Opens the Login page in the same page | The Login page is open | Approved  
+| Visit the Guild page | Click on Guild link | Reg./(Non-Reg. Users*) | (if authenticated) - On the navbar of the website click on Guild | Opens the Guild page in the same page | The Guild page is open | Approved  
+| Visit the a User/Profile page from the Guild | Click on Guild link | Reg./(Non-Reg. Users*) | (if authenticated) - Inside the Guild page -> Click the username of a User | Opens a User profile page in the same page | A Profile page is open | Approved  
 | Log into a User account | On the Login page input the Login credentials and hit Login | Registered Users | - Input the login credentials(Username/Password) -> Click Login | Logs the User | The User is logged in | Approved   
 | Log out from a User account | Click on Logout link | Registered Users | (if authenticated) - On the navbar of the website click on Logout | Logs the User out | The User is logged out | Approved  
 | Visit the Register page | Click on Register link | Reg./Non-Reg. Users | - On the navbar of the website click on Register | Opens the Register page in the same page | The Register page is open | Approved  

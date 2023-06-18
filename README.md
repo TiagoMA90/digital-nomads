@@ -78,7 +78,7 @@ One/Many Profiles can create many Posts. Many Comments can be created in many Po
 <img src="media/readme_img/relationshipdiagram.png" alt="Relationship Diagram">
 
 ## Navbar, Header & Favicon
-- The Navbar features from left to right the [Logo], [Home], [About], [Login], [Register] and the [Search] fields. Furthermore, for Users who are logged in, the [Post], [Profile] and [Logout] links.
+- The Navbar features from left to right the [Logo], [Home], [About], [Login], [Register] and the [Search] fields. Furthermore, for Users who are logged in, the [Post], [Profile], [Guild] and [Logout] links.
 - The links guide Users to the respective pages and remain "active" when and if on that page, with the exception of [Post].
 - The Header features an image that splits in half, sharing the rest with the Footer.
 - On the browser's tab, the Favicon and Logo of the website can be found, a red cog.
@@ -86,7 +86,7 @@ One/Many Profiles can create many Posts. Many Comments can be created in many Po
 <img src="media/readme_img/headernavpanel.png" alt="Navigation & Header">
 
 ## Footer
-- The Footer is best defined by Bootstrap's template. It features a slogan on the left side and on the right, the Social Media links. At the very bottom, a copyright notice.
+- The Footer is best defined by Bootstrap's template. It features a slogan on the left side and on the right, the Social Media links (Facebook, Instagram, Youtube, Twitter & Github). At the very bottom, a copyright notice followe by a Contact Us link to a form.
 - Above the Footer is the rest of the image shared with the Header: the keyboard of a laptop.
 - Users can open the Social Media links and respective pages on new tabs.
 
