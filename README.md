@@ -244,8 +244,10 @@ Once completed, the issues were marked as "done" and the milestone consequently 
 
 ## Ideas to Implement in the future:
 The Developer would like to:
-- add a tab with a list of all Registered Users.
 - add a tab with a chatroom for Registered Users.
+- let users send email to each other
+- add the possibility for Users to follow each other
+- enrich the profile/user page with other fields
 - reinstate ckedior
 
 ## Development Process

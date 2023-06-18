@@ -90,6 +90,7 @@ In order to comply with markup validity, the website coformed with w3validator.
 Refer to the following links:
 - [home](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdigital-nomad.herokuapp.com%2F)
 - [/about/](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdigital-nomad.herokuapp.com%2Fabout%2F)
+- [/guild/](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdigital-nomad.herokuapp.com%2Fguild%2F)
 - [/contact/](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdigital-nomad.herokuapp.com%2Fcontact%2F)
 - [/login/](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdigital-nomad.herokuapp.com%2Flogin%2F)
 - [/logout/](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdigital-nomad.herokuapp.com%2Flogout%2F)

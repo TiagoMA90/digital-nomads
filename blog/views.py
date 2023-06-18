@@ -36,7 +36,7 @@ def about(request):
 # Guild Views
 def guild(request):
     profiles = Profile.objects.all()
-    return render(request, 'blog/guild.html', {'profiles':profiles})
+    return render(request, 'blog/guild.html', {'profiles': profiles})
 
 
 # Contact Views
@@ -48,7 +48,7 @@ def contact(request):
             return render(request, 'blog/contact_success.html')
     else:
         form = ContactForm()
-    
+
     context = {
         'form': form,
     }
