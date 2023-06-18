@@ -4,9 +4,8 @@
 <br>
 <!-- Renders guild page -->
 <div class="panels">
-    <h1>Guild of Nomads</h1>
-    <hr>
     {% if profiles %}
+    <h2 class="text-center">Guild of Digital Nomads</h2>
         <div class="row">
             {% for profile in profiles %}
                 <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
@@ -18,9 +17,8 @@
             {% endfor %}
         </div>
     {% else %}
-        <div class="panels">
-          <h2 class="text-center">There are no Nomads in this Guild! Be the first one to join! <a class="nav-item nav-link" href="{% url 'register' %}"><i class="fa-solid fa-user-plus"></i></a></h2>
-        </div>
+          <h2 class="text-center">There are no Nomads in this Guild! Be the first one to join! <a class="nav-item nav-link" href="{% url 'register' %}"><i class="fa-solid fa-user-pen"></i></a></h2>
     {% endif %}
 </div>
+<br>
 {% endblock %}
