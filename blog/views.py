@@ -14,12 +14,13 @@ from django.urls import reverse, reverse_lazy
 from django.db.models import Q
 from .models import Post
 from .models import Comment
-from .models import Contact 
+from .models import Contact
+from users.models import Profile
 from .forms import ContactForm
 
 
 # Routing for the urls
-# Home
+# Home Views
 def home(request):
     context = {
         'posts': Post.objects.all()
@@ -27,9 +28,15 @@ def home(request):
     return render(request, 'blog/home.html')
 
 
-# About
+# About Views
 def about(request):
     return render(request, 'blog/about.html', {'title': 'About'})
+
+
+# Guild Views
+def guild(request):
+    profiles = Profile.objects.all()
+    return render(request, 'blog/guild.html', {'profiles':profiles})
 
 
 # Contact Views

@@ -40,7 +40,8 @@
               <!-- If the User is authenticated display this links -->
               {% if user.is_authenticated %}
                 <a class="nav-item nav-link {% if request.path == '/post/create/' %}active{% endif %}" href="{% url 'post-create' %}"><i class="fa-solid fa-file-circle-plus"></i> Post</a>
-                <a class="nav-item nav-link {% if request.path == '/profile/' %}active{% endif %}" href="{% url 'profile' %}"><i class="fa-solid fa-gear"></i> Profile</a>
+                <a class="nav-item nav-link {% if request.path == '/profile/' %}active{% endif %}" href="{% url 'profile' %}"><i class="fa-solid fa-user-gear"></i> Profile</a>
+                <a class="nav-item nav-link {% if request.path == '/guild/' %}active{% endif %}" href="{% url 'guild' %}"><i class="fa-solid fa-users-gear"></i> Guild</a>
                 <a class="nav-item nav-link" href="{% url 'logout' %}"><i class="fa-solid fa-power-off"></i> Logout</a>
                 <!-- Otherwise display this links -->
               {% else %}

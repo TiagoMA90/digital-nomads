@@ -1,0 +1,26 @@
+<!-- Extends from base.html -->
+{% extends "blog/base.html" %}
+{% block content %}
+<br>
+<!-- Renders guild page -->
+<div class="panels">
+    <h1>Guild of Nomads</h1>
+    <hr>
+    {% if profiles %}
+        <div class="row">
+            {% for profile in profiles %}
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
+                    <div class="text-center">
+                        <img src="{{ profile.image.url }}" alt="Profile Picture" width="100" class="img-thumbnail">
+                        <div><a href="{% url 'post-user' username=profile.user.username %}">{{ profile.user.username }}</a></div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="panels">
+          <h2 class="text-center">There are no Nomads in this Guild! Be the first one to join! <a class="nav-item nav-link" href="{% url 'register' %}"><i class="fa-solid fa-user-plus"></i></a></h2>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
