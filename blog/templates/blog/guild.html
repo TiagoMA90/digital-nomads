@@ -11,8 +11,10 @@
             {% for profile in profiles %}
                 <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
                     <div class="text-center">
-                        <img src="{{ profile.image.url }}" alt="Profile Picture" width="100" class="img-thumbnail">
+                        <div class="panels">
+                        <img src="{{ profile.image.url }}" alt="Profile Picture" width="80" class="img-thumbnail rounded-circle">
                         <div><a href="{% url 'post-user' username=profile.user.username %}">{{ profile.user.username }}</a></div>
+                        </div>
                     </div>
                 </div>
             {% endfor %}
