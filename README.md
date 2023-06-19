@@ -211,6 +211,9 @@ One/Many Profiles can create many Posts. Many Comments can be created in many Po
 - Create/update/delete users.
 - Delete comments.
 - Promote users to Superuser.
+- Read CRUD messages sent by users via Contact Us model
+
+<img src="media/readme_img/adminpanel.png" alt="Admin panel">
 
 ## Planning & Agile:
 This project was planned using Agile methodology and MoSCoW prioritization.
