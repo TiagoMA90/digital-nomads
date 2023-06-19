@@ -9,12 +9,13 @@
         <div class="media">
             <img class="rounded accountimg" src="{{ user.profile.image.url }}" alt="Profile Picture">
             <div class="media-body">
-              <h2 class="accountname">{{ user.username }}</h2>
+              <h2 class="accountname">{{ user.username }}  • <a href="{% url 'post-user' user.username %}"><i class="fa-solid fa-eye"></i></a></h2>
               <p class="text-secondary">{{ user.email }}</p>
             </div>
         </div>
         <form method="POST" enctype="multipart/form-data">
           {% csrf_token %}
+          <br>
           <fieldset class="form-group">
               <legend class="border-bottom mb-4">
                   Profile details

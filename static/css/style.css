@@ -211,11 +211,11 @@ ul {
 }
 
 /* Social Media & Icons*/
-.fa-person-through-window, .docplus, .fa-user-pen {
+.fa-person-through-window, .docplus, .fa-user-pen, .fa-eye {
   color: #333333;
 }
 
-.fa-person-through-window:hover, .docplus:hover, .fa-user-pen:hover {
+.fa-person-through-window:hover, .docplus:hover, .fa-user-pen:hover, .fa-eye:hover {
   color: #979154;
 }
 
