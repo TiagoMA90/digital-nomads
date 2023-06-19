@@ -9,25 +9,25 @@
         <div class="media">
             <img class="rounded accountimg" src="{{ user.profile.image.url }}" alt="Profile Picture">
             <div class="media-body">
-              <h2 class="accountname">{{ user.username }}  • <a href="{% url 'post-user' user.username %}"><i class="fa-solid fa-eye"></i></a></h2>
+              <h2 class="accountname"><a href="{% url 'post-user' user.username %}" aria-label="Profile"><i class="fa-solid fa-circle-user"></i></a>  {{ user.username }}</h2>
               <p class="text-secondary">{{ user.email }}</p>
             </div>
         </div>
         <form method="POST" enctype="multipart/form-data">
-          {% csrf_token %}
-          <br>
-          <fieldset class="form-group">
-              <legend class="border-bottom mb-4">
-                  Profile details
-              </legend>
-              <!-- Loads user and profile Forms -->
-              {{ user_form|crispy }}
-              {{ profile_form|crispy }}
-          </fieldset>
-          <div class="form-group">
-              <button class="btn btn-outline-secondary panels" type="submit">Update</button>
-              <a class="btn btn-outline-danger panels" href="{% url 'delete_profile' %}">Delete Profile</a>
-          </div>
+            {% csrf_token %}
+            <br>
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">
+                    <h4>Profile details</h4>
+                </legend>
+                <!-- Loads user and profile Forms -->
+                {{ user_form|crispy }}
+                {{ profile_form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-secondary panels" type="submit">Update</button>
+                <a class="btn btn-outline-danger panels" href="{% url 'delete_profile' %}">Delete Profile</a>
+            </div>
         </form>
     </div>
 {% endblock %}
