@@ -401,8 +401,3 @@ The following sources and references were resorted for the creation of this webs
 
 # Testing
 For Manual testing, please refer to [TESTING.md](https://github.com/TiagoMA90/digital-nomads/blob/main/TESTING.md)
-
-The Assessor may also log in to the Administration panel with the following<details>
-- Username: assessor
-- Password: HelloWorld
-</details>
