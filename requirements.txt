@@ -12,3 +12,4 @@ django-summernote==0.8.20.0
 pillow==8.4.0
 psycopg2==2.9.10
 sqlparse==0.5.3
+python-dotenv==1.1.0
