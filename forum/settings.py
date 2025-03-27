@@ -113,6 +113,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+# Cloudinary configuration from environment variables
+CLOUDINARY_URL = os.getenv('CLOUDINARY_URL')  # Cloudinary URL from environment
+
 # Media storage (Cloudinary)
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
