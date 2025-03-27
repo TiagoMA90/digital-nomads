@@ -92,22 +92,9 @@ WSGI_APPLICATION = 'forum.wsgi.application'
 #        'NAME': BASE_DIR / 'db.sqlite3',
 #    }
 # }
-
-####################################
-DATABASE_URL = os.environ.get("DATABASE_URL")
-
-# Explicitly decode to string if it's in bytes format
-if isinstance(DATABASE_URL, bytes):
-    DATABASE_URL = DATABASE_URL.decode('utf-8')
-
 DATABASES = {
-    'default': dj_database_url.parse(DATABASE_URL)
-}
-####################################
-# DATABASES = {
-#     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-#  }
-###################################
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+ }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
