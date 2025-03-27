@@ -42,7 +42,16 @@
                 <a class="nav-item nav-link {% if request.path == '/post/create/' %}active{% endif %}" href="{% url 'post-create' %}"><i class="fa-solid fa-file-circle-plus"></i> Post</a>
                 <a class="nav-item nav-link {% if request.path == '/profile/' %}active{% endif %}" href="{% url 'profile' %}"><i class="fa-solid fa-user-gear"></i> Profile</a>
                 <a class="nav-item nav-link {% if request.path == '/guild/' %}active{% endif %}" href="{% url 'guild' %}"><i class="fa-solid fa-users-gear"></i> Guild</a>
-                <a class="nav-item nav-link" href="{% url 'logout' %}"><i class="fa-solid fa-power-off"></i> Logout</a>
+                <!-- *Original URL: <a class="nav-item nav-link" href="{% url 'logout' %}"><i class="fa-solid fa-power-off"></i> Logout</a> -->
+
+                <!-- Updated Log out form for *Original URL (above) -->
+                <form id="logout-form" action="{% url 'logout' %}" method="POST" style="display: inline;">
+                  {% csrf_token %}
+                  <button type="submit" class="nav-item nav-link btn btn-link">
+                      <i class="fa-solid fa-power-off"></i> Logout
+                  </button>
+              </form>
+              
                 <!-- Otherwise display this links -->
               {% else %}
                 <a class="nav-item nav-link {% if request.path == '/login/' %}active{% endif %}" href="{% url 'login' %}"><i class="fa-solid fa-right-to-bracket"></i> Login</a>

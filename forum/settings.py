@@ -24,6 +24,13 @@ DEBUG = False
 # Set allowed hosts for Heroku, localhost, and Gitpod
 ALLOWED_HOSTS = ['digital-nomad.herokuapp.com', 'localhost', '127.0.0.1', '.gitpod.io', '8000-tiagoma90-digitalnomads-xktq52s41f9.ws-eu118.gitpod.io/']
 
+# CSRF for Debug mode
+CSRF_TRUSTED_ORIGINS = [
+    "https://8000-tiagoma90-digitalnomads-xktq52s41f9.ws-eu118.gitpod.io",
+    "https://*.gitpod.io"
+]
+
+
 # Application definition
 INSTALLED_APPS = [
     'blog.apps.BlogConfig',
