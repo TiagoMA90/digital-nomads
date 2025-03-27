@@ -1,6 +1,8 @@
 import os
 import dj_database_url
 from dotenv import load_dotenv
+from pathlib import Path
+
 
 # Load environment variables from .env file (for local development)
 load_dotenv()
@@ -20,7 +22,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = False
 
 # Set allowed hosts for Heroku, localhost, and Gitpod
-ALLOWED_HOSTS = ['digital-nomad.herokuapp.com', 'localhost', '127.0.0.1', '8000-tiagoma90-digitalnomads-fb0ywrlj0ak.ws-eu100.gitpod.io']
+ALLOWED_HOSTS = ['digital-nomad.herokuapp.com', 'localhost', '127.0.0.1', '.gitpod.io', '8000-tiagoma90-digitalnomads-xktq52s41f9.ws-eu118.gitpod.io/']
 
 # Application definition
 INSTALLED_APPS = [
