@@ -3,35 +3,39 @@ import dj_database_url
 from dotenv import load_dotenv
 from pathlib import Path
 
-
-# Load environment variables from .env file (for local development)
+# Load environment variables from .env file
 load_dotenv()
 
 # Base directory of your project
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Template directories
 TEMPLATES_DIR = [
     os.path.join(BASE_DIR, 'templates'),
     os.path.join(BASE_DIR, 'users', 'templates'),
     os.path.join(BASE_DIR, 'blog', 'templates')
 ]
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+# Security settings
+SECRET_KEY = os.environ.get('SECRET_KEY', 'your-default-secret-key')
+DEBUG = True  # Set to True for local development, False for production
 
-# Set DEBUG to False for production
-DEBUG = False
-
-# Set allowed hosts for Heroku, localhost, and Gitpod
-ALLOWED_HOSTS = ['digital-nomad.herokuapp.com', 'localhost', '127.0.0.1', '.gitpod.io', '8000-tiagoma90-digitalnomads-xktq52s41f9.ws-eu118.gitpod.io/']
-
-# CSRF for Debug mode
-CSRF_TRUSTED_ORIGINS = [
-    "https://8000-tiagoma90-digitalnomads-xktq52s41f9.ws-eu118.gitpod.io",
-    "https://*.gitpod.io"
+# Allowed Hosts (Heroku, localhost, Gitpod)
+ALLOWED_HOSTS = [
+    'digital-nomad.herokuapp.com',
+    'localhost',
+    '127.0.0.1',
+    '.gitpod.io'
 ]
 
+# CSRF Trusted Origins
+CSRF_TRUSTED_ORIGINS = [
+    "https://8000-tiagoma90-digitalnomads-xktq52s41f9.ws-eu118.gitpod.io",
+    "https://*.gitpod.io",
+    "https://digital-nomad.herokuapp.com"
+]
 
-# Application definition
+# Installed apps
 INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'users.apps.UsersConfig',
@@ -41,12 +45,13 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'cloudinary_storage',
     'django.contrib.staticfiles',
+    'cloudinary_storage',
     'cloudinary',
     'forum',
 ]
 
+# Middleware
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -57,8 +62,10 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# Root URL configuration
 ROOT_URLCONF = 'forum.urls'
 
+# Templates configuration
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -75,30 +82,27 @@ TEMPLATES = [
     },
 ]
 
+# WSGI application
 WSGI_APPLICATION = 'forum.wsgi.application'
 
-# Database configuration for Heroku (PostgreSQL)
+# Database Configuration (Neon.tech PostgreSQL for Heroku)
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    'default': dj_database_url.config(
+        default="postgres://user:password@localhost/dbname",
+        conn_max_age=600,
+        ssl_require=True
+    )
 }
 
-# Password validation settings
+# Password validation
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
+    {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
 ]
 
-# Static files (CSS, JavaScript, Images)
+# Static & Media Files (Cloudinary)
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 STATIC_URL = '/static/'
@@ -112,9 +116,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Media storage (Cloudinary)
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
+# Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Email settings for Gmail (using your email credentials)
+# Email settings for Gmail SMTP
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
@@ -124,3 +129,9 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
 
 # Redirect after login
 LOGIN_REDIRECT_URL = 'blog-home'
+
+# Force HTTPS in production (recommended for security)
+if not DEBUG:
+    SECURE_SSL_REDIRECT = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
