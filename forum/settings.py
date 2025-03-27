@@ -3,7 +3,6 @@ import dj_database_url
 from dotenv import load_dotenv
 from pathlib import Path
 
-
 # Load environment variables from .env file (for local development)
 load_dotenv()
 
@@ -29,7 +28,6 @@ CSRF_TRUSTED_ORIGINS = [
     "https://8000-tiagoma90-digitalnomads-xktq52s41f9.ws-eu118.gitpod.io",
     "https://*.gitpod.io"
 ]
-
 
 # Application definition
 INSTALLED_APPS = [
@@ -78,8 +76,14 @@ TEMPLATES = [
 WSGI_APPLICATION = 'forum.wsgi.application'
 
 # Database configuration for Heroku (PostgreSQL)
+DATABASE_URL = os.environ.get("DATABASE_URL")
+
+# Ensure DATABASE_URL is a string and not bytes
+if isinstance(DATABASE_URL, bytes):
+    DATABASE_URL = DATABASE_URL.decode('utf-8')  # Decode it to a string
+
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    'default': dj_database_url.parse(DATABASE_URL)
 }
 
 # Password validation settings
