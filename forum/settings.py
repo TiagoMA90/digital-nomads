@@ -18,7 +18,7 @@ TEMPLATES_DIR = [
 
 # Security settings
 SECRET_KEY = os.environ.get('SECRET_KEY', 'your-default-secret-key')
-DEBUG = True  # Set to True for local development, False for production
+DEBUG = False  # Set to True for local development, False for production
 
 # Allowed Hosts (Heroku, localhost, Gitpod)
 ALLOWED_HOSTS = [
